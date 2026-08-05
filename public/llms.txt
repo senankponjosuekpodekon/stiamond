@@ -1,0 +1,53 @@
+# Stiamond
+
+> AI, Software & Cloud Engineering Company
+
+Stiamond designs AI-powered software, cloud infrastructure, and digital growth systems that accelerate business performance.
+
+## Expertise
+
+- AI Engineering: LLM integration, RAG systems, AI agents, intelligent automation
+- Software Engineering: Custom software, web platforms, SaaS products
+- Cloud Infrastructure: Scalable architecture, DevOps, CI/CD, infrastructure as code
+- Growth Systems: SEO, content strategy, marketing automation, data-driven growth
+- Automation: Workflow orchestration, process optimization, intelligent pipelines
+
+## Products
+
+- MEDIM: AI-powered medical intelligence platform
+- AI Platform: Multi-model AI gateway with intelligent routing (Gemini, Groq, Ollama, OpenAI)
+- APIs: Developer-first APIs for AI, data, and infrastructure
+- Developer SDK: Tools for building with Stiamond's platform
+- Marketplace: Integration marketplace for Stiamond ecosystem
+
+## Services
+
+- AI Engineering: Chatbots, RAG, AI agents, LLM integration
+- Software Engineering: Web apps, SaaS, APIs, microservices
+- Cloud: Architecture, DevOps, CI/CD, Docker, Kubernetes
+- Automation: Process automation, workflow orchestration
+- Growth: SEO/GEO, content, marketing automation, analytics
+- Consulting: Technical strategy, architecture review, team training
+
+## Industries
+
+- Healthcare
+- Retail
+- Finance
+- Education
+- Logistics
+- Professional Services
+
+## Documentation
+
+- API Reference: https://stiamond.net/developers/api
+- SDK: https://stiamond.net/developers/sdk
+- Authentication: https://stiamond.net/developers/authentication
+- Status: https://stiamond.net/developers/status
+- Changelog: https://stiamond.net/developers/changelog
+
+## Contact
+
+- Website: https://stiamond.net
+- Contact: https://stiamond.net/contact
+- Pricing: https://stiamond.net/pricing
