@@ -16,7 +16,7 @@ const buttonVariants = cva(
           "border border-border-strong bg-transparent text-foreground hover:bg-surface-1",
         ghost:
           "bg-transparent text-muted hover:bg-surface-1 hover:text-foreground",
-        ai: "bg-gradient-ai text-white shadow-sm hover:shadow-glow hover:-translate-y-px active:translate-y-0",
+        ai: "bg-gradient-brand text-white shadow-sm hover:shadow-glow hover:-translate-y-px active:translate-y-0",
         danger:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         link: "text-primary underline-offset-4 hover:underline",

@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/container";
-import { Sparkles } from "lucide-react";
 
 const footerLinks = {
   Company: [
@@ -41,9 +41,13 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
             <div className="col-span-2 lg:col-span-1">
               <Link href="/" className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-ai">
-                  <Sparkles className="h-4 w-4 text-white" />
-                </div>
+                <Image
+                  src="/logo.png"
+                  alt="Stiamond"
+                  width={32}
+                  height={32}
+                  className="rounded-lg"
+                />
                 <span className="text-body font-semibold">Stiamond</span>
               </Link>
               <p className="mt-4 max-w-xs text-body-sm text-muted-foreground">

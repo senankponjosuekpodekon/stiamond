@@ -1,41 +1,45 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/container";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 
 const navLinks = [
   { label: "Company", href: "/company" },
   { label: "Solutions", href: "/solutions" },
-  { label: "Services", href: "/services" },
   { label: "Products", href: "/products" },
   { label: "Industries", href: "/industries" },
-  { label: "Resources", href: "/resources" },
   { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ];
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-sticky w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-sticky w-full border-b border-border bg-background/90 backdrop-blur-lg">
       <Container>
         <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center gap-8">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-ai">
-                <Sparkles className="h-4 w-4 text-white" />
-              </div>
+          <div className="flex items-center gap-10">
+            <Link href="/" className="flex items-center gap-2.5">
+              <Image
+                src="/logo.png"
+                alt="Stiamond"
+                width={28}
+                height={28}
+                className="rounded-md"
+                priority
+              />
               <span className="text-body font-semibold tracking-tight">
                 Stiamond
               </span>
             </Link>
 
-            <nav className="hidden items-center gap-1 lg:flex">
+            <nav className="hidden items-center gap-0.5 lg:flex">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-md px-3 py-2 text-body-sm text-muted-foreground transition-colors hover:text-foreground"
+                  className="rounded-md px-3 py-2 text-body-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </Link>

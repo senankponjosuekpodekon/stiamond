@@ -31,21 +31,13 @@ const config: Config = {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
         ai: {
           DEFAULT: "hsl(var(--ai))",
           foreground: "hsl(var(--ai-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         success: {
           DEFAULT: "hsl(var(--success))",
@@ -64,6 +56,14 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
+      },
+      fontWeight: {
+        light: "300",
+        normal: "400",
+        medium: "500",
+        semibold: "600",
+        bold: "700",
+        extrabold: "800",
       },
       fontSize: {
         display: ["3.5rem", { lineHeight: "1.1", fontWeight: "700", letterSpacing: "-0.02em" }],
@@ -85,23 +85,23 @@ const config: Config = {
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 4px)",
-        sm: "calc(var(--radius) - 8px)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
         xl: "calc(var(--radius) + 4px)",
-        "2xl": "calc(var(--radius) + 12px)",
+        "2xl": "calc(var(--radius) + 10px)",
       },
       boxShadow: {
-        glow: "0 0 40px rgba(139, 92, 246, 0.2)",
-        "glow-sm": "0 0 20px rgba(139, 92, 246, 0.15)",
-        "glow-lg": "0 0 80px rgba(139, 92, 246, 0.25)",
-        "glow-blue": "0 0 40px rgba(37, 99, 235, 0.2)",
+        glow: "0 0 40px rgba(6, 71, 154, 0.12)",
+        "glow-sm": "0 0 20px rgba(6, 71, 154, 0.08)",
+        "glow-lg": "0 0 80px rgba(6, 71, 154, 0.15)",
+        "glow-accent": "0 0 30px rgba(244, 32, 16, 0.12)",
       },
       backgroundImage: {
-        "gradient-ai": "linear-gradient(135deg, #2563EB 0%, #8B5CF6 100%)",
-        "gradient-hero": "radial-gradient(ellipse at top, rgba(37,99,235,0.15) 0%, transparent 50%)",
-        "gradient-glow": "radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)",
-        "gradient-text": "linear-gradient(135deg, #3B82F6 0%, #A78BFA 100%)",
-        "gradient-border": "linear-gradient(135deg, rgba(37,99,235,0.5), rgba(139,92,246,0.5))",
+        "gradient-brand": "linear-gradient(135deg, #06479a 0%, #f42010 100%)",
+        "gradient-hero": "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(6,71,154,0.08) 0%, transparent 60%)",
+        "gradient-text": "linear-gradient(135deg, #06479a 0%, #f42010 100%)",
+        "gradient-border": "linear-gradient(135deg, rgba(6,71,154,0.4), rgba(244,32,16,0.3))",
+        "gradient-subtle": "linear-gradient(180deg, rgba(6,71,154,0.03) 0%, transparent 100%)",
       },
       transitionTimingFunction: {
         spring: "cubic-bezier(0.34, 1.56, 0.64, 1)",
