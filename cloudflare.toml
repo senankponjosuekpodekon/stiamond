@@ -1,17 +1,18 @@
 # Cloudflare Pages Configuration
-# Build command: npx @cloudflare/next-on-pages
-# Build output directory: .vercel/output/static
+#
+# In Cloudflare Pages dashboard, set:
+#   Build command: npx @cloudflare/next-on-pages
+#   Build output directory: .vercel/output/static
+#   Deploy command: (leave empty — Cloudflare handles deploy automatically)
+#
 # Environment variables (set in Cloudflare dashboard):
 #   DATABASE_URL - Neon PostgreSQL connection string
 #   AUTH_SECRET - NextAuth secret (generate with: openssl rand -base64 32)
 #   AUTH_URL - https://stiamond.net
 #   NEXTAUTH_URL - https://stiamond.net
+#   NEXT_PUBLIC_POSTHOG_KEY - PostHog project key
+#   SENTRY_DSN - Sentry DSN (optional)
 
 name = "stiamond"
 compatibility_date = "2024-12-01"
 compatibility_flags = ["nodejs_compat"]
-
-# Note: For Next.js on Cloudflare Pages, use @cloudflare/next-on-pages
-# Install: npm install -D @cloudflare/next-on-pages
-# Build: npx @cloudflare/next-on-pages
-# Deploy: npx wrangler pages deploy .vercel/output/static
