@@ -84,7 +84,7 @@ export function Header() {
       <div
         className={cn(
           "overflow-hidden border-t border-border transition-all duration-300 lg:hidden",
-          mobileOpen ? "max-h-96" : "max-h-0 border-t-0"
+          mobileOpen ? "max-h-[32rem]" : "max-h-0 border-t-0"
         )}
       >
         <Container>
@@ -106,8 +106,9 @@ export function Header() {
             >
               {t("clientPortal")}
             </Link>
-            <div className="px-3 py-2">
+            <div className="flex items-center gap-2 px-3 py-2">
               <LanguageSwitcher />
+              <ThemeToggle />
             </div>
           </nav>
         </Container>
