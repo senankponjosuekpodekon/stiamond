@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
-import { getTranslations } from "next-intl/server";
 import { AnalyticsProvider } from "@/components/analytics";
 import { headers } from "next/headers";
 import en from "../../messages/en.json";
@@ -44,18 +43,18 @@ const jetbrainsMono = JetBrains_Mono({
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
-  const t = await getTranslations({ locale, namespace: "metadata.site" });
-
+  const meta = (messagesMap[locale] as Record<string, unknown>).metadata as Record<string, { title: string; description: string }>;
+  const site = meta.site;
   const ogLocale = locale === "fr" ? "fr_FR" : "en_US";
   const altLocale = locale === "fr" ? "en_US" : "fr_FR";
 
   return {
     metadataBase: new URL("https://stiamond.net"),
     title: {
-      default: t("title"),
+      default: site.title,
       template: `%s — Stiamond`,
     },
-    description: t("description"),
+    description: site.description,
     keywords: [
       "AI engineering",
       "software development",
@@ -76,13 +75,13 @@ export async function generateMetadata(): Promise<Metadata> {
       alternateLocale: [altLocale],
       url: "https://stiamond.net",
       siteName: "Stiamond",
-      title: t("title"),
-      description: t("description"),
+      title: site.title,
+      description: site.description,
     },
     twitter: {
       card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
+      title: site.title,
+      description: site.description,
     },
     robots: {
       index: true,
