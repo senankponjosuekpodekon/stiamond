@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -10,16 +11,17 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "Company", href: "/company" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "Products", href: "/products" },
-  { label: "Industries", href: "/industries" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Contact", href: "/contact" },
+  { key: "company", href: "/company" },
+  { key: "solutions", href: "/solutions" },
+  { key: "products", href: "/products" },
+  { key: "industries", href: "/industries" },
+  { key: "pricing", href: "/pricing" },
+  { key: "contact", href: "/contact" },
 ];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const t = useTranslations("nav");
 
   return (
     <header className="sticky top-0 z-sticky w-full border-b border-border bg-background/90 backdrop-blur-lg">
@@ -47,7 +49,7 @@ export function Header() {
                   href={link.href}
                   className="rounded-md px-3 py-2 text-body-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  {link.label}
+                  {t(link.key)}
                 </Link>
               ))}
             </nav>
@@ -56,10 +58,10 @@ export function Header() {
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <Button variant="ghost" size="sm" asChild className="hidden sm:inline-flex">
-              <Link href="/client-portal">Client Portal</Link>
+              <Link href="/client-portal">{t("clientPortal")}</Link>
             </Button>
             <Button variant="primary" size="sm" asChild>
-              <Link href="/contact">Get Started</Link>
+              <Link href="/contact">{t("getStarted")}</Link>
             </Button>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -92,7 +94,7 @@ export function Header() {
                 onClick={() => setMobileOpen(false)}
                 className="rounded-md px-3 py-2.5 text-body font-medium text-muted-foreground transition-colors hover:bg-surface-1 hover:text-foreground"
               >
-                {link.label}
+                {t(link.key)}
               </Link>
             ))}
             <Link
@@ -100,7 +102,7 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
               className="rounded-md px-3 py-2.5 text-body font-medium text-muted-foreground transition-colors hover:bg-surface-1 hover:text-foreground"
             >
-              Client Portal
+              {t("clientPortal")}
             </Link>
           </nav>
         </Container>

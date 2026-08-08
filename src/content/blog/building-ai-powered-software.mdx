@@ -1,0 +1,42 @@
+---
+title: "Building AI-Powered Software: A Practical Guide"
+date: "2026-08-01"
+excerpt: "How we integrate LLMs, RAG systems, and intelligent automation into production software that delivers real business value."
+tags: ["AI", "Software Engineering"]
+---
+
+Building AI-powered software isn't just about calling an API. It's about
+designing systems that are reliable, observable, and genuinely useful.
+
+## The Three Layers
+
+When we build AI-powered systems, we think in three layers:
+
+1. **Data layer** — Vector databases, embeddings, and retrieval pipelines
+2. **Intelligence layer** — LLM orchestration, prompt engineering, and fallbacks
+3. **Application layer** — User interfaces, APIs, and observability
+
+## RAG Done Right
+
+Retrieval-Augmented Generation (RAG) is the backbone of most production AI
+systems. But most implementations get it wrong.
+
+The key is **chunking strategy**. Split your documents too finely and you lose
+context. Too coarsely and you waste tokens. We've found that semantic chunking
+— splitting by meaning rather than character count — produces the best results.
+
+## Observability
+
+Every AI system needs:
+
+- Token usage tracking
+- Latency monitoring
+- Quality scoring (human or automated)
+- Fallback mechanisms
+
+Without these, you're flying blind.
+
+## What's Next
+
+In future posts, we'll dive deeper into each layer with code examples and
+architecture diagrams.

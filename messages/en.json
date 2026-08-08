@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "company": "Company",
+    "solutions": "Solutions",
+    "products": "Products",
+    "industries": "Industries",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "clientPortal": "Client Portal",
+    "getStarted": "Get Started"
+  },
+  "home": {
+    "badge": "AI-Powered Engineering",
+    "title": "Building the next generation of {highlight}",
+    "highlight": "intelligent software",
+    "subtitle": "Stiamond designs AI-powered software, cloud infrastructure, and digital growth systems that accelerate business performance.",
+    "cta": "Start a Project",
+    "ctaSecondary": "Explore Solutions"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

@@ -1,0 +1,49 @@
+---
+title: "The Composable Architecture: Building Systems That Last"
+date: "2026-06-20"
+excerpt: "Why composable architecture is the key to building software systems that adapt to changing requirements without rewrites."
+tags: ["Architecture", "Software Engineering"]
+---
+
+Software systems rarely fail because of technology choices. They fail because
+they can't adapt. Composable architecture is our answer to that problem.
+
+## What Is Composable Architecture?
+
+Composable architecture means building your system as independent, interchangeable
+modules. Each module:
+
+- Has a clear contract (API)
+- Can be replaced without affecting others
+- Can be tested in isolation
+- Scales independently
+
+## The Building Blocks
+
+### 1. Core Domain
+
+Your business logic lives here. No framework dependencies. No infrastructure
+concerns. Pure TypeScript (or your language of choice).
+
+### 2. Infrastructure Layer
+
+Database access, external APIs, file storage — all abstracted behind interfaces.
+Need to switch from PostgreSQL to something else? You change one module.
+
+### 3. Delivery Layer
+
+REST, GraphQL, CLI, web UI — all built on top of the core domain. Multiple
+delivery mechanisms can coexist.
+
+## Benefits
+
+- **Testability** — Test business logic without a database
+- **Flexibility** — Swap any layer without touching the others
+- **Team velocity** — Teams work in parallel on different modules
+- **Longevity** — The core domain outlives every framework
+
+## Real-World Example
+
+We rebuilt a client's monolithic PHP app into a composable architecture. The
+result? They went from 6-month feature cycles to 2-week sprints. Same team,
+same business — different architecture.

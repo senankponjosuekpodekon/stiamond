@@ -5,31 +5,25 @@ import { Container } from "@/components/container";
 const footerLinks = {
   Company: [
     { label: "About", href: "/company" },
-    { label: "Vision", href: "/company/vision" },
-    { label: "Leadership", href: "/company/leadership" },
-    { label: "Careers", href: "/company/careers" },
-    { label: "Partners", href: "/company/partners" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Contact", href: "/contact" },
+    { label: "Client Portal", href: "/client-portal" },
   ],
   Solutions: [
     { label: "AI Engineering", href: "/solutions/ai" },
     { label: "Software Engineering", href: "/solutions/software" },
     { label: "Cloud Infrastructure", href: "/solutions/cloud" },
     { label: "Growth Systems", href: "/solutions/growth" },
-    { label: "Automation", href: "/solutions/automation" },
   ],
   Products: [
-    { label: "MEDIM", href: "/products/medim" },
-    { label: "AI Platform", href: "/products/ai-platform" },
-    { label: "APIs", href: "/products/apis" },
-    { label: "Developer SDK", href: "/products/sdk" },
-    { label: "Marketplace", href: "/products/marketplace" },
+    { label: "All Products", href: "/products" },
+    { label: "Industries", href: "/industries" },
   ],
   Resources: [
-    { label: "Blog", href: "/resources/blog" },
-    { label: "Documentation", href: "/developers" },
-    { label: "Research", href: "/resources/research" },
+    { label: "Blog", href: "/blog" },
+    { label: "Documentation", href: "/docs" },
+    { label: "Developers", href: "/developers" },
     { label: "Case Studies", href: "/case-studies" },
-    { label: "Contact", href: "/contact" },
   ],
 };
 

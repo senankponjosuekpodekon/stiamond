@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "company": "Entreprise",
+    "solutions": "Solutions",
+    "products": "Produits",
+    "industries": "Industries",
+    "pricing": "Tarifs",
+    "contact": "Contact",
+    "clientPortal": "Portail Client",
+    "getStarted": "Commencer"
+  },
+  "home": {
+    "badge": "Ingénierie IA",
+    "title": "Construire la prochaine génération de {highlight}",
+    "highlight": "logiciels intelligents",
+    "subtitle": "Stiamond conçoit des logiciels IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance business.",
+    "cta": "Démarrer un projet",
+    "ctaSecondary": "Explorer les solutions"
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  }
+}
