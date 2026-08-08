@@ -11,8 +11,7 @@
   },
   "home": {
     "badge": "AI-Powered Engineering",
-    "title": "Building the next generation of {highlight}",
-    "highlight": "intelligent software",
+    "title": "Building the next generation of <highlight>intelligent software</highlight>",
     "subtitle": "Stiamond designs AI-powered software, cloud infrastructure, and digital growth systems that accelerate business performance.",
     "ctaPrimary": "Start a Project",
     "ctaSecondary": "Explore Solutions",

@@ -11,8 +11,7 @@
   },
   "home": {
     "badge": "Ingénierie IA",
-    "title": "Construire la prochaine génération de {highlight}",
-    "highlight": "logiciels intelligents",
+    "title": "Construire la prochaine génération de <highlight>logiciels intelligents</highlight>",
     "subtitle": "Stiamond conçoit des logiciels IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance business.",
     "ctaPrimary": "Démarrer un projet",
     "ctaSecondary": "Explorer les solutions",
