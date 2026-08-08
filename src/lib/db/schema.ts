@@ -2,6 +2,8 @@ import { pgTable, uuid, varchar, timestamp, text, pgEnum } from "drizzle-orm/pg-
 
 export const userRoleEnum = pgEnum("user_role", ["admin", "client", "viewer"]);
 
+export const postStatusEnum = pgEnum("post_status", ["draft", "published"]);
+
 export const users = pgTable("users", {
   id: uuid("id").primaryKey().defaultRandom(),
   email: varchar("email", { length: 255 }).notNull().unique(),
@@ -9,6 +11,20 @@ export const users = pgTable("users", {
   firstName: varchar("first_name", { length: 100 }).notNull(),
   lastName: varchar("last_name", { length: 100 }).notNull(),
   role: userRoleEnum("role").default("client").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
+export const blogPosts = pgTable("blog_posts", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  title: varchar("title", { length: 255 }).notNull(),
+  slug: varchar("slug", { length: 255 }).notNull().unique(),
+  excerpt: text("excerpt").notNull(),
+  content: text("content").notNull(),
+  tags: varchar("tags", { length: 500 }).default(""),
+  status: postStatusEnum("status").default("draft").notNull(),
+  authorId: uuid("author_id").references(() => users.id).notNull(),
+  publishedAt: timestamp("published_at"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
