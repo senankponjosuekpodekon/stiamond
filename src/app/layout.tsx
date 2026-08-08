@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Poppins, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
 import { AnalyticsProvider } from "@/components/analytics";
+import en from "../../messages/en.json";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -75,13 +75,13 @@ const themeScript = `
 })();
 `;
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
-  const messages = await getMessages();
+  const locale = "en";
+  const messages = en;
 
   return (
     <html lang={locale} suppressHydrationWarning>

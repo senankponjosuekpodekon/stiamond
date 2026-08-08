@@ -110,7 +110,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
         <Container>
-          <div className="flex flex-col items-center py-24 text-center md:py-32 lg:py-40">
+          <div className="flex flex-col items-center py-16 text-center sm:py-20 md:py-32 lg:py-40">
             <FadeIn delay={0}>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface-1 px-4 py-1.5 text-caption font-medium text-muted-foreground">
                 <span className="flex h-2 w-2 rounded-full bg-accent" />
