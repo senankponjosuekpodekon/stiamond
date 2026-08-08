@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { FadeIn, Stagger, StaggerItem } from "@/components/motion";
 import {
   Cpu,
   Cloud,
@@ -110,32 +111,40 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-hero" />
         <Container>
           <div className="flex flex-col items-center py-24 text-center md:py-32 lg:py-40">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface-1 px-4 py-1.5 text-caption font-medium text-muted-foreground animate-fade-in">
-              <span className="flex h-2 w-2 rounded-full bg-accent" />
-              AI-Powered Engineering
-            </div>
+            <FadeIn delay={0}>
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface-1 px-4 py-1.5 text-caption font-medium text-muted-foreground">
+                <span className="flex h-2 w-2 rounded-full bg-accent" />
+                AI-Powered Engineering
+              </div>
+            </FadeIn>
 
-            <h1 className="max-w-4xl text-display animate-fade-in-up [animation-delay:100ms] opacity-0 [animation-fill-mode:forwards]">
-              Building the next generation of{" "}
-              <span className="text-gradient">intelligent software</span>
-            </h1>
+            <FadeIn delay={0.1}>
+              <h1 className="max-w-4xl text-display">
+                Building the next generation of{" "}
+                <span className="text-gradient">intelligent software</span>
+              </h1>
+            </FadeIn>
 
-            <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground animate-fade-in-up [animation-delay:200ms] opacity-0 [animation-fill-mode:forwards]">
-              Stiamond designs AI-powered software, cloud infrastructure, and
-              digital growth systems that accelerate business performance.
-            </p>
+            <FadeIn delay={0.2}>
+              <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground">
+                Stiamond designs AI-powered software, cloud infrastructure, and
+                digital growth systems that accelerate business performance.
+              </p>
+            </FadeIn>
 
-            <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row animate-fade-in-up [animation-delay:300ms] opacity-0 [animation-fill-mode:forwards]">
-              <Button variant="primary" size="lg" asChild>
-                <Link href="/contact">
-                  Start a Project
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/solutions">Explore Solutions</Link>
-              </Button>
-            </div>
+            <FadeIn delay={0.3}>
+              <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
+                <Button variant="primary" size="lg" asChild>
+                  <Link href="/contact">
+                    Start a Project
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link href="/solutions">Explore Solutions</Link>
+                </Button>
+              </div>
+            </FadeIn>
           </div>
         </Container>
       </section>
@@ -172,23 +181,25 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((pillar) => (
-              <Link key={pillar.title} href={pillar.href}>
-                <Card className="group h-full hover:-translate-y-1 hover:border-primary/30 hover:shadow-md">
-                  <CardHeader>
-                    <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/8 text-primary transition-all group-hover:bg-primary group-hover:text-primary-foreground">
-                      <pillar.icon className="h-5 w-5" strokeWidth={1.5} />
-                    </div>
-                    <CardTitle className="mt-4 text-h5">{pillar.title}</CardTitle>
-                    <CardDescription className="mt-2">
-                      {pillar.description}
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
+              <StaggerItem key={pillar.title}>
+                <Link href={pillar.href}>
+                  <Card className="group h-full hover:-translate-y-1 hover:border-primary/30 hover:shadow-md">
+                    <CardHeader>
+                      <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/8 text-primary transition-all group-hover:bg-primary group-hover:text-primary-foreground">
+                        <pillar.icon className="h-5 w-5" strokeWidth={1.5} />
+                      </div>
+                      <CardTitle className="mt-4 text-h5">{pillar.title}</CardTitle>
+                      <CardDescription className="mt-2">
+                        {pillar.description}
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                </Link>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </Container>
       </section>
 
@@ -206,21 +217,23 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {products.map((product) => (
-              <Card key={product.name} className="group h-full hover:-translate-y-1 hover:shadow-md">
-                <CardContent className="pt-6">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-surface-2 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                    <product.icon className="h-5 w-5" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="mt-4 text-h5 font-semibold">{product.name}</h3>
-                  <p className="mt-2 text-body-sm text-muted-foreground">
-                    {product.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <StaggerItem key={product.name}>
+                <Card className="group h-full hover:-translate-y-1 hover:shadow-md">
+                  <CardContent className="pt-6">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-surface-2 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                      <product.icon className="h-5 w-5" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="mt-4 text-h5 font-semibold">{product.name}</h3>
+                    <p className="mt-2 text-body-sm text-muted-foreground">
+                      {product.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
 
           <div className="mt-12 text-center">
             <Button variant="outline" asChild>

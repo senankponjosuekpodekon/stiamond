@@ -1,9 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/container";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "Company", href: "/company" },
@@ -15,6 +19,8 @@ const navLinks = [
 ];
 
 export function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-sticky w-full border-b border-border bg-background/90 backdrop-blur-lg">
       <Container>
@@ -55,17 +61,50 @@ export function Header() {
             <Button variant="primary" size="sm" asChild>
               <Link href="/contact">Get Started</Link>
             </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="lg:hidden"
-              aria-label="Menu"
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:bg-surface-1 hover:text-foreground lg:hidden"
+              aria-label="Toggle menu"
             >
-              <Menu className="h-5 w-5" />
-            </Button>
+              {mobileOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </button>
           </div>
         </div>
       </Container>
+
+      {/* Mobile menu */}
+      <div
+        className={cn(
+          "overflow-hidden border-t border-border transition-all duration-300 lg:hidden",
+          mobileOpen ? "max-h-96" : "max-h-0 border-t-0"
+        )}
+      >
+        <Container>
+          <nav className="flex flex-col gap-1 py-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="rounded-md px-3 py-2.5 text-body font-medium text-muted-foreground transition-colors hover:bg-surface-1 hover:text-foreground"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/client-portal"
+              onClick={() => setMobileOpen(false)}
+              className="rounded-md px-3 py-2.5 text-body font-medium text-muted-foreground transition-colors hover:bg-surface-1 hover:text-foreground"
+            >
+              Client Portal
+            </Link>
+          </nav>
+        </Container>
+      </div>
     </header>
   );
 }

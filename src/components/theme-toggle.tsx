@@ -6,17 +6,30 @@ import { cn } from "@/lib/utils";
 
 export function ThemeToggle({ className }: { className?: string }) {
   const [isDark, setIsDark] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
+    setMounted(true);
     setIsDark(document.documentElement.classList.contains("dark"));
   }, []);
 
   const toggle = () => {
-    const newTheme = isDark ? "light" : "dark";
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle("dark");
-    localStorage.setItem("stiamond-theme", newTheme);
+    const newIsDark = !isDark;
+    setIsDark(newIsDark);
+    document.documentElement.classList.toggle("dark", newIsDark);
+    localStorage.setItem("stiamond-theme", newIsDark ? "dark" : "light");
   };
+
+  if (!mounted) {
+    return (
+      <div
+        className={cn(
+          "inline-flex h-9 w-9 items-center justify-center rounded-md border border-border",
+          className
+        )}
+      />
+    );
+  }
 
   return (
     <button

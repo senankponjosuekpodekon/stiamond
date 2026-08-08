@@ -1,16 +1,53 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Sign Up",
-  description: "Create your Stiamond account.",
-};
 
 export default function RegisterPage() {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      firstName: formData.get("firstName") as string,
+      lastName: formData.get("lastName") as string,
+      email: formData.get("email") as string,
+      password: formData.get("password") as string,
+    };
+
+    try {
+      const res = await fetch("/api/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        const err = await res.json();
+        setError(err.error || "Registration failed");
+        setLoading(false);
+        return;
+      }
+
+      router.push("/login");
+      router.refresh();
+    } catch {
+      setError("Something went wrong");
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex min-h-screen items-center justify-center px-4">
       <div className="w-full max-w-md">
@@ -26,34 +63,39 @@ export default function RegisterPage() {
 
         <Card>
           <CardContent className="p-8">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {error && (
+                <div className="rounded-md border border-destructive/30 bg-destructive/5 px-4 py-3 text-body-sm text-destructive">
+                  {error}
+                </div>
+              )}
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
                   <label className="text-body-sm font-medium">First name</label>
-                  <Input placeholder="John" className="mt-2" />
+                  <Input name="firstName" placeholder="John" className="mt-2" required />
                 </div>
                 <div>
                   <label className="text-body-sm font-medium">Last name</label>
-                  <Input placeholder="Doe" className="mt-2" />
+                  <Input name="lastName" placeholder="Doe" className="mt-2" required />
                 </div>
               </div>
               <div>
                 <label className="text-body-sm font-medium">Email</label>
-                <Input type="email" placeholder="you@company.com" className="mt-2" />
+                <Input name="email" type="email" placeholder="you@company.com" className="mt-2" required />
               </div>
               <div>
                 <label className="text-body-sm font-medium">Password</label>
-                <Input type="password" placeholder="••••••••" className="mt-2" />
+                <Input name="password" type="password" placeholder="••••••••" className="mt-2" required />
               </div>
-              <Button variant="primary" size="lg" className="w-full">
-                Create Account
-                <ArrowRight className="h-4 w-4" />
+              <Button type="submit" variant="primary" size="lg" className="w-full" disabled={loading}>
+                {loading ? "Creating account..." : "Create Account"}
+                {!loading && <ArrowRight className="h-4 w-4" />}
               </Button>
             </form>
 
             <p className="mt-6 text-center text-body-sm text-muted-foreground">
               Already have an account?{" "}
-              <Link href="/auth/login" className="font-medium text-primary hover:underline">
+              <Link href="/login" className="font-medium text-primary hover:underline">
                 Sign in
               </Link>
             </p>

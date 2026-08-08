@@ -1,16 +1,43 @@
+"use client";
+
+import { useState } from "react";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Sign In",
-  description: "Sign in to your Stiamond account.",
-};
 
 export default function LoginPage() {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+
+    const res = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
+
+    if (res?.error) {
+      setError("Invalid credentials");
+      setLoading(false);
+    } else {
+      router.push("/app");
+      router.refresh();
+    }
+  };
+
   return (
     <div className="flex min-h-screen items-center justify-center px-4">
       <div className="w-full max-w-md">
@@ -26,10 +53,15 @@ export default function LoginPage() {
 
         <Card>
           <CardContent className="p-8">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {error && (
+                <div className="rounded-md border border-destructive/30 bg-destructive/5 px-4 py-3 text-body-sm text-destructive">
+                  {error}
+                </div>
+              )}
               <div>
                 <label className="text-body-sm font-medium">Email</label>
-                <Input type="email" placeholder="you@company.com" className="mt-2" />
+                <Input name="email" type="email" placeholder="you@company.com" className="mt-2" required />
               </div>
               <div>
                 <div className="flex items-center justify-between">
@@ -38,31 +70,17 @@ export default function LoginPage() {
                     Forgot password?
                   </Link>
                 </div>
-                <Input type="password" placeholder="••••••••" className="mt-2" />
+                <Input name="password" type="password" placeholder="••••••••" className="mt-2" required />
               </div>
-              <Button variant="primary" size="lg" className="w-full">
-                Sign In
-                <ArrowRight className="h-4 w-4" />
+              <Button type="submit" variant="primary" size="lg" className="w-full" disabled={loading}>
+                {loading ? "Signing in..." : "Sign In"}
+                {!loading && <ArrowRight className="h-4 w-4" />}
               </Button>
             </form>
 
-            <div className="relative my-6">
-              <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t border-border" />
-              </div>
-              <div className="relative flex justify-center text-caption">
-                <span className="bg-card px-2 text-muted-foreground">or</span>
-              </div>
-            </div>
-
-            <Button variant="outline" size="lg" className="w-full">
-              <Mail className="h-4 w-4" />
-              Continue with Email
-            </Button>
-
             <p className="mt-6 text-center text-body-sm text-muted-foreground">
               Don&apos;t have an account?{" "}
-              <Link href="/auth/register" className="font-medium text-primary hover:underline">
+              <Link href="/register" className="font-medium text-primary hover:underline">
                 Sign up
               </Link>
             </p>
