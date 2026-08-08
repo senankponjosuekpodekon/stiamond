@@ -1,40 +1,14 @@
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { Card, CardContent } from "@/components/ui/card";
 import { Terminal, Code2, BookOpen, Github, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Developers",
-  description: "Developer resources — API docs, SDKs, code examples, and tools.",
-};
-
-const resources = [
-  {
-    icon: Code2,
-    title: "API Reference",
-    description: "Full REST and GraphQL API documentation with examples.",
-    href: "/docs",
-  },
-  {
-    icon: Terminal,
-    title: "SDKs & Libraries",
-    description: "Official SDKs for JavaScript, Python, and Go.",
-    href: "/docs",
-  },
-  {
-    icon: BookOpen,
-    title: "Guides & Tutorials",
-    description: "Step-by-step guides for common integration patterns.",
-    href: "/docs",
-  },
-  {
-    icon: Github,
-    title: "Open Source",
-    description: "Explore our open-source projects and contributions.",
-    href: "https://github.com/senankponjosuekpodekon/stiamond",
-  },
-];
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata("developers");
+}
 
 const codeExample = `import { Stiamond } from "@stiamond/sdk";
 
@@ -50,16 +24,24 @@ const result = await client.ai.complete({
 console.log(result.text);`;
 
 export default function DevelopersPage() {
+  const t = useTranslations("developers");
+
+  const resources = [
+    { icon: Code2, title: t("resources.apiRef.title"), description: t("resources.apiRef.description"), href: "/docs" },
+    { icon: Terminal, title: t("resources.sdks.title"), description: t("resources.sdks.description"), href: "/docs" },
+    { icon: BookOpen, title: t("resources.guides.title"), description: t("resources.guides.description"), href: "/docs" },
+    { icon: Github, title: t("resources.openSource.title"), description: t("resources.openSource.description"), href: "https://github.com/senankponjosuekpodekon/stiamond" },
+  ];
+
   return (
     <>
       <section className="border-b border-border bg-gradient-hero">
         <Container>
           <div className="py-16 md:py-20">
-            <p className="text-overline font-semibold uppercase text-accent">Developers</p>
-            <h1 className="mt-3 text-h1">Build with Stiamond</h1>
+            <p className="text-overline font-semibold uppercase text-accent">{t("overline")}</p>
+            <h1 className="mt-3 text-h1">{t("title")}</h1>
             <p className="mt-4 max-w-2xl text-body-lg text-muted-foreground">
-              APIs, SDKs, and tools to integrate AI, cloud, and software capabilities
-              into your applications.
+              {t("subtitle")}
             </p>
           </div>
         </Container>
@@ -79,7 +61,7 @@ export default function DevelopersPage() {
                       <h2 className="text-h5 font-semibold">{res.title}</h2>
                       <p className="mt-1 text-body-sm text-muted-foreground">{res.description}</p>
                       <span className="mt-3 inline-flex items-center gap-1 text-body-sm font-medium text-primary">
-                        Explore
+                        {t("explore")}
                         <ArrowRight className="h-3.5 w-3.5" />
                       </span>
                     </div>
@@ -94,9 +76,9 @@ export default function DevelopersPage() {
       <section className="border-t border-border bg-surface-1/40 py-16 md:py-20">
         <Container>
           <div className="mx-auto max-w-2xl">
-            <h2 className="text-h3">Quick start</h2>
+            <h2 className="text-h3">{t("quickStart")}</h2>
             <p className="mt-2 text-body text-muted-foreground">
-              Install the SDK and make your first API call in minutes.
+              {t("quickStartDesc")}
             </p>
             <div className="mt-6 overflow-hidden rounded-lg border border-border bg-card">
               <div className="flex items-center gap-2 border-b border-border px-4 py-3">

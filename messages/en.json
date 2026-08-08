@@ -14,10 +14,599 @@
     "title": "Building the next generation of {highlight}",
     "highlight": "intelligent software",
     "subtitle": "Stiamond designs AI-powered software, cloud infrastructure, and digital growth systems that accelerate business performance.",
-    "cta": "Start a Project",
-    "ctaSecondary": "Explore Solutions"
+    "ctaPrimary": "Start a Project",
+    "ctaSecondary": "Explore Solutions",
+    "stats": {
+      "pillars": "Pillars of Expertise",
+      "pages": "Pages of Architecture",
+      "lighthouse": "Lighthouse Target",
+      "roadmap": "Roadmap Vision"
+    },
+    "pillars": {
+      "overline": "Our Expertise",
+      "title": "Four pillars of engineering",
+      "subtitle": "We combine deep technical expertise with strategic thinking to deliver systems that scale.",
+      "software": {
+        "title": "Software Engineering",
+        "description": "Custom software, web platforms, and SaaS products built with modern architecture."
+      },
+      "ai": {
+        "title": "AI Engineering",
+        "description": "LLM integration, RAG systems, AI agents, and intelligent automation pipelines."
+      },
+      "cloud": {
+        "title": "Cloud Infrastructure",
+        "description": "Scalable cloud architecture, DevOps, CI/CD, and infrastructure as code."
+      },
+      "growth": {
+        "title": "Growth Systems",
+        "description": "SEO, content strategy, marketing automation, and data-driven growth engines."
+      }
+    },
+    "products": {
+      "overline": "Products",
+      "title": "Technology we build",
+      "subtitle": "We don't just deliver services. We create products that compound in value over time.",
+      "viewAll": "View All Products",
+      "medim": "AI-powered medical intelligence platform",
+      "aiPlatform": "Multi-model AI gateway with intelligent routing",
+      "automation": "Workflow automation and process orchestration",
+      "apis": "Developer-first APIs for AI, data, and infrastructure"
+    },
+    "values": {
+      "overline": "Why Stiamond",
+      "title": "Engineered for trust",
+      "subtitle": "Every system we build follows the same principles — security, scale, and composability.",
+      "security": {
+        "title": "Security First",
+        "description": "RBAC, JWT, WAF, audit logs — enterprise-grade by default."
+      },
+      "scale": {
+        "title": "Global Scale",
+        "description": "Edge-deployed on Cloudflare. Sub-50ms worldwide."
+      },
+      "composable": {
+        "title": "Composable",
+        "description": "Modular architecture. Every layer independently scalable."
+      }
+    },
+    "philosophy": {
+      "overline": "Our Philosophy",
+      "title": "From research to ecosystem",
+      "subtitle": "Every project is an opportunity to learn. Every learning becomes a feature. Every feature becomes a product. Every product enriches the platform.",
+      "research": "Research",
+      "prototypes": "Prototypes",
+      "services": "Services",
+      "caseStudies": "Case Studies",
+      "productsStep": "Products",
+      "platform": "Platform",
+      "ecosystem": "Ecosystem"
+    },
+    "cta": {
+      "title": "Ready to build something intelligent?",
+      "subtitle": "Let's discuss how Stiamond can help you engineer your next digital system.",
+      "getInTouch": "Get in Touch",
+      "viewPricing": "View Pricing"
+    }
   },
   "footer": {
-    "rights": "All rights reserved."
+    "tagline": "AI, Software & Cloud Engineering. We build intelligent digital systems that accelerate business growth.",
+    "company": "Company",
+    "solutions": "Solutions",
+    "products": "Products",
+    "resources": "Resources",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "clientPortal": "Client Portal",
+    "aiEngineering": "AI Engineering",
+    "softwareEngineering": "Software Engineering",
+    "cloudInfrastructure": "Cloud Infrastructure",
+    "growthSystems": "Growth Systems",
+    "allProducts": "All Products",
+    "industries": "Industries",
+    "blog": "Blog",
+    "documentation": "Documentation",
+    "developers": "Developers",
+    "caseStudies": "Case Studies",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "security": "Security"
+  },
+  "solutions": {
+    "overline": "Solutions",
+    "title": "Four pillars of engineering excellence",
+    "subtitle": "We combine deep technical expertise with strategic thinking to deliver systems that scale — from prototype to production to platform.",
+    "learnMore": "Learn more",
+    "capabilities": {
+      "overline": "Capabilities",
+      "title": "Beyond the pillars",
+      "subtitle": "Cross-cutting capabilities that enhance every solution we deliver.",
+      "automation": {
+        "title": "Automation",
+        "description": "Workflow automation and process orchestration."
+      },
+      "apis": {
+        "title": "APIs",
+        "description": "Developer-first APIs for AI, data, and infrastructure."
+      },
+      "integration": {
+        "title": "Integration",
+        "description": "Seamless integration with existing systems and tools."
+      }
+    },
+    "cta": {
+      "title": "Ready to engineer your next system?",
+      "subtitle": "Let's discuss how our solutions can accelerate your business.",
+      "getInTouch": "Get in Touch"
+    },
+    "software": {
+      "title": "Software Engineering",
+      "subtitle": "Custom software, web platforms, and SaaS products built with modern architecture, clean code, and scalable design patterns.",
+      "startProject": "Start a Project",
+      "whatWeBuild": "What we build",
+      "ourStack": "Our stack",
+      "features": {
+        "f1": "Custom Web Applications",
+        "f2": "SaaS Platform Development",
+        "f3": "API Design & Development",
+        "f4": "Microservices Architecture",
+        "f5": "Real-time Systems",
+        "f6": "Progressive Web Apps",
+        "f7": "Database Design",
+        "f8": "Code Review & Audits"
+      }
+    },
+    "ai": {
+      "title": "AI Engineering",
+      "subtitle": "LLM integration, RAG systems, AI agents, and intelligent automation pipelines that turn AI capabilities into production-grade systems.",
+      "startProject": "Start a Project",
+      "whatWeBuild": "What we build",
+      "ourStack": "Our stack",
+      "features": {
+        "f1": "LLM Integration & Fine-tuning",
+        "f2": "RAG (Retrieval-Augmented Generation)",
+        "f3": "AI Agents & Multi-agent Systems",
+        "f4": "Intelligent Automation Pipelines",
+        "f5": "Vector Databases & Embeddings",
+        "f6": "Model Evaluation & Monitoring",
+        "f7": "Prompt Engineering",
+        "f8": "AI Safety & Guardrails"
+      }
+    },
+    "cloud": {
+      "title": "Cloud Infrastructure",
+      "subtitle": "Scalable cloud architecture, DevOps, CI/CD, and infrastructure as code for reliable, secure, and cost-efficient systems.",
+      "startProject": "Start a Project",
+      "whatWeBuild": "What we build",
+      "ourStack": "Our stack",
+      "features": {
+        "f1": "Cloud Architecture Design",
+        "f2": "DevOps & CI/CD Pipelines",
+        "f3": "Kubernetes Orchestration",
+        "f4": "Infrastructure as Code",
+        "f5": "Edge Deployment & CDN",
+        "f6": "Monitoring & Observability",
+        "f7": "Security & Compliance",
+        "f8": "Cost Optimization"
+      }
+    },
+    "growth": {
+      "title": "Growth Systems",
+      "subtitle": "SEO, content strategy, marketing automation, and data-driven growth engines that turn traffic into revenue.",
+      "startProject": "Start a Project",
+      "whatWeBuild": "What we build",
+      "ourStack": "Our stack",
+      "features": {
+        "f1": "SEO Engineering",
+        "f2": "Content Strategy & Systems",
+        "f3": "Marketing Automation",
+        "f4": "Analytics & Attribution",
+        "f5": "Conversion Optimization",
+        "f6": "A/B Testing Frameworks",
+        "f7": "Growth Dashboards",
+        "f8": "Data Pipelines"
+      }
+    },
+    "features": {
+      "software": ["Custom Web Apps", "SaaS Platforms", "API Design", "Microservices"],
+      "ai": ["LLM Integration", "RAG Systems", "AI Agents", "Model Fine-tuning"],
+      "cloud": ["Cloud Architecture", "DevOps & CI/CD", "Kubernetes", "Edge Deployment"],
+      "growth": ["SEO Engineering", "Marketing Automation", "Analytics", "Content Systems"]
+    }
+  },
+  "products": {
+    "overline": "Products",
+    "title": "Technology we build",
+    "subtitle": "We don't just deliver services. We create products that compound in value over time — each project teaches us something that becomes a feature.",
+    "medim": {
+      "tagline": "AI-powered medical intelligence platform",
+      "description": "Diagnostic assistance, medical imaging analysis, and clinical decision support powered by specialized AI models.",
+      "features": ["AI Diagnostic Assistance", "Medical Imaging Analysis", "Clinical Decision Support", "HIPAA Compliant"]
+    },
+    "aiPlatform": {
+      "tagline": "Multi-model AI gateway with intelligent routing",
+      "description": "A unified API that routes requests across multiple LLM providers based on cost, latency, and capability requirements.",
+      "features": ["Multi-model Routing", "Cost Optimization", "Latency-aware", "Fallback & Retry"]
+    },
+    "automation": {
+      "tagline": "Workflow automation and process orchestration",
+      "description": "Visual workflow builder with AI-powered automation for business processes, data pipelines, and integrations.",
+      "features": ["Visual Workflow Builder", "AI-powered Triggers", "200+ Integrations", "Real-time Monitoring"]
+    },
+    "apis": {
+      "tagline": "Developer-first APIs for AI, data, and infrastructure",
+      "description": "A suite of REST and GraphQL APIs for AI inference, data processing, and cloud infrastructure management.",
+      "features": ["REST & GraphQL", "AI Inference", "Data Processing", "Infrastructure Management"]
+    },
+    "status": {
+      "inDevelopment": "In Development",
+      "planned": "Planned"
+    },
+    "cta": {
+      "title": "Interested in our products?",
+      "subtitle": "Get early access or learn how these products can integrate with your business.",
+      "requestAccess": "Request Access"
+    }
+  },
+  "pricing": {
+    "overline": "Pricing",
+    "title": "Simple, transparent pricing",
+    "subtitle": "Choose the plan that fits your stage. No hidden fees, no surprises.",
+    "popular": "Popular",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "For small projects and MVPs.",
+        "price": "$2,500",
+        "period": "/project",
+        "features": ["1 engineering pillar", "Up to 40 hours", "Project-based delivery", "Email support", "30-day warranty"],
+        "cta": "Start a Project"
+      },
+      "growth": {
+        "name": "Growth",
+        "description": "For scaling businesses that need ongoing engineering.",
+        "price": "$8,000",
+        "period": "/month",
+        "features": ["Up to 3 engineering pillars", "Up to 160 hours/month", "Dedicated engineer", "Priority support", "Quarterly roadmap", "90-day warranty"],
+        "cta": "Scale with Us"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For large teams and complex systems.",
+        "price": "Custom",
+        "period": "",
+        "features": ["All 4 engineering pillars", "Unlimited hours", "Dedicated team", "24/7 support", "SLA guarantee", "On-site available", "Custom integrations"],
+        "cta": "Contact Sales"
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "What's included in the hours?",
+      "a1": "Engineering, design, code review, testing, and deployment. Meetings and planning are included.",
+      "q2": "Can I switch plans?",
+      "a2": "Yes, you can upgrade or downgrade anytime. Changes take effect on the next billing cycle.",
+      "q3": "Do you offer custom pricing?",
+      "a3": "For Enterprise clients, we tailor pricing based on scope, team size, and SLA requirements.",
+      "q4": "What technologies do you use?",
+      "a4": "Next.js, TypeScript, Python, Go, Cloudflare, AWS, and modern AI/ML frameworks."
+    }
+  },
+  "company": {
+    "overline": "About Us",
+    "title": "Engineering the future of intelligent software",
+    "subtitle": "Stiamond is an AI & software company that builds products, platforms, and infrastructure for the next generation of digital businesses.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses with AI-powered software, cloud infrastructure, and growth systems that are accessible, scalable, and secure. We turn complex technical challenges into elegant, composable solutions."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "A world where every business — regardless of size — can leverage enterprise-grade AI, software, and cloud systems. We envision a composable ecosystem where innovation compounds through research, products, and platform."
+    },
+    "values": {
+      "overline": "Our Values",
+      "title": "What drives us",
+      "innovation": {
+        "title": "Innovation",
+        "description": "We push boundaries with AI-first thinking and emerging technologies."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "Transparent processes, honest communication, and ethical AI practices."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "We hold ourselves to the highest standards in everything we ship."
+      },
+      "impact": {
+        "title": "Impact",
+        "description": "We build systems that create measurable value for businesses worldwide."
+      }
+    },
+    "milestones": {
+      "overline": "Milestones",
+      "title": "Our journey",
+      "m1": { "year": "2024", "title": "Founded", "description": "Stiamond established with a vision to democratize AI engineering." },
+      "m2": { "year": "2024", "title": "First Products", "description": "Launched MEDIM and AI Platform prototypes." },
+      "m3": { "year": "2025", "title": "Platform Expansion", "description": "Grew to 4 pillars: Software, AI, Cloud, and Growth systems." },
+      "m4": { "year": "2026", "title": "Global Reach", "description": "Edge-deployed infrastructure serving clients across 3 continents." }
+    },
+    "cta": {
+      "title": "Want to join our mission?",
+      "subtitle": "We're always looking for talented engineers, designers, and thinkers.",
+      "viewCareers": "View Careers"
+    }
+  },
+  "contact": {
+    "overline": "Contact",
+    "title": "Let's build something intelligent",
+    "subtitle": "Tell us about your project. We'll get back to you within 24 hours.",
+    "getInTouch": "Get in touch",
+    "getInTouchDesc": "Whether you have a specific project in mind or just want to explore possibilities, we're here to help.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "locationValue": "Remote · Global",
+    "form": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "company": "Company",
+      "projectType": "Project type",
+      "selectType": "Select a type...",
+      "typeAi": "AI Engineering",
+      "typeSoftware": "Software Engineering",
+      "typeCloud": "Cloud Infrastructure",
+      "typeGrowth": "Growth Systems",
+      "typeOther": "Other",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent!",
+      "successDesc": "We'll get back to you within 24 hours."
+    }
+  },
+  "industries": {
+    "overline": "Industries",
+    "title": "Solutions for every sector",
+    "subtitle": "We adapt our AI, software, and cloud expertise to the unique challenges of each industry we serve.",
+    "healthcare": {
+      "title": "Healthcare",
+      "description": "AI-powered diagnostics, medical imaging, patient management, and clinical decision support systems.",
+      "useCases": ["AI Diagnostics", "Medical Imaging", "Patient Records", "Telemedicine"]
+    },
+    "finance": {
+      "title": "Finance",
+      "description": "Fraud detection, risk assessment, algorithmic trading, and automated compliance systems.",
+      "useCases": ["Fraud Detection", "Risk Models", "Trading Bots", "Compliance Automation"]
+    },
+    "retail": {
+      "title": "Retail & E-commerce",
+      "description": "Personalized recommendations, inventory optimization, and AI-driven customer experiences.",
+      "useCases": ["Recommendation Engines", "Inventory AI", "Dynamic Pricing", "Visual Search"]
+    },
+    "manufacturing": {
+      "title": "Manufacturing",
+      "description": "Predictive maintenance, supply chain optimization, and IoT-enabled quality control.",
+      "useCases": ["Predictive Maintenance", "Supply Chain AI", "Quality Control", "IoT Monitoring"]
+    },
+    "education": {
+      "title": "Education",
+      "description": "Personalized learning paths, AI tutoring, and automated assessment systems.",
+      "useCases": ["AI Tutoring", "Adaptive Learning", "Auto-grading", "Content Generation"]
+    },
+    "realEstate": {
+      "title": "Real Estate",
+      "description": "Property valuation, market analysis, virtual tours, and intelligent lead management.",
+      "useCases": ["AI Valuation", "Market Analysis", "Virtual Tours", "Lead Scoring"]
+    }
+  },
+  "caseStudies": {
+    "overline": "Case Studies",
+    "title": "Real projects, real results",
+    "subtitle": "We don't just build software. We deliver measurable business outcomes.",
+    "startProject": "Start your project",
+    "c1": {
+      "client": "MedTech Startup",
+      "sector": "Healthcare",
+      "title": "AI-powered medical intelligence platform",
+      "summary": "Built a HIPAA-compliant AI platform that processes medical literature 10x faster than manual review.",
+      "metrics": { "speed": "Processing speed", "speedValue": "10x faster", "time": "Time to market", "timeValue": "4 months", "compliance": "Compliance", "complianceValue": "HIPAA ready" }
+    },
+    "c2": {
+      "client": "FinTech Scale-up",
+      "sector": "Finance",
+      "title": "Cloud migration with zero downtime",
+      "summary": "Migrated a monolithic PHP application to a composable cloud architecture without service interruption.",
+      "metrics": { "perf": "Performance", "perfValue": "3x improvement", "downtime": "Downtime", "downtimeValue": "0 hours", "cost": "Cost reduction", "costValue": "40% lower" }
+    },
+    "c3": {
+      "client": "E-commerce Brand",
+      "sector": "Retail",
+      "title": "Data-driven growth engine",
+      "summary": "Implemented marketing automation and SEO infrastructure that tripled organic traffic in 6 months.",
+      "metrics": { "traffic": "Organic traffic", "trafficValue": "3x increase", "timeline": "Timeline", "timelineValue": "6 months", "conversion": "Conversion rate", "conversionValue": "+45%" }
+    }
+  },
+  "clientPortal": {
+    "overline": "Client Portal",
+    "title": "Client Portal",
+    "subtitle": "Secure access to your projects, documents, and invoices.",
+    "signIn": "Sign in to your portal",
+    "signInDesc": "Enter your credentials to access your dashboard.",
+    "email": "Email",
+    "password": "Password",
+    "signInBtn": "Sign In",
+    "noAccount": "Don't have an account?",
+    "requestAccess": "Request access",
+    "whatYouGet": "What you get",
+    "features": {
+      "dashboard": { "title": "Project Dashboard", "description": "Track progress, milestones, and deliverables in real time." },
+      "documents": { "title": "Documents", "description": "Access contracts, proposals, and project documentation." },
+      "invoices": { "title": "Invoices", "description": "View and download invoices, payment history, and receipts." }
+    }
+  },
+  "blog": {
+    "overline": "Resources",
+    "title": "Blog",
+    "subtitle": "Insights on AI, software engineering, cloud architecture, and growth systems.",
+    "noPosts": "No posts yet. Check back soon.",
+    "backToBlog": "Back to blog",
+    "allPosts": "All posts"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to your account to continue",
+      "email": "Email",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "signIn": "Sign In",
+      "signingIn": "Signing in...",
+      "invalidCredentials": "Invalid credentials",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up"
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Start building with Stiamond today",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "createAccount": "Create Account",
+      "creating": "Creating account...",
+      "registrationFailed": "Registration failed",
+      "somethingWrong": "Something went wrong",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "overview": "Here's an overview of your account.",
+    "activeProjects": "Active Projects",
+    "documents": "Documents",
+    "pendingInvoices": "Pending Invoices",
+    "updates": "Updates This Week",
+    "recentActivity": "Recent Activity",
+    "noActivity": "No recent activity. Your projects and updates will appear here."
+  },
+  "docs": {
+    "overline": "Documentation",
+    "title": "Guides, references, and tutorials",
+    "subtitle": "Everything you need to build with Stiamond's products and platforms.",
+    "sections": {
+      "gettingStarted": { "title": "Getting Started", "description": "Quick start guides, installation, and project setup.", "links": ["Introduction", "Quick Start", "Project Structure", "Configuration"] },
+      "software": { "title": "Software Engineering", "description": "Architecture patterns, code standards, and best practices.", "links": ["Architecture", "Code Standards", "Testing", "Deployment"] },
+      "ai": { "title": "AI Engineering", "description": "LLM integration, RAG systems, and AI agent development.", "links": ["LLM Integration", "RAG Systems", "AI Agents", "Model Tuning"] },
+      "cloud": { "title": "Cloud Infrastructure", "description": "Deployment, scaling, and infrastructure management.", "links": ["Cloud Setup", "CI/CD", "Kubernetes", "Monitoring"] },
+      "api": { "title": "API Reference", "description": "REST and GraphQL API documentation.", "links": ["Authentication", "REST API", "GraphQL", "Webhooks"] }
+    }
+  },
+  "developers": {
+    "overline": "Developers",
+    "title": "Build with Stiamond",
+    "subtitle": "APIs, SDKs, and tools to integrate AI, cloud, and software capabilities into your applications.",
+    "resources": {
+      "apiRef": { "title": "API Reference", "description": "Full REST and GraphQL API documentation with examples." },
+      "sdks": { "title": "SDKs & Libraries", "description": "Official SDKs for JavaScript, Python, and Go." },
+      "guides": { "title": "Guides & Tutorials", "description": "Step-by-step guides for common integration patterns." },
+      "openSource": { "title": "Open Source", "description": "Explore our open-source projects and contributions." }
+    },
+    "explore": "Explore",
+    "quickStart": "Quick start",
+    "quickStartDesc": "Install the SDK and make your first API call in minutes."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: August 2026",
+    "s1Title": "1. Introduction",
+    "s1Body": "Stiamond (\"we\", \"our\", \"us\") is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your personal data when you use our website and services.",
+    "s2Title": "2. Data We Collect",
+    "s2Body": "We collect the following types of data:",
+    "s2Contact": "Contact data: name, email, company, phone number when you submit forms.",
+    "s2Account": "Account data: email, password (hashed), profile information.",
+    "s2Usage": "Usage data: pages visited, browser type, IP address, timestamps.",
+    "s2Project": "Project data: information you share about your projects and requirements.",
+    "s3Title": "3. How We Use Your Data",
+    "s3Items": ["To provide and maintain our services", "To respond to your inquiries and provide support", "To send project updates and relevant communications", "To improve our website and services", "To comply with legal obligations"],
+    "s4Title": "4. Data Storage & Security",
+    "s4Body": "Your data is stored in encrypted PostgreSQL databases hosted on Neon, with edge delivery via Cloudflare. We use industry-standard encryption (TLS 1.3 in transit, AES-256 at rest) and follow OWASP security practices. Access is restricted via RBAC and audit logging.",
+    "s5Title": "5. Your Rights",
+    "s5Body": "Under GDPR and similar regulations, you have the right to:",
+    "s5Items": ["Access your personal data", "Request correction or deletion", "Object to or restrict processing", "Data portability", "Withdraw consent at any time"],
+    "s6Title": "6. Contact",
+    "s6Body": "For privacy inquiries, contact us at"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: August 2026",
+    "s1Title": "1. Acceptance of Terms",
+    "s1Body": "By accessing or using Stiamond's website and services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.",
+    "s2Title": "2. Services",
+    "s2Body": "Stiamond provides AI engineering, software engineering, cloud infrastructure, and growth systems services. Specific deliverables, timelines, and pricing are defined in individual project agreements.",
+    "s3Title": "3. Intellectual Property",
+    "s3Body": "All custom work delivered to clients is transferred upon full payment, unless otherwise specified in the project agreement. Stiamond retains ownership of its proprietary tools, frameworks, and platform components.",
+    "s4Title": "4. Payment",
+    "s4Body": "Payment terms are defined per project agreement. Invoices are due within 30 days of issuance. Late payments may incur interest charges as permitted by law.",
+    "s5Title": "5. Confidentiality",
+    "s5Body": "Both parties agree to keep confidential all proprietary information shared during the course of engagement. This obligation survives termination of the agreement.",
+    "s6Title": "6. Limitation of Liability",
+    "s6Body": "Stiamond's liability is limited to the fees paid for the specific project giving rise to the claim. We are not liable for indirect, incidental, or consequential damages.",
+    "s7Title": "7. Contact",
+    "s7Body": "For legal inquiries, contact us at"
+  },
+  "security": {
+    "overline": "Security",
+    "title": "Security by design",
+    "subtitle": "Security is not an add-on. It's embedded in every layer of our architecture — from code to infrastructure to operations.",
+    "practices": {
+      "encryption": { "title": "Encryption", "description": "TLS 1.3 in transit, AES-256 at rest. All data encrypted by default." },
+      "rbac": { "title": "RBAC", "description": "Role-based access control with least-privilege principle." },
+      "audit": { "title": "Audit Logs", "description": "Comprehensive logging of all access and modifications." },
+      "scanning": { "title": "Vulnerability Scanning", "description": "Regular dependency audits and automated security scanning." },
+      "compliance": { "title": "Compliance", "description": "GDPR-aligned data handling and OWASP best practices." },
+      "infrastructure": { "title": "Infrastructure", "description": "Edge-deployed on Cloudflare. PostgreSQL on Neon with isolation." }
+    },
+    "disclosure": {
+      "title": "Responsible disclosure",
+      "body": "If you discover a security vulnerability, please report it responsibly to",
+      "commitment": " We commit to acknowledging receipt within 48 hours and providing a fix timeline within 72 hours."
+    }
+  },
+  "common": {
+    "startProject": "Start a Project",
+    "getInTouch": "Get in Touch",
+    "learnMore": "Learn more",
+    "viewAll": "View All Products"
+  },
+  "metadata": {
+    "site": {
+      "title": "Stiamond — AI, Software & Cloud Engineering",
+      "description": "Stiamond designs AI-powered software, cloud infrastructure, and digital growth systems that accelerate business performance."
+    },
+    "home": { "title": "Stiamond — AI, Software & Cloud Engineering", "description": "Stiamond designs AI-powered software, cloud infrastructure, and digital growth systems that accelerate business performance." },
+    "solutions": { "title": "Solutions", "description": "AI Engineering, Software Engineering, Cloud Infrastructure, and Growth Systems." },
+    "solutionsAi": { "title": "AI Engineering", "description": "LLM integration, RAG systems, AI agents, and intelligent automation pipelines." },
+    "solutionsCloud": { "title": "Cloud Infrastructure", "description": "Scalable cloud architecture, DevOps, CI/CD, and infrastructure as code." },
+    "solutionsGrowth": { "title": "Growth Systems", "description": "SEO, content strategy, marketing automation, and data-driven growth engines." },
+    "solutionsSoftware": { "title": "Software Engineering", "description": "Custom software, web platforms, and SaaS products built with modern architecture." },
+    "products": { "title": "Products", "description": "AI-powered products and platforms built by Stiamond." },
+    "industries": { "title": "Industries", "description": "AI, software, and cloud solutions for healthcare, finance, retail, manufacturing, education, and real estate." },
+    "pricing": { "title": "Pricing", "description": "Simple, transparent pricing for AI, software, and cloud engineering services." },
+    "company": { "title": "Company", "description": "Stiamond — AI, Software & Cloud Engineering company. Our mission, vision, and team." },
+    "contact": { "title": "Contact", "description": "Get in touch with Stiamond for your next AI, software, or cloud project." },
+    "caseStudies": { "title": "Case Studies", "description": "Real projects, real results. See how Stiamond delivers measurable business outcomes." },
+    "clientPortal": { "title": "Client Portal", "description": "Access your Stiamond client dashboard." },
+    "blog": { "title": "Blog", "description": "Insights on AI, software engineering, cloud architecture, and growth systems." },
+    "privacy": { "title": "Privacy Policy", "description": "How Stiamond collects, uses, and protects your data." },
+    "terms": { "title": "Terms of Service", "description": "Terms and conditions for using Stiamond's services." },
+    "security": { "title": "Security", "description": "Stiamond's security practices and infrastructure." },
+    "docs": { "title": "Documentation", "description": "Stiamond documentation — guides, API references, and tutorials." },
+    "developers": { "title": "Developers", "description": "Developer resources — API docs, SDKs, code examples, and tools." }
   }
 }

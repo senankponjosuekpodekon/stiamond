@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { AnalyticsProvider } from "@/components/analytics";
 import { headers } from "next/headers";
 import en from "../../messages/en.json";
@@ -41,51 +42,67 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://stiamond.net"),
-  title: {
-    default: "Stiamond — AI, Software & Cloud Engineering",
-    template: "%s — Stiamond",
-  },
-  description:
-    "Stiamond conçoit des logiciels, des systèmes d'intelligence artificielle et des infrastructures cloud qui accélèrent la croissance des entreprises.",
-  keywords: [
-    "AI engineering",
-    "software development",
-    "cloud infrastructure",
-    "automation",
-    "digital growth",
-    "Stiamond",
-  ],
-  authors: [{ name: "Stiamond" }],
-  creator: "Stiamond",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    alternateLocale: ["fr_FR"],
-    url: "https://stiamond.net",
-    siteName: "Stiamond",
-    title: "Stiamond — AI, Software & Cloud Engineering",
-    description:
-      "We build AI-powered software, cloud infrastructure and digital growth systems.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Stiamond — AI, Software & Cloud Engineering",
-    description:
-      "We build AI-powered software, cloud infrastructure and digital growth systems.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const t = await getTranslations({ locale, namespace: "metadata.site" });
+
+  const ogLocale = locale === "fr" ? "fr_FR" : "en_US";
+  const altLocale = locale === "fr" ? "en_US" : "fr_FR";
+
+  return {
+    metadataBase: new URL("https://stiamond.net"),
+    title: {
+      default: t("title"),
+      template: `%s — Stiamond`,
+    },
+    description: t("description"),
+    keywords: [
+      "AI engineering",
+      "software development",
+      "cloud infrastructure",
+      "automation",
+      "digital growth",
+      "Stiamond",
+      "ingénierie IA",
+      "développement logiciel",
+      "infrastructure cloud",
+      "croissance digitale",
+    ],
+    authors: [{ name: "Stiamond" }],
+    creator: "Stiamond",
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      alternateLocale: [altLocale],
+      url: "https://stiamond.net",
+      siteName: "Stiamond",
+      title: t("title"),
+      description: t("description"),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+    },
+    robots: {
       index: true,
       follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
-  },
-};
+    alternates: {
+      languages: {
+        en: "https://stiamond.net",
+        fr: "https://stiamond.net/fr",
+        "x-default": "https://stiamond.net",
+      },
+    },
+  };
+}
 
 const themeScript = `
 (function() {
@@ -110,7 +127,7 @@ export default async function RootLayout({
       <head suppressHydrationWarning>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <link rel="alternate" hrefLang="en" href="https://stiamond.net" />
-        <link rel="alternate" hrefLang="fr" href="https://stiamond.net?lang=fr" />
+        <link rel="alternate" hrefLang="fr" href="https://stiamond.net/fr" />
         <link rel="alternate" hrefLang="x-default" href="https://stiamond.net" />
       </head>
       <body

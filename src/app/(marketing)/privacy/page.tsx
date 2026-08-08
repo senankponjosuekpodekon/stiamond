@@ -1,80 +1,76 @@
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "How Stiamond collects, uses, and protects your data.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata("privacy");
+}
 
 export default function PrivacyPage() {
+  const t = useTranslations("privacy");
+  const s3Items = t.raw("s3Items") as string[];
+  const s5Items = t.raw("s5Items") as string[];
+
   return (
     <Container>
       <div className="py-20 md:py-28">
-        <h1 className="text-h1">Privacy Policy</h1>
-        <p className="mt-4 text-body-sm text-muted-foreground">Last updated: August 2026</p>
+        <h1 className="text-h1">{t("title")}</h1>
+        <p className="mt-4 text-body-sm text-muted-foreground">{t("lastUpdated")}</p>
 
         <div className="mt-12 max-w-3xl space-y-8">
           <section>
-            <h2 className="text-h4">1. Introduction</h2>
+            <h2 className="text-h4">{t("s1Title")}</h2>
             <p className="mt-4 text-body text-muted-foreground">
-              Stiamond (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your privacy.
-              This policy explains how we collect, use, and safeguard your personal data
-              when you use our website and services.
+              {t("s1Body")}
             </p>
           </section>
 
           <section>
-            <h2 className="text-h4">2. Data We Collect</h2>
+            <h2 className="text-h4">{t("s2Title")}</h2>
             <p className="mt-4 text-body text-muted-foreground">
-              We collect the following types of data:
+              {t("s2Body")}
             </p>
             <ul className="mt-4 space-y-2 text-body text-muted-foreground">
-              <li><strong className="text-foreground">Contact data:</strong> name, email, company, phone number when you submit forms.</li>
-              <li><strong className="text-foreground">Account data:</strong> email, password (hashed), profile information.</li>
-              <li><strong className="text-foreground">Usage data:</strong> pages visited, browser type, IP address, timestamps.</li>
-              <li><strong className="text-foreground">Project data:</strong> information you share about your projects and requirements.</li>
+              <li>{t("s2Contact")}</li>
+              <li>{t("s2Account")}</li>
+              <li>{t("s2Usage")}</li>
+              <li>{t("s2Project")}</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-h4">3. How We Use Your Data</h2>
+            <h2 className="text-h4">{t("s3Title")}</h2>
             <ul className="mt-4 space-y-2 text-body text-muted-foreground">
-              <li>To provide and maintain our services</li>
-              <li>To respond to your inquiries and provide support</li>
-              <li>To send project updates and relevant communications</li>
-              <li>To improve our website and services</li>
-              <li>To comply with legal obligations</li>
+              {s3Items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
           </section>
 
           <section>
-            <h2 className="text-h4">4. Data Storage & Security</h2>
+            <h2 className="text-h4">{t("s4Title")}</h2>
             <p className="mt-4 text-body text-muted-foreground">
-              Your data is stored in encrypted PostgreSQL databases hosted on Neon,
-              with edge delivery via Cloudflare. We use industry-standard encryption
-              (TLS 1.3 in transit, AES-256 at rest) and follow OWASP security practices.
-              Access is restricted via RBAC and audit logging.
+              {t("s4Body")}
             </p>
           </section>
 
           <section>
-            <h2 className="text-h4">5. Your Rights</h2>
+            <h2 className="text-h4">{t("s5Title")}</h2>
             <p className="mt-4 text-body text-muted-foreground">
-              Under GDPR and similar regulations, you have the right to:
+              {t("s5Body")}
             </p>
             <ul className="mt-4 space-y-2 text-body text-muted-foreground">
-              <li>Access your personal data</li>
-              <li>Request correction or deletion</li>
-              <li>Object to or restrict processing</li>
-              <li>Data portability</li>
-              <li>Withdraw consent at any time</li>
+              {s5Items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
           </section>
 
           <section>
-            <h2 className="text-h4">6. Contact</h2>
+            <h2 className="text-h4">{t("s6Title")}</h2>
             <p className="mt-4 text-body text-muted-foreground">
-              For privacy inquiries, contact us at{" "}
+              {t("s6Body")}{" "}
               <a href="mailto:privacy@stiamond.net" className="text-primary hover:underline">privacy@stiamond.net</a>.
             </p>
           </section>

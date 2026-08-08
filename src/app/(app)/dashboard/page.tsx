@@ -1,20 +1,23 @@
+import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FolderKanban, FileText, CreditCard, Activity } from "lucide-react";
 
-const stats = [
-  { icon: FolderKanban, label: "Active Projects", value: "0" },
-  { icon: FileText, label: "Documents", value: "0" },
-  { icon: CreditCard, label: "Pending Invoices", value: "0" },
-  { icon: Activity, label: "Updates This Week", value: "0" },
-];
-
 export default function AppDashboard() {
+  const t = useTranslations("dashboard");
+
+  const stats = [
+    { icon: FolderKanban, label: t("activeProjects"), value: "0" },
+    { icon: FileText, label: t("documents"), value: "0" },
+    { icon: CreditCard, label: t("pendingInvoices"), value: "0" },
+    { icon: Activity, label: t("updates"), value: "0" },
+  ];
+
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-h3">Welcome back</h2>
+        <h2 className="text-h3">{t("welcome")}</h2>
         <p className="mt-2 text-body text-muted-foreground">
-          Here&apos;s an overview of your account.
+          {t("overview")}
         </p>
       </div>
 
@@ -36,11 +39,11 @@ export default function AppDashboard() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-h5">Recent Activity</CardTitle>
+          <CardTitle className="text-h5">{t("recentActivity")}</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-body-sm text-muted-foreground">
-            No recent activity. Your projects and updates will appear here.
+            {t("noActivity")}
           </p>
         </CardContent>
       </Card>

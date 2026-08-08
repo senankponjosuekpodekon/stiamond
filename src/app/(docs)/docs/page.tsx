@@ -1,57 +1,60 @@
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { Card, CardContent } from "@/components/ui/card";
 import { Book, Code, Cloud, Brain, Server, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Documentation",
-  description: "Stiamond documentation — guides, API references, and tutorials.",
-};
-
-const sections = [
-  {
-    icon: Book,
-    title: "Getting Started",
-    description: "Quick start guides, installation, and project setup.",
-    links: ["Introduction", "Quick Start", "Project Structure", "Configuration"],
-  },
-  {
-    icon: Code,
-    title: "Software Engineering",
-    description: "Architecture patterns, code standards, and best practices.",
-    links: ["Architecture", "Code Standards", "Testing", "Deployment"],
-  },
-  {
-    icon: Brain,
-    title: "AI Engineering",
-    description: "LLM integration, RAG systems, and AI agent development.",
-    links: ["LLM Integration", "RAG Systems", "AI Agents", "Model Tuning"],
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Infrastructure",
-    description: "Deployment, scaling, and infrastructure management.",
-    links: ["Cloud Setup", "CI/CD", "Kubernetes", "Monitoring"],
-  },
-  {
-    icon: Server,
-    title: "API Reference",
-    description: "REST and GraphQL API documentation.",
-    links: ["Authentication", "REST API", "GraphQL", "Webhooks"],
-  },
-];
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata("docs");
+}
 
 export default function DocsPage() {
+  const t = useTranslations("docs");
+
+  const sections = [
+    {
+      icon: Book,
+      title: t("sections.gettingStarted.title"),
+      description: t("sections.gettingStarted.description"),
+      links: t.raw("sections.gettingStarted.links") as string[],
+    },
+    {
+      icon: Code,
+      title: t("sections.software.title"),
+      description: t("sections.software.description"),
+      links: t.raw("sections.software.links") as string[],
+    },
+    {
+      icon: Brain,
+      title: t("sections.ai.title"),
+      description: t("sections.ai.description"),
+      links: t.raw("sections.ai.links") as string[],
+    },
+    {
+      icon: Cloud,
+      title: t("sections.cloud.title"),
+      description: t("sections.cloud.description"),
+      links: t.raw("sections.cloud.links") as string[],
+    },
+    {
+      icon: Server,
+      title: t("sections.api.title"),
+      description: t("sections.api.description"),
+      links: t.raw("sections.api.links") as string[],
+    },
+  ];
+
   return (
     <>
       <section className="border-b border-border bg-gradient-hero">
         <Container>
           <div className="py-16 md:py-20">
-            <p className="text-overline font-semibold uppercase text-accent">Documentation</p>
-            <h1 className="mt-3 text-h1">Guides, references, and tutorials</h1>
+            <p className="text-overline font-semibold uppercase text-accent">{t("overline")}</p>
+            <h1 className="mt-3 text-h1">{t("title")}</h1>
             <p className="mt-4 max-w-2xl text-body-lg text-muted-foreground">
-              Everything you need to build with Stiamond&apos;s products and platforms.
+              {t("subtitle")}
             </p>
           </div>
         </Container>

@@ -14,10 +14,599 @@
     "title": "Construire la prochaine génération de {highlight}",
     "highlight": "logiciels intelligents",
     "subtitle": "Stiamond conçoit des logiciels IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance business.",
-    "cta": "Démarrer un projet",
-    "ctaSecondary": "Explorer les solutions"
+    "ctaPrimary": "Démarrer un projet",
+    "ctaSecondary": "Explorer les solutions",
+    "stats": {
+      "pillars": "Piliers d'expertise",
+      "pages": "Pages d'architecture",
+      "lighthouse": "Objectif Lighthouse",
+      "roadmap": "Vision roadmap"
+    },
+    "pillars": {
+      "overline": "Notre expertise",
+      "title": "Quatre piliers d'ingénierie",
+      "subtitle": "Nous combinons une expertise technique approfondie avec une réflexion stratégique pour livrer des systèmes qui passent à l'échelle.",
+      "software": {
+        "title": "Ingénierie Logicielle",
+        "description": "Logiciels sur mesure, plateformes web et produits SaaS construits avec une architecture moderne."
+      },
+      "ai": {
+        "title": "Ingénierie IA",
+        "description": "Intégration LLM, systèmes RAG, agents IA et pipelines d'automatisation intelligents."
+      },
+      "cloud": {
+        "title": "Infrastructure Cloud",
+        "description": "Architecture cloud scalable, DevOps, CI/CD et infrastructure as code."
+      },
+      "growth": {
+        "title": "Systèmes de Croissance",
+        "description": "SEO, stratégie de contenu, automatisation marketing et moteurs de croissance data-driven."
+      }
+    },
+    "products": {
+      "overline": "Produits",
+      "title": "La technologie que nous construisons",
+      "subtitle": "Nous ne livrons pas seulement des services. Nous créons des produits dont la valeur augmente avec le temps.",
+      "viewAll": "Voir tous les produits",
+      "medim": "Plateforme d'intelligence médicale par IA",
+      "aiPlatform": "Passerelle IA multi-modèles avec routage intelligent",
+      "automation": "Automatisation de workflows et orchestration de processus",
+      "apis": "APIs developer-first pour l'IA, les données et l'infrastructure"
+    },
+    "values": {
+      "overline": "Pourquoi Stiamond",
+      "title": "Conçu pour la confiance",
+      "subtitle": "Chaque système que nous construisons suit les mêmes principes — sécurité, échelle et composabilité.",
+      "security": {
+        "title": "Sécurité d'abord",
+        "description": "RBAC, JWT, WAF, logs d'audit — niveau entreprise par défaut."
+      },
+      "scale": {
+        "title": "Échelle Mondiale",
+        "description": "Déployé en edge sur Cloudflare. Sous 50ms dans le monde entier."
+      },
+      "composable": {
+        "title": "Composable",
+        "description": "Architecture modulaire. Chaque couche est indépendamment scalable."
+      }
+    },
+    "philosophy": {
+      "overline": "Notre philosophie",
+      "title": "De la recherche à l'écosystème",
+      "subtitle": "Chaque projet est une opportunité d'apprendre. Chaque apprentissage devient une fonctionnalité. Chaque fonctionnalité devient un produit. Chaque produit enrichit la plateforme.",
+      "research": "Recherche",
+      "prototypes": "Prototypes",
+      "services": "Services",
+      "caseStudies": "Études de cas",
+      "productsStep": "Produits",
+      "platform": "Plateforme",
+      "ecosystem": "Écosystème"
+    },
+    "cta": {
+      "title": "Prêt à construire quelque chose d'intelligent ?",
+      "subtitle": "Discutons de la façon dont Stiamond peut vous aider à concevoir votre prochain système digital.",
+      "getInTouch": "Nous contacter",
+      "viewPricing": "Voir les tarifs"
+    }
   },
   "footer": {
-    "rights": "Tous droits réservés."
+    "tagline": "Ingénierie IA, Logicielle & Cloud. Nous construisons des systèmes digitaux intelligents qui accélèrent la croissance business.",
+    "company": "Entreprise",
+    "solutions": "Solutions",
+    "products": "Produits",
+    "resources": "Ressources",
+    "about": "À propos",
+    "pricing": "Tarifs",
+    "contact": "Contact",
+    "clientPortal": "Portail Client",
+    "aiEngineering": "Ingénierie IA",
+    "softwareEngineering": "Ingénierie Logicielle",
+    "cloudInfrastructure": "Infrastructure Cloud",
+    "growthSystems": "Systèmes de Croissance",
+    "allProducts": "Tous les produits",
+    "industries": "Industries",
+    "blog": "Blog",
+    "documentation": "Documentation",
+    "developers": "Développeurs",
+    "caseStudies": "Études de cas",
+    "rights": "Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "security": "Sécurité"
+  },
+  "solutions": {
+    "overline": "Solutions",
+    "title": "Quatre piliers d'excellence en ingénierie",
+    "subtitle": "Nous combinons une expertise technique approfondie avec une réflexion stratégique pour livrer des systèmes qui passent à l'échelle — du prototype à la production à la plateforme.",
+    "learnMore": "En savoir plus",
+    "capabilities": {
+      "overline": "Capacités",
+      "title": "Au-delà des piliers",
+      "subtitle": "Des capacités transversales qui améliorent chaque solution que nous livrons.",
+      "automation": {
+        "title": "Automatisation",
+        "description": "Automatisation de workflows et orchestration de processus."
+      },
+      "apis": {
+        "title": "APIs",
+        "description": "APIs developer-first pour l'IA, les données et l'infrastructure."
+      },
+      "integration": {
+        "title": "Intégration",
+        "description": "Intégration transparente avec les systèmes et outils existants."
+      }
+    },
+    "cta": {
+      "title": "Prêt à concevoir votre prochain système ?",
+      "subtitle": "Discutons de la façon dont nos solutions peuvent accélérer votre business.",
+      "getInTouch": "Nous contacter"
+    },
+    "software": {
+      "title": "Ingénierie Logicielle",
+      "subtitle": "Logiciels sur mesure, plateformes web et produits SaaS construits avec une architecture moderne, du code propre et des design patterns scalables.",
+      "startProject": "Démarrer un projet",
+      "whatWeBuild": "Ce que nous construisons",
+      "ourStack": "Notre stack",
+      "features": {
+        "f1": "Applications Web Sur Mesure",
+        "f2": "Développement de Plateformes SaaS",
+        "f3": "Conception & Développement d'APIs",
+        "f4": "Architecture Microservices",
+        "f5": "Systèmes Temps Réel",
+        "f6": "Progressive Web Apps",
+        "f7": "Conception de Bases de Données",
+        "f8": "Revue de Code & Audits"
+      }
+    },
+    "ai": {
+      "title": "Ingénierie IA",
+      "subtitle": "Intégration LLM, systèmes RAG, agents IA et pipelines d'automatisation intelligents qui transforment les capacités IA en systèmes production-ready.",
+      "startProject": "Démarrer un projet",
+      "whatWeBuild": "Ce que nous construisons",
+      "ourStack": "Notre stack",
+      "features": {
+        "f1": "Intégration & Fine-tuning LLM",
+        "f2": "RAG (Génération Augmentée par Recherche)",
+        "f3": "Agents IA & Systèmes Multi-agents",
+        "f4": "Pipelines d'Automatisation Intelligents",
+        "f5": "Bases de Données Vectorielles & Embeddings",
+        "f6": "Évaluation & Monitoring de Modèles",
+        "f7": "Prompt Engineering",
+        "f8": "Sécurité IA & Garde-fous"
+      }
+    },
+    "cloud": {
+      "title": "Infrastructure Cloud",
+      "subtitle": "Architecture cloud scalable, DevOps, CI/CD et infrastructure as code pour des systèmes fiables, sécurisés et économes.",
+      "startProject": "Démarrer un projet",
+      "whatWeBuild": "Ce que nous construisons",
+      "ourStack": "Notre stack",
+      "features": {
+        "f1": "Conception d'Architecture Cloud",
+        "f2": "Pipelines DevOps & CI/CD",
+        "f3": "Orchestration Kubernetes",
+        "f4": "Infrastructure as Code",
+        "f5": "Déploiement Edge & CDN",
+        "f6": "Monitoring & Observabilité",
+        "f7": "Sécurité & Conformité",
+        "f8": "Optimisation des Coûts"
+      }
+    },
+    "growth": {
+      "title": "Systèmes de Croissance",
+      "subtitle": "SEO, stratégie de contenu, automatisation marketing et moteurs de croissance data-driven qui transforment le trafic en revenus.",
+      "startProject": "Démarrer un projet",
+      "whatWeBuild": "Ce que nous construisons",
+      "ourStack": "Notre stack",
+      "features": {
+        "f1": "Ingénierie SEO",
+        "f2": "Stratégie & Systèmes de Contenu",
+        "f3": "Automatisation Marketing",
+        "f4": "Analytics & Attribution",
+        "f5": "Optimisation des Conversions",
+        "f6": "Frameworks A/B Testing",
+        "f7": "Dashboards de Croissance",
+        "f8": "Pipelines de Données"
+      }
+    },
+    "features": {
+      "software": ["Apps Web Sur Mesure", "Plateformes SaaS", "Conception d'API", "Microservices"],
+      "ai": ["Intégration LLM", "Systèmes RAG", "Agents IA", "Fine-tuning de Modèles"],
+      "cloud": ["Architecture Cloud", "DevOps & CI/CD", "Kubernetes", "Déploiement Edge"],
+      "growth": ["Ingénierie SEO", "Automatisation Marketing", "Analytics", "Systèmes de Contenu"]
+    }
+  },
+  "products": {
+    "overline": "Produits",
+    "title": "La technologie que nous construisons",
+    "subtitle": "Nous ne livrons pas seulement des services. Nous créons des produits dont la valeur augmente avec le temps — chaque projet nous apprend quelque chose qui devient une fonctionnalité.",
+    "medim": {
+      "tagline": "Plateforme d'intelligence médicale par IA",
+      "description": "Assistance au diagnostic, analyse d'imagerie médicale et support à la décision clinique propulsés par des modèles IA spécialisés.",
+      "features": ["Assistance au Diagnostic IA", "Analyse d'Imagerie Médicale", "Support à la Décision Clinique", "Conforme HIPAA"]
+    },
+    "aiPlatform": {
+      "tagline": "Passerelle IA multi-modèles avec routage intelligent",
+      "description": "Une API unifiée qui route les requêtes across plusieurs fournisseurs LLM selon le coût, la latence et les capacités requises.",
+      "features": ["Routage Multi-modèles", "Optimisation des Coûts", "Sensible à la Latence", "Fallback & Retry"]
+    },
+    "automation": {
+      "tagline": "Automatisation de workflows et orchestration de processus",
+      "description": "Constructeur de workflows visuel avec automatisation IA pour les processus business, pipelines de données et intégrations.",
+      "features": ["Constructeur de Workflows Visuel", "Déclencheurs IA", "200+ Intégrations", "Monitoring Temps Réel"]
+    },
+    "apis": {
+      "tagline": "APIs developer-first pour l'IA, les données et l'infrastructure",
+      "description": "Une suite d'APIs REST et GraphQL pour l'inférence IA, le traitement de données et la gestion d'infrastructure cloud.",
+      "features": ["REST & GraphQL", "Inférence IA", "Traitement de Données", "Gestion d'Infrastructure"]
+    },
+    "status": {
+      "inDevelopment": "En Développement",
+      "planned": "Planifié"
+    },
+    "cta": {
+      "title": "Intéressé par nos produits ?",
+      "subtitle": "Obtenez un accès anticipé ou découvrez comment ces produits peuvent s'intégrer à votre business.",
+      "requestAccess": "Demander l'accès"
+    }
+  },
+  "pricing": {
+    "overline": "Tarifs",
+    "title": "Des tarifs simples et transparents",
+    "subtitle": "Choisissez le plan adapté à votre étape. Pas de frais cachés, pas de surprises.",
+    "popular": "Populaire",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Pour les petits projets et les MVPs.",
+        "price": "2 500 $",
+        "period": "/projet",
+        "features": ["1 pilier d'ingénierie", "Jusqu'à 40 heures", "Livraison par projet", "Support email", "Garantie 30 jours"],
+        "cta": "Démarrer un projet"
+      },
+      "growth": {
+        "name": "Growth",
+        "description": "Pour les entreprises en croissance qui ont besoin d'ingénierie continue.",
+        "price": "8 000 $",
+        "period": "/mois",
+        "features": ["Jusqu'à 3 piliers d'ingénierie", "Jusqu'à 160 heures/mois", "Ingénieur dédié", "Support prioritaire", "Roadmap trimestrielle", "Garantie 90 jours"],
+        "cta": "Passer à l'échelle avec nous"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Pour les grandes équipes et les systèmes complexes.",
+        "price": "Sur Mesure",
+        "period": "",
+        "features": ["Les 4 piliers d'ingénierie", "Heures illimitées", "Équipe dédiée", "Support 24/7", "Garantie SLA", "Intervention sur site", "Intégrations sur mesure"],
+        "cta": "Contacter les ventes"
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": "Qu'est-ce qui est inclus dans les heures ?",
+      "a1": "Ingénierie, design, revue de code, tests et déploiement. Les réunions et la planification sont incluses.",
+      "q2": "Puis-je changer de plan ?",
+      "a2": "Oui, vous pouvez monter ou descendre de plan à tout moment. Les changements prennent effet au prochain cycle de facturation.",
+      "q3": "Proposez-vous des tarifs personnalisés ?",
+      "a3": "Pour les clients Enterprise, nous adaptons les tarifs selon la portée, la taille de l'équipe et les exigences SLA.",
+      "q4": "Quelles technologies utilisez-vous ?",
+      "a4": "Next.js, TypeScript, Python, Go, Cloudflare, AWS et frameworks AI/ML modernes."
+    }
+  },
+  "company": {
+    "overline": "À Propos",
+    "title": "Concevoir l'avenir du logiciel intelligent",
+    "subtitle": "Stiamond est une entreprise d'IA & de logiciels qui construit des produits, des plateformes et des infrastructures pour la prochaine génération d'entreprises digitales.",
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Donner aux entreprises les moyens d'utiliser des logiciels IA, des infrastructures cloud et des systèmes de croissance accessibles, scalables et sécurisés. Nous transformons les défis techniques complexes en solutions élégantes et composables."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Un monde où chaque entreprise — quelle que soit sa taille — peut exploiter des systèmes IA, logiciels et cloud de niveau entreprise. Nous imaginons un écosystème composable où l'innovation se multiplie par la recherche, les produits et la plateforme."
+    },
+    "values": {
+      "overline": "Nos Valeurs",
+      "title": "Ce qui nous anime",
+      "innovation": {
+        "title": "Innovation",
+        "description": "Nous repoussons les limites avec une réflexion IA-first et les technologies émergentes."
+      },
+      "integrity": {
+        "title": "Intégrité",
+        "description": "Processus transparents, communication honnête et pratiques IA éthiques."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Nous nous tenons aux plus hauts standards dans tout ce que nous livrons."
+      },
+      "impact": {
+        "title": "Impact",
+        "description": "Nous construisons des systèmes qui créent une valeur mesurable pour les entreprises du monde entier."
+      }
+    },
+    "milestones": {
+      "overline": "Jalons",
+      "title": "Notre parcours",
+      "m1": { "year": "2024", "title": "Fondation", "description": "Stiamond créé avec une vision : démocratiser l'ingénierie IA." },
+      "m2": { "year": "2024", "title": "Premiers Produits", "description": "Lancement des prototypes MEDIM et AI Platform." },
+      "m3": { "year": "2025", "title": "Expansion de la Plateforme", "description": "Croissance vers 4 piliers : Logiciel, IA, Cloud et Croissance." },
+      "m4": { "year": "2026", "title": "Portée Mondiale", "description": "Infrastructure déployée en edge servant des clients sur 3 continents." }
+    },
+    "cta": {
+      "title": "Vous voulez rejoindre notre mission ?",
+      "subtitle": "Nous recherchons toujours des ingénieurs, des designers et des penseurs talentueux.",
+      "viewCareers": "Voir les carrières"
+    }
+  },
+  "contact": {
+    "overline": "Contact",
+    "title": "Construisons quelque chose d'intelligent",
+    "subtitle": "Parlez-nous de votre projet. Nous reviendrons vers vous sous 24 heures.",
+    "getInTouch": "Nous contacter",
+    "getInTouchDesc": "Que vous ayez un projet spécifique en tête ou que vous vouliez simplement explorer les possibilités, nous sommes là pour vous aider.",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "locationValue": "Remote · Global",
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "company": "Entreprise",
+      "projectType": "Type de projet",
+      "selectType": "Sélectionner un type...",
+      "typeAi": "Ingénierie IA",
+      "typeSoftware": "Ingénierie Logicielle",
+      "typeCloud": "Infrastructure Cloud",
+      "typeGrowth": "Systèmes de Croissance",
+      "typeOther": "Autre",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-nous de votre projet...",
+      "send": "Envoyer le message",
+      "sending": "Envoi...",
+      "success": "Message envoyé !",
+      "successDesc": "Nous reviendrons vers vous sous 24 heures."
+    }
+  },
+  "industries": {
+    "overline": "Industries",
+    "title": "Des solutions pour chaque secteur",
+    "subtitle": "Nous adaptons notre expertise IA, logicielle et cloud aux défis uniques de chaque industrie que nous servons.",
+    "healthcare": {
+      "title": "Santé",
+      "description": "Diagnostics par IA, imagerie médicale, gestion des patients et systèmes de support à la décision clinique.",
+      "useCases": ["Diagnostics IA", "Imagerie Médicale", "Dossiers Patients", "Télémédecine"]
+    },
+    "finance": {
+      "title": "Finance",
+      "description": "Détection de fraude, évaluation des risques, trading algorithmique et systèmes de conformité automatisés.",
+      "useCases": ["Détection de Fraude", "Modèles de Risque", "Bots de Trading", "Automatisation de Conformité"]
+    },
+    "retail": {
+      "title": "Retail & E-commerce",
+      "description": "Recommandations personnalisées, optimisation des stocks et expériences client pilotées par l'IA.",
+      "useCases": ["Moteurs de Recommandation", "IA Inventaire", "Pricing Dynamique", "Recherche Visuelle"]
+    },
+    "manufacturing": {
+      "title": "Industrie",
+      "description": "Maintenance prédictive, optimisation de la chaîne d'approvisionnement et contrôle qualité IoT.",
+      "useCases": ["Maintenance Prédictive", "IA Chaîne d'Approvisionnement", "Contrôle Qualité", "Monitoring IoT"]
+    },
+    "education": {
+      "title": "Éducation",
+      "description": "Parcours d'apprentissage personnalisés, tutorat IA et systèmes d'évaluation automatisés.",
+      "useCases": ["Tutorat IA", "Apprentissage Adaptatif", "Notation Auto", "Génération de Contenu"]
+    },
+    "realEstate": {
+      "title": "Immobilier",
+      "description": "Évaluation de biens, analyse de marché, visites virtuelles et gestion intelligente des leads.",
+      "useCases": ["Évaluation IA", "Analyse de Marché", "Visites Virtuelles", "Scoring de Leads"]
+    }
+  },
+  "caseStudies": {
+    "overline": "Études de cas",
+    "title": "Des projets réels, des résultats réels",
+    "subtitle": "Nous ne construisons pas que des logiciels. Nous livrons des résultats business mesurables.",
+    "startProject": "Démarrer votre projet",
+    "c1": {
+      "client": "Startup MedTech",
+      "sector": "Santé",
+      "title": "Plateforme d'intelligence médicale par IA",
+      "summary": "Construit une plateforme IA conforme HIPAA qui traite la littérature médicale 10x plus vite que la revue manuelle.",
+      "metrics": { "speed": "Vitesse de traitement", "speedValue": "10x plus rapide", "time": "Time to market", "timeValue": "4 mois", "compliance": "Conformité", "complianceValue": "HIPAA ready" }
+    },
+    "c2": {
+      "client": "Scale-up FinTech",
+      "sector": "Finance",
+      "title": "Migration cloud sans interruption",
+      "summary": "Migration d'une application PHP monolithique vers une architecture cloud composable sans interruption de service.",
+      "metrics": { "perf": "Performance", "perfValue": "3x amélioration", "downtime": "Downtime", "downtimeValue": "0 heures", "cost": "Réduction des coûts", "costValue": "-40%" }
+    },
+    "c3": {
+      "client": "Marque E-commerce",
+      "sector": "Retail",
+      "title": "Moteur de croissance data-driven",
+      "summary": "Implémentation d'automatisation marketing et d'infrastructure SEO qui a triplé le trafic organique en 6 mois.",
+      "metrics": { "traffic": "Trafic organique", "trafficValue": "3x augmentation", "timeline": "Durée", "timelineValue": "6 mois", "conversion": "Taux de conversion", "conversionValue": "+45%" }
+    }
+  },
+  "clientPortal": {
+    "overline": "Portail Client",
+    "title": "Portail Client",
+    "subtitle": "Accès sécurisé à vos projets, documents et factures.",
+    "signIn": "Connectez-vous à votre portail",
+    "signInDesc": "Entrez vos identifiants pour accéder à votre tableau de bord.",
+    "email": "Email",
+    "password": "Mot de passe",
+    "signInBtn": "Se connecter",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "requestAccess": "Demander l'accès",
+    "whatYouGet": "Ce que vous obtenez",
+    "features": {
+      "dashboard": { "title": "Tableau de Bord Projet", "description": "Suivez la progression, les jalons et les livrables en temps réel." },
+      "documents": { "title": "Documents", "description": "Accédez aux contrats, propositions et documentation de projet." },
+      "invoices": { "title": "Factures", "description": "Consultez et téléchargez les factures, l'historique de paiement et les reçus." }
+    }
+  },
+  "blog": {
+    "overline": "Ressources",
+    "title": "Blog",
+    "subtitle": "Insights sur l'IA, l'ingénierie logicielle, l'architecture cloud et les systèmes de croissance.",
+    "noPosts": "Aucun article pour le moment. Revenez bientôt.",
+    "backToBlog": "Retour au blog",
+    "allPosts": "Tous les articles"
+  },
+  "auth": {
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous à votre compte pour continuer",
+      "email": "Email",
+      "password": "Mot de passe",
+      "forgotPassword": "Mot de passe oublié ?",
+      "signIn": "Se connecter",
+      "signingIn": "Connexion...",
+      "invalidCredentials": "Identifiants invalides",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "signUp": "S'inscrire"
+    },
+    "register": {
+      "title": "Créez votre compte",
+      "subtitle": "Commencez à construire avec Stiamond dès aujourd'hui",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "password": "Mot de passe",
+      "createAccount": "Créer le compte",
+      "creating": "Création du compte...",
+      "registrationFailed": "Échec de l'inscription",
+      "somethingWrong": "Une erreur est survenue",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "signIn": "Se connecter"
+    }
+  },
+  "dashboard": {
+    "welcome": "Bon retour",
+    "overview": "Voici un aperçu de votre compte.",
+    "activeProjects": "Projets Actifs",
+    "documents": "Documents",
+    "pendingInvoices": "Factures en Attente",
+    "updates": "Mises à Jour Cette Semaine",
+    "recentActivity": "Activité Récente",
+    "noActivity": "Aucune activité récente. Vos projets et mises à jour apparaîtront ici."
+  },
+  "docs": {
+    "overline": "Documentation",
+    "title": "Guides, références et tutoriels",
+    "subtitle": "Tout ce dont vous avez besoin pour construire avec les produits et plateformes de Stiamond.",
+    "sections": {
+      "gettingStarted": { "title": "Démarrage", "description": "Guides de démarrage rapide, installation et configuration de projet.", "links": ["Introduction", "Démarrage Rapide", "Structure du Projet", "Configuration"] },
+      "software": { "title": "Ingénierie Logicielle", "description": "Patterns d'architecture, standards de code et bonnes pratiques.", "links": ["Architecture", "Standards de Code", "Tests", "Déploiement"] },
+      "ai": { "title": "Ingénierie IA", "description": "Intégration LLM, systèmes RAG et développement d'agents IA.", "links": ["Intégration LLM", "Systèmes RAG", "Agents IA", "Tuning de Modèles"] },
+      "cloud": { "title": "Infrastructure Cloud", "description": "Déploiement, scaling et gestion d'infrastructure.", "links": ["Configuration Cloud", "CI/CD", "Kubernetes", "Monitoring"] },
+      "api": { "title": "Référence API", "description": "Documentation des APIs REST et GraphQL.", "links": ["Authentification", "API REST", "GraphQL", "Webhooks"] }
+    }
+  },
+  "developers": {
+    "overline": "Développeurs",
+    "title": "Construisez avec Stiamond",
+    "subtitle": "APIs, SDKs et outils pour intégrer les capacités IA, cloud et logicielles dans vos applications.",
+    "resources": {
+      "apiRef": { "title": "Référence API", "description": "Documentation complète des APIs REST et GraphQL avec exemples." },
+      "sdks": { "title": "SDKs & Bibliothèques", "description": "SDKs officiels pour JavaScript, Python et Go." },
+      "guides": { "title": "Guides & Tutoriels", "description": "Guides pas à pas pour les patterns d'intégration courants." },
+      "openSource": { "title": "Open Source", "description": "Explorez nos projets open-source et nos contributions." }
+    },
+    "explore": "Explorer",
+    "quickStart": "Démarrage rapide",
+    "quickStartDesc": "Installez le SDK et faites votre premier appel API en quelques minutes."
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour : Août 2026",
+    "s1Title": "1. Introduction",
+    "s1Body": "Stiamond (« nous », « notre ») s'engage à protéger votre confidentialité. Cette politique explique comment nous collectons, utilisons et protégeons vos données personnelles lorsque vous utilisez notre site web et nos services.",
+    "s2Title": "2. Données que nous collectons",
+    "s2Body": "Nous collectons les types de données suivants :",
+    "s2Contact": "Données de contact : nom, email, entreprise, numéro de téléphone lorsque vous soumettez des formulaires.",
+    "s2Account": "Données de compte : email, mot de passe (haché), informations de profil.",
+    "s2Usage": "Données d'utilisation : pages visitées, type de navigateur, adresse IP, horodatages.",
+    "s2Project": "Données de projet : informations que vous partagez sur vos projets et exigences.",
+    "s3Title": "3. Comment nous utilisons vos données",
+    "s3Items": ["Pour fournir et maintenir nos services", "Pour répondre à vos demandes et fournir un support", "Pour envoyer des mises à jour de projet et des communications pertinentes", "Pour améliorer notre site web et nos services", "Pour nous conformer aux obligations légales"],
+    "s4Title": "4. Stockage & Sécurité des Données",
+    "s4Body": "Vos données sont stockées dans des bases de données PostgreSQL chiffrées hébergées sur Neon, avec une livraison en edge via Cloudflare. Nous utilisons un chiffrement standard de l'industrie (TLS 1.3 en transit, AES-256 au repos) et suivons les pratiques de sécurité OWASP. L'accès est restreint via RBAC et logs d'audit.",
+    "s5Title": "5. Vos Droits",
+    "s5Body": "Conformément au RGPD et réglementations similaires, vous avez le droit de :",
+    "s5Items": ["Accéder à vos données personnelles", "Demander une correction ou une suppression", "Vous opposer au traitement ou le restreindre", "Portabilité des données", "Retirer votre consentement à tout moment"],
+    "s6Title": "6. Contact",
+    "s6Body": "Pour toute question relative à la confidentialité, contactez-nous à"
+  },
+  "terms": {
+    "title": "Conditions d'Utilisation",
+    "lastUpdated": "Dernière mise à jour : Août 2026",
+    "s1Title": "1. Acceptation des Conditions",
+    "s1Body": "En accédant ou en utilisant le site web et les services de Stiamond, vous acceptez d'être lié par ces Conditions d'Utilisation. Si vous n'acceptez pas, veuillez ne pas utiliser nos services.",
+    "s2Title": "2. Services",
+    "s2Body": "Stiamond fournit des services d'ingénierie IA, d'ingénierie logicielle, d'infrastructure cloud et de systèmes de croissance. Les livrables spécifiques, les délais et les tarifs sont définis dans des accords de projet individuels.",
+    "s3Title": "3. Propriété Intellectuelle",
+    "s3Body": "Tout travail personnalisé livré aux clients est transféré après paiement intégral, sauf indication contraire dans l'accord de projet. Stiamond conserve la propriété de ses outils propriétaires, frameworks et composants de plateforme.",
+    "s4Title": "4. Paiement",
+    "s4Body": "Les conditions de paiement sont définies par accord de projet. Les factures sont dues dans les 30 jours suivant l'émission. Les retards de paiement peuvent entraîner des intérêts conformément à la loi.",
+    "s5Title": "5. Confidentialité",
+    "s5Body": "Les deux parties s'engagent à garder confidentielles toutes les informations propriétaires partagées durant l'engagement. Cette obligation survit à la résiliation de l'accord.",
+    "s6Title": "6. Limitation de Responsabilité",
+    "s6Body": "La responsabilité de Stiamond est limitée aux frais payés pour le projet spécifique à l'origine de la réclamation. Nous ne sommes pas responsables des dommages indirects, accessoires ou consécutifs.",
+    "s7Title": "7. Contact",
+    "s7Body": "Pour toute question juridique, contactez-nous à"
+  },
+  "security": {
+    "overline": "Sécurité",
+    "title": "La sécurité par design",
+    "subtitle": "La sécurité n'est pas un add-on. Elle est intégrée dans chaque couche de notre architecture — du code à l'infrastructure aux opérations.",
+    "practices": {
+      "encryption": { "title": "Chiffrement", "description": "TLS 1.3 en transit, AES-256 au repos. Toutes les données chiffrées par défaut." },
+      "rbac": { "title": "RBAC", "description": "Contrôle d'accès basé sur les rôles avec principe du moindre privilège." },
+      "audit": { "title": "Logs d'Audit", "description": "Journalisation complète de tous les accès et modifications." },
+      "scanning": { "title": "Scan de Vulnérabilités", "description": "Audits réguliers des dépendances et scan de sécurité automatisé." },
+      "compliance": { "title": "Conformité", "description": "Traitement des données aligné RGPD et bonnes pratiques OWASP." },
+      "infrastructure": { "title": "Infrastructure", "description": "Déployé en edge sur Cloudflare. PostgreSQL sur Neon avec isolation." }
+    },
+    "disclosure": {
+      "title": "Divulgation responsable",
+      "body": "Si vous découvrez une vulnérabilité de sécurité, veuillez la signaler de manière responsable à",
+      "commitment": " Nous nous engageons à accuser réception sous 48 heures et à fournir un calendrier de correctif sous 72 heures."
+    }
+  },
+  "common": {
+    "startProject": "Démarrer un projet",
+    "getInTouch": "Nous contacter",
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tous les produits"
+  },
+  "metadata": {
+    "site": {
+      "title": "Stiamond — IA, Logiciel & Cloud",
+      "description": "Stiamond conçoit des logiciels propulsés par l'IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance des entreprises."
+    },
+    "home": { "title": "Stiamond — IA, Logiciel & Cloud", "description": "Stiamond conçoit des logiciels propulsés par l'IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance des entreprises." },
+    "solutions": { "title": "Solutions", "description": "Ingénierie IA, Ingénierie Logicielle, Infrastructure Cloud et Systèmes de Croissance." },
+    "solutionsAi": { "title": "Ingénierie IA", "description": "Intégration LLM, systèmes RAG, agents IA et pipelines d'automatisation intelligente." },
+    "solutionsCloud": { "title": "Infrastructure Cloud", "description": "Architecture cloud scalable, DevOps, CI/CD et infrastructure as code." },
+    "solutionsGrowth": { "title": "Systèmes de Croissance", "description": "SEO, stratégie de contenu, automatisation marketing et moteurs de croissance data-driven." },
+    "solutionsSoftware": { "title": "Ingénierie Logicielle", "description": "Logiciels sur mesure, plateformes web et produits SaaS construits avec une architecture moderne." },
+    "products": { "title": "Produits", "description": "Produits et plateformes propulsés par l'IA, construits par Stiamond." },
+    "industries": { "title": "Industries", "description": "Solutions IA, logicielles et cloud pour la santé, la finance, le retail, l'industrie, l'éducation et l'immobilier." },
+    "pricing": { "title": "Tarifs", "description": "Tarification simple et transparente pour les services d'ingénierie IA, logicielle et cloud." },
+    "company": { "title": "Entreprise", "description": "Stiamond — Entreprise d'ingénierie IA, Logiciel & Cloud. Notre mission, vision et équipe." },
+    "contact": { "title": "Contact", "description": "Contactez Stiamond pour votre prochain projet IA, logiciel ou cloud." },
+    "caseStudies": { "title": "Études de Cas", "description": "Des projets réels, des résultats réels. Découvrez comment Stiamond livre des résultats commerciaux mesurables." },
+    "clientPortal": { "title": "Espace Client", "description": "Accédez à votre tableau de bord client Stiamond." },
+    "blog": { "title": "Blog", "description": "Insights sur l'IA, l'ingénierie logicielle, l'architecture cloud et les systèmes de croissance." },
+    "privacy": { "title": "Politique de Confidentialité", "description": "Comment Stiamond collecte, utilise et protège vos données." },
+    "terms": { "title": "Conditions d'Utilisation", "description": "Conditions d'utilisation des services de Stiamond." },
+    "security": { "title": "Sécurité", "description": "Pratiques de sécurité et infrastructure de Stiamond." },
+    "docs": { "title": "Documentation", "description": "Documentation Stiamond — guides, références API et tutoriels." },
+    "developers": { "title": "Développeurs", "description": "Ressources développeur — docs API, SDKs, exemples de code et outils." }
   }
 }

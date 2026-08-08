@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,6 +10,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function RegisterPage() {
+  const t = useTranslations("auth.register");
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -35,7 +37,7 @@ export default function RegisterPage() {
 
       if (!res.ok) {
         const err = await res.json();
-        setError(err.error || "Registration failed");
+        setError(err.error || t("registrationFailed"));
         setLoading(false);
         return;
       }
@@ -43,7 +45,7 @@ export default function RegisterPage() {
       router.push("/login");
       router.refresh();
     } catch {
-      setError("Something went wrong");
+      setError(t("somethingWrong"));
       setLoading(false);
     }
   };
@@ -55,9 +57,9 @@ export default function RegisterPage() {
           <Link href="/" className="inline-block">
             <span className="text-h3 font-bold">Stiamond</span>
           </Link>
-          <h1 className="mt-6 text-h3">Create your account</h1>
+          <h1 className="mt-6 text-h3">{t("title")}</h1>
           <p className="mt-2 text-body-sm text-muted-foreground">
-            Start building with Stiamond today
+            {t("subtitle")}
           </p>
         </div>
 
@@ -71,32 +73,32 @@ export default function RegisterPage() {
               )}
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
-                  <label className="text-body-sm font-medium">First name</label>
+                  <label className="text-body-sm font-medium">{t("firstName")}</label>
                   <Input name="firstName" placeholder="John" className="mt-2" required />
                 </div>
                 <div>
-                  <label className="text-body-sm font-medium">Last name</label>
+                  <label className="text-body-sm font-medium">{t("lastName")}</label>
                   <Input name="lastName" placeholder="Doe" className="mt-2" required />
                 </div>
               </div>
               <div>
-                <label className="text-body-sm font-medium">Email</label>
+                <label className="text-body-sm font-medium">{t("email")}</label>
                 <Input name="email" type="email" placeholder="you@company.com" className="mt-2" required />
               </div>
               <div>
-                <label className="text-body-sm font-medium">Password</label>
+                <label className="text-body-sm font-medium">{t("password")}</label>
                 <Input name="password" type="password" placeholder="••••••••" className="mt-2" required />
               </div>
               <Button type="submit" variant="primary" size="lg" className="w-full" disabled={loading}>
-                {loading ? "Creating account..." : "Create Account"}
+                {loading ? t("creating") : t("createAccount")}
                 {!loading && <ArrowRight className="h-4 w-4" />}
               </Button>
             </form>
 
             <p className="mt-6 text-center text-body-sm text-muted-foreground">
-              Already have an account?{" "}
+              {t("haveAccount")}{" "}
               <Link href="/login" className="font-medium text-primary hover:underline">
-                Sign in
+                {t("signIn")}
               </Link>
             </p>
           </CardContent>

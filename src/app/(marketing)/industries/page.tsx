@@ -1,63 +1,65 @@
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { HeartPulse, Banknote, ShoppingCart, Factory, GraduationCap, Building2 } from "lucide-react";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Industries",
-  description: "Industries we serve with AI, software, and cloud solutions.",
-};
-
-const industries = [
-  {
-    icon: HeartPulse,
-    title: "Healthcare",
-    description: "AI-powered diagnostics, medical imaging, patient management, and clinical decision support systems.",
-    useCases: ["AI Diagnostics", "Medical Imaging", "Patient Records", "Telemedicine"],
-  },
-  {
-    icon: Banknote,
-    title: "Finance",
-    description: "Fraud detection, risk assessment, algorithmic trading, and automated compliance systems.",
-    useCases: ["Fraud Detection", "Risk Models", "Trading Bots", "Compliance Automation"],
-  },
-  {
-    icon: ShoppingCart,
-    title: "Retail & E-commerce",
-    description: "Personalized recommendations, inventory optimization, and AI-driven customer experiences.",
-    useCases: ["Recommendation Engines", "Inventory AI", "Dynamic Pricing", "Visual Search"],
-  },
-  {
-    icon: Factory,
-    title: "Manufacturing",
-    description: "Predictive maintenance, supply chain optimization, and IoT-enabled quality control.",
-    useCases: ["Predictive Maintenance", "Supply Chain AI", "Quality Control", "IoT Monitoring"],
-  },
-  {
-    icon: GraduationCap,
-    title: "Education",
-    description: "Personalized learning paths, AI tutoring, and automated assessment systems.",
-    useCases: ["AI Tutoring", "Adaptive Learning", "Auto-grading", "Content Generation"],
-  },
-  {
-    icon: Building2,
-    title: "Real Estate",
-    description: "Property valuation, market analysis, virtual tours, and intelligent lead management.",
-    useCases: ["AI Valuation", "Market Analysis", "Virtual Tours", "Lead Scoring"],
-  },
-];
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata("industries");
+}
 
 export default function IndustriesPage() {
+  const t = useTranslations("industries");
+
+  const industries = [
+    {
+      icon: HeartPulse,
+      title: t("healthcare.title"),
+      description: t("healthcare.description"),
+      useCases: t.raw("healthcare.useCases") as string[],
+    },
+    {
+      icon: Banknote,
+      title: t("finance.title"),
+      description: t("finance.description"),
+      useCases: t.raw("finance.useCases") as string[],
+    },
+    {
+      icon: ShoppingCart,
+      title: t("retail.title"),
+      description: t("retail.description"),
+      useCases: t.raw("retail.useCases") as string[],
+    },
+    {
+      icon: Factory,
+      title: t("manufacturing.title"),
+      description: t("manufacturing.description"),
+      useCases: t.raw("manufacturing.useCases") as string[],
+    },
+    {
+      icon: GraduationCap,
+      title: t("education.title"),
+      description: t("education.description"),
+      useCases: t.raw("education.useCases") as string[],
+    },
+    {
+      icon: Building2,
+      title: t("realEstate.title"),
+      description: t("realEstate.description"),
+      useCases: t.raw("realEstate.useCases") as string[],
+    },
+  ];
+
   return (
     <>
       <section className="border-b border-border bg-gradient-hero">
         <Container>
           <div className="py-20 md:py-28">
-            <p className="text-overline font-semibold uppercase text-accent">Industries</p>
-            <h1 className="mt-3 max-w-3xl text-display">Solutions for every sector</h1>
+            <p className="text-overline font-semibold uppercase text-accent">{t("overline")}</p>
+            <h1 className="mt-3 max-w-3xl text-display">{t("title")}</h1>
             <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground">
-              We adapt our AI, software, and cloud expertise to the unique challenges
-              of each industry we serve.
+              {t("subtitle")}
             </p>
           </div>
         </Container>
@@ -66,18 +68,18 @@ export default function IndustriesPage() {
       <section className="py-20 md:py-28">
         <Container>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {industries.map((ind) => (
-              <Card key={ind.title} className="group h-full hover:border-primary/30 hover:shadow-md">
+            {industries.map((industry) => (
+              <Card key={industry.title} className="group h-full hover:border-primary/30 hover:shadow-md">
                 <CardHeader>
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/8 text-primary">
-                    <ind.icon className="h-6 w-6" strokeWidth={1.5} />
+                    <industry.icon className="h-6 w-6" strokeWidth={1.5} />
                   </div>
-                  <CardTitle className="mt-4 text-h5">{ind.title}</CardTitle>
-                  <CardDescription className="mt-2">{ind.description}</CardDescription>
+                  <CardTitle className="mt-4 text-h5">{industry.title}</CardTitle>
+                  <CardDescription className="mt-2">{industry.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
-                    {ind.useCases.map((uc) => (
+                    {industry.useCases.map((uc) => (
                       <span key={uc} className="rounded-md border border-border bg-surface-1 px-2.5 py-1 text-caption font-medium text-muted-foreground">
                         {uc}
                       </span>

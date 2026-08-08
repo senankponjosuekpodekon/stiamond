@@ -1,28 +1,23 @@
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Code, Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Software Engineering",
-  description: "Custom software, web platforms, and SaaS products built with modern architecture.",
-};
-
-const features = [
-  "Custom Web Applications",
-  "SaaS Platform Development",
-  "API Design & Development",
-  "Microservices Architecture",
-  "Real-time Systems",
-  "Progressive Web Apps",
-  "Database Design",
-  "Code Review & Audits",
-];
-
-const stack = ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Redis", "GraphQL", "tRPC", "Prisma"];
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata("solutionsSoftware");
+}
 
 export default function SoftwareSolutionPage() {
+  const t = useTranslations("solutions.software");
+  const features = [
+    t("features.f1"), t("features.f2"), t("features.f3"), t("features.f4"),
+    t("features.f5"), t("features.f6"), t("features.f7"), t("features.f8"),
+  ];
+  const stack = ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Redis", "GraphQL", "tRPC", "Prisma"];
+
   return (
     <>
       <section className="border-b border-border bg-gradient-hero">
@@ -31,15 +26,14 @@ export default function SoftwareSolutionPage() {
             <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/8 text-primary">
               <Code className="h-7 w-7" strokeWidth={1.5} />
             </div>
-            <h1 className="mt-6 max-w-3xl text-display">Software Engineering</h1>
+            <h1 className="mt-6 max-w-3xl text-display">{t("title")}</h1>
             <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground">
-              Custom software, web platforms, and SaaS products built with modern
-              architecture, clean code, and scalable design patterns.
+              {t("subtitle")}
             </p>
             <div className="mt-8">
               <Button variant="primary" size="lg" asChild>
                 <Link href="/contact">
-                  Start a Project
+                  {t("startProject")}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
@@ -52,7 +46,7 @@ export default function SoftwareSolutionPage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="text-h3">What we build</h2>
+              <h2 className="text-h3">{t("whatWeBuild")}</h2>
               <ul className="mt-8 space-y-4">
                 {features.map((f) => (
                   <li key={f} className="flex items-center gap-3">
@@ -65,7 +59,7 @@ export default function SoftwareSolutionPage() {
               </ul>
             </div>
             <div>
-              <h2 className="text-h3">Our stack</h2>
+              <h2 className="text-h3">{t("ourStack")}</h2>
               <div className="mt-8 flex flex-wrap gap-3">
                 {stack.map((tech) => (
                   <span key={tech} className="rounded-lg border border-border bg-surface-1 px-4 py-2 text-body-sm font-medium">

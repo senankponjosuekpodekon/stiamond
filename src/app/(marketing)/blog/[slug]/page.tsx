@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -29,11 +30,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound();
 
   return (
+    <BlogPostView slug={slug} />
+  );
+}
+
+function BlogPostView({ slug }: { slug: string }) {
+  const t = useTranslations("blog");
+  const post = getPostBySlug(slug);
+  if (!post) notFound();
+
+  return (
     <Container size="md">
       <article className="py-20 md:py-28">
         <Link href="/blog" className="inline-flex items-center gap-2 text-body-sm text-muted-foreground hover:text-foreground">
           <ArrowLeft className="h-4 w-4" />
-          Back to blog
+          {t("backToBlog")}
         </Link>
 
         <div className="mt-8 flex items-center gap-3 text-caption text-muted-foreground">
@@ -60,7 +71,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <Button variant="outline" asChild>
             <Link href="/blog">
               <ArrowLeft className="h-4 w-4" />
-              All posts
+              {t("allPosts")}
             </Link>
           </Button>
         </div>

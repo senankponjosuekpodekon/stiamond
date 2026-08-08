@@ -1,63 +1,65 @@
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Code, Brain, Cloud, TrendingUp, Zap, Server, Workflow, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Solutions",
-  description: "AI Engineering, Software Engineering, Cloud Infrastructure, and Growth Systems.",
-};
-
-const solutions = [
-  {
-    icon: Code,
-    title: "Software Engineering",
-    description: "Custom software, web platforms, and SaaS products built with modern architecture.",
-    features: ["Custom Web Apps", "SaaS Platforms", "API Design", "Microservices"],
-    href: "/solutions/software",
-  },
-  {
-    icon: Brain,
-    title: "AI Engineering",
-    description: "LLM integration, RAG systems, AI agents, and intelligent automation pipelines.",
-    features: ["LLM Integration", "RAG Systems", "AI Agents", "Model Fine-tuning"],
-    href: "/solutions/ai",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Infrastructure",
-    description: "Scalable cloud architecture, DevOps, CI/CD, and infrastructure as code.",
-    features: ["Cloud Architecture", "DevOps & CI/CD", "Kubernetes", "Edge Deployment"],
-    href: "/solutions/cloud",
-  },
-  {
-    icon: TrendingUp,
-    title: "Growth Systems",
-    description: "SEO, content strategy, marketing automation, and data-driven growth engines.",
-    features: ["SEO Engineering", "Marketing Automation", "Analytics", "Content Systems"],
-    href: "/solutions/growth",
-  },
-];
-
-const capabilities = [
-  { icon: Zap, title: "Automation", description: "Workflow automation and process orchestration." },
-  { icon: Server, title: "APIs", description: "Developer-first APIs for AI, data, and infrastructure." },
-  { icon: Workflow, title: "Integration", description: "Seamless integration with existing systems and tools." },
-];
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata("solutions");
+}
 
 export default function SolutionsPage() {
+  const t = useTranslations("solutions");
+
+  const solutions = [
+    {
+      icon: Code,
+      title: t("software.title"),
+      description: t("software.subtitle"),
+      features: t.raw("features.software") as string[],
+      href: "/solutions/software",
+    },
+    {
+      icon: Brain,
+      title: t("ai.title"),
+      description: t("ai.subtitle"),
+      features: t.raw("features.ai") as string[],
+      href: "/solutions/ai",
+    },
+    {
+      icon: Cloud,
+      title: t("cloud.title"),
+      description: t("cloud.subtitle"),
+      features: t.raw("features.cloud") as string[],
+      href: "/solutions/cloud",
+    },
+    {
+      icon: TrendingUp,
+      title: t("growth.title"),
+      description: t("growth.subtitle"),
+      features: t.raw("features.growth") as string[],
+      href: "/solutions/growth",
+    },
+  ];
+
+  const capabilities = [
+    { icon: Zap, title: t("capabilities.automation.title"), description: t("capabilities.automation.description") },
+    { icon: Server, title: t("capabilities.apis.title"), description: t("capabilities.apis.description") },
+    { icon: Workflow, title: t("capabilities.integration.title"), description: t("capabilities.integration.description") },
+  ];
+
   return (
     <>
       <section className="border-b border-border bg-gradient-hero">
         <Container>
           <div className="py-20 md:py-28">
-            <p className="text-overline font-semibold uppercase text-accent">Solutions</p>
-            <h1 className="mt-3 max-w-3xl text-display">Four pillars of engineering excellence</h1>
+            <p className="text-overline font-semibold uppercase text-accent">{t("overline")}</p>
+            <h1 className="mt-3 max-w-3xl text-display">{t("title")}</h1>
             <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground">
-              We combine deep technical expertise with strategic thinking to deliver
-              systems that scale — from prototype to production to platform.
+              {t("subtitle")}
             </p>
           </div>
         </Container>
@@ -84,7 +86,7 @@ export default function SolutionsPage() {
                     ))}
                   </div>
                   <Link href={sol.href} className="mt-6 inline-flex items-center gap-1.5 text-body-sm font-medium text-primary hover:gap-2.5 transition-all">
-                    Learn more
+                    {t("learnMore")}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </CardContent>
@@ -97,10 +99,10 @@ export default function SolutionsPage() {
       <section className="border-t border-border bg-surface-1/40 py-20 md:py-28">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-overline font-semibold uppercase text-accent">Capabilities</p>
-            <h2 className="mt-3 text-h2">Beyond the pillars</h2>
+            <p className="text-overline font-semibold uppercase text-accent">{t("capabilities.overline")}</p>
+            <h2 className="mt-3 text-h2">{t("capabilities.title")}</h2>
             <p className="mt-4 text-body-lg text-muted-foreground">
-              Cross-cutting capabilities that enhance every solution we deliver.
+              {t("capabilities.subtitle")}
             </p>
           </div>
           <div className="mt-16 grid gap-6 sm:grid-cols-3">
@@ -120,14 +122,14 @@ export default function SolutionsPage() {
       <section className="border-t border-border py-20 md:py-28">
         <Container>
           <div className="relative overflow-hidden rounded-xl border border-border bg-primary px-8 py-16 text-center md:px-16 md:py-20">
-            <h2 className="text-h2 text-primary-foreground">Ready to engineer your next system?</h2>
+            <h2 className="text-h2 text-primary-foreground">{t("cta.title")}</h2>
             <p className="mx-auto mt-4 max-w-xl text-body-lg text-primary-foreground/80">
-              Let&apos;s discuss how our solutions can accelerate your business.
+              {t("cta.subtitle")}
             </p>
             <div className="mt-8 flex justify-center">
               <Button variant="secondary" size="lg" asChild className="bg-white text-primary hover:bg-white/90">
                 <Link href="/contact">
-                  Get in Touch
+                  {t("cta.getInTouch")}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>

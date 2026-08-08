@@ -1,33 +1,48 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 
-const footerLinks = {
-  Company: [
-    { label: "About", href: "/company" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "Contact", href: "/contact" },
-    { label: "Client Portal", href: "/client-portal" },
-  ],
-  Solutions: [
-    { label: "AI Engineering", href: "/solutions/ai" },
-    { label: "Software Engineering", href: "/solutions/software" },
-    { label: "Cloud Infrastructure", href: "/solutions/cloud" },
-    { label: "Growth Systems", href: "/solutions/growth" },
-  ],
-  Products: [
-    { label: "All Products", href: "/products" },
-    { label: "Industries", href: "/industries" },
-  ],
-  Resources: [
-    { label: "Blog", href: "/blog" },
-    { label: "Documentation", href: "/docs" },
-    { label: "Developers", href: "/developers" },
-    { label: "Case Studies", href: "/case-studies" },
-  ],
-};
-
 export function Footer() {
+  const t = useTranslations("footer");
+
+  const footerLinks = [
+    {
+      title: t("company"),
+      links: [
+        { label: t("about"), href: "/company" },
+        { label: t("pricing"), href: "/pricing" },
+        { label: t("contact"), href: "/contact" },
+        { label: t("clientPortal"), href: "/client-portal" },
+      ],
+    },
+    {
+      title: t("solutions"),
+      links: [
+        { label: t("aiEngineering"), href: "/solutions/ai" },
+        { label: t("softwareEngineering"), href: "/solutions/software" },
+        { label: t("cloudInfrastructure"), href: "/solutions/cloud" },
+        { label: t("growthSystems"), href: "/solutions/growth" },
+      ],
+    },
+    {
+      title: t("products"),
+      links: [
+        { label: t("allProducts"), href: "/products" },
+        { label: t("industries"), href: "/industries" },
+      ],
+    },
+    {
+      title: t("resources"),
+      links: [
+        { label: t("blog"), href: "/blog" },
+        { label: t("documentation"), href: "/docs" },
+        { label: t("developers"), href: "/developers" },
+        { label: t("caseStudies"), href: "/case-studies" },
+      ],
+    },
+  ];
+
   return (
     <footer className="border-t border-border bg-surface-1/50">
       <Container>
@@ -45,18 +60,17 @@ export function Footer() {
                 <span className="text-body font-semibold">Stiamond</span>
               </Link>
               <p className="mt-4 max-w-xs text-body-sm text-muted-foreground">
-                AI, Software & Cloud Engineering. We build intelligent digital
-                systems that accelerate business growth.
+                {t("tagline")}
               </p>
             </div>
 
-            {Object.entries(footerLinks).map(([title, links]) => (
-              <div key={title}>
+            {footerLinks.map((section) => (
+              <div key={section.title}>
                 <h3 className="text-overline font-semibold uppercase text-muted-foreground">
-                  {title}
+                  {section.title}
                 </h3>
                 <ul className="mt-4 space-y-3">
-                  {links.map((link) => (
+                  {section.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
@@ -73,26 +87,26 @@ export function Footer() {
 
           <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
             <p className="text-caption text-muted-foreground">
-              © {new Date().getFullYear()} Stiamond. All rights reserved.
+              © {new Date().getFullYear()} Stiamond. {t("rights")}
             </p>
             <div className="flex items-center gap-6">
               <Link
                 href="/privacy"
                 className="text-caption text-muted-foreground hover:text-foreground"
               >
-                Privacy
+                {t("privacy")}
               </Link>
               <Link
                 href="/terms"
                 className="text-caption text-muted-foreground hover:text-foreground"
               >
-                Terms
+                {t("terms")}
               </Link>
               <Link
                 href="/security"
                 className="text-caption text-muted-foreground hover:text-foreground"
               >
-                Security
+                {t("security")}
               </Link>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,86 +25,56 @@ import {
   Layers,
 } from "lucide-react";
 
-const pillars = [
-  {
-    icon: Code,
-    title: "Software Engineering",
-    description:
-      "Custom software, web platforms, and SaaS products built with modern architecture.",
-    href: "/solutions/software",
-  },
-  {
-    icon: Brain,
-    title: "AI Engineering",
-    description:
-      "LLM integration, RAG systems, AI agents, and intelligent automation pipelines.",
-    href: "/solutions/ai",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Infrastructure",
-    description:
-      "Scalable cloud architecture, DevOps, CI/CD, and infrastructure as code.",
-    href: "/solutions/cloud",
-  },
-  {
-    icon: TrendingUp,
-    title: "Growth Systems",
-    description:
-      "SEO, content strategy, marketing automation, and data-driven growth engines.",
-    href: "/solutions/growth",
-  },
-];
-
-const stats = [
-  { value: "5+", label: "Pillars of Expertise" },
-  { value: "40+", label: "Pages of Architecture" },
-  { value: "100", label: "Lighthouse Target" },
-  { value: "5yr", label: "Roadmap Vision" },
-];
-
-const products = [
-  {
-    icon: Cpu,
-    name: "MEDIM",
-    description: "AI-powered medical intelligence platform",
-  },
-  {
-    icon: Brain,
-    name: "AI Platform",
-    description: "Multi-model AI gateway with intelligent routing",
-  },
-  {
-    icon: Zap,
-    name: "Automation",
-    description: "Workflow automation and process orchestration",
-  },
-  {
-    icon: Server,
-    name: "APIs",
-    description: "Developer-first APIs for AI, data, and infrastructure",
-  },
-];
-
-const values = [
-  {
-    icon: ShieldCheck,
-    title: "Security First",
-    description: "RBAC, JWT, WAF, audit logs — enterprise-grade by default.",
-  },
-  {
-    icon: Globe,
-    title: "Global Scale",
-    description: "Edge-deployed on Cloudflare. Sub-50ms worldwide.",
-  },
-  {
-    icon: Layers,
-    title: "Composable",
-    description: "Modular architecture. Every layer independently scalable.",
-  },
-];
-
 export default function HomePage() {
+  const t = useTranslations("home");
+
+  const pillars = [
+    {
+      icon: Code,
+      title: t("pillars.software.title"),
+      description: t("pillars.software.description"),
+      href: "/solutions/software",
+    },
+    {
+      icon: Brain,
+      title: t("pillars.ai.title"),
+      description: t("pillars.ai.description"),
+      href: "/solutions/ai",
+    },
+    {
+      icon: Cloud,
+      title: t("pillars.cloud.title"),
+      description: t("pillars.cloud.description"),
+      href: "/solutions/cloud",
+    },
+    {
+      icon: TrendingUp,
+      title: t("pillars.growth.title"),
+      description: t("pillars.growth.description"),
+      href: "/solutions/growth",
+    },
+  ];
+
+  const stats = [
+    { value: "5+", label: t("stats.pillars") },
+    { value: "40+", label: t("stats.pages") },
+    { value: "100", label: t("stats.lighthouse") },
+    { value: "5yr", label: t("stats.roadmap") },
+  ];
+
+  const products = [
+    { icon: Cpu, name: "MEDIM", description: t("products.medim") },
+    { icon: Brain, name: "AI Platform", description: t("products.aiPlatform") },
+    { icon: Zap, name: "Automation", description: t("products.automation") },
+    { icon: Server, name: "APIs", description: t("products.apis") },
+  ];
+
+  const values = [
+    { icon: ShieldCheck, title: t("values.security.title"), description: t("values.security.description") },
+    { icon: Globe, title: t("values.scale.title"), description: t("values.scale.description") },
+    { icon: Layers, title: t("values.composable.title"), description: t("values.composable.description") },
+  ];
+
   return (
     <>
       {/* Hero */}
@@ -114,21 +85,21 @@ export default function HomePage() {
             <FadeIn delay={0}>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface-1 px-4 py-1.5 text-caption font-medium text-muted-foreground">
                 <span className="flex h-2 w-2 rounded-full bg-accent" />
-                AI-Powered Engineering
+                {t("badge")}
               </div>
             </FadeIn>
 
             <FadeIn delay={0.1}>
               <h1 className="max-w-4xl text-display">
-                Building the next generation of{" "}
-                <span className="text-gradient">intelligent software</span>
+                {t.rich("title", {
+                  highlight: (chunks) => <span className="text-gradient">{chunks}</span>,
+                })}
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.2}>
               <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground">
-                Stiamond designs AI-powered software, cloud infrastructure, and
-                digital growth systems that accelerate business performance.
+                {t("subtitle")}
               </p>
             </FadeIn>
 
@@ -136,12 +107,12 @@ export default function HomePage() {
               <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
                 <Button variant="primary" size="lg" asChild>
                   <Link href="/contact">
-                    Start a Project
+                    {t("ctaPrimary")}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link href="/solutions">Explore Solutions</Link>
+                  <Link href="/solutions">{t("ctaSecondary")}</Link>
                 </Button>
               </div>
             </FadeIn>
@@ -172,12 +143,11 @@ export default function HomePage() {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-overline font-semibold uppercase text-accent">
-              Our Expertise
+              {t("pillars.overline")}
             </p>
-            <h2 className="mt-3 text-h2">Four pillars of engineering</h2>
+            <h2 className="mt-3 text-h2">{t("pillars.title")}</h2>
             <p className="mt-4 text-body-lg text-muted-foreground">
-              We combine deep technical expertise with strategic thinking to
-              deliver systems that scale.
+              {t("pillars.subtitle")}
             </p>
           </div>
 
@@ -208,12 +178,11 @@ export default function HomePage() {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-overline font-semibold uppercase text-accent">
-              Products
+              {t("products.overline")}
             </p>
-            <h2 className="mt-3 text-h2">Technology we build</h2>
+            <h2 className="mt-3 text-h2">{t("products.title")}</h2>
             <p className="mt-4 text-body-lg text-muted-foreground">
-              We don&apos;t just deliver services. We create products that
-              compound in value over time.
+              {t("products.subtitle")}
             </p>
           </div>
 
@@ -238,7 +207,7 @@ export default function HomePage() {
           <div className="mt-12 text-center">
             <Button variant="outline" asChild>
               <Link href="/products">
-                View All Products
+                {t("products.viewAll")}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
@@ -252,12 +221,11 @@ export default function HomePage() {
           <div className="grid gap-12 lg:grid-cols-3">
             <div className="lg:col-span-1">
               <p className="text-overline font-semibold uppercase text-accent">
-                Why Stiamond
+                {t("values.overline")}
               </p>
-              <h2 className="mt-3 text-h2">Engineered for trust</h2>
+              <h2 className="mt-3 text-h2">{t("values.title")}</h2>
               <p className="mt-4 text-body-lg text-muted-foreground">
-                Every system we build follows the same principles — security,
-                scale, and composability.
+                {t("values.subtitle")}
               </p>
             </div>
 
@@ -283,25 +251,23 @@ export default function HomePage() {
         <Container size="md">
           <div className="text-center">
             <p className="text-overline font-semibold uppercase text-accent">
-              Our Philosophy
+              {t("philosophy.overline")}
             </p>
-            <h2 className="mt-3 text-h2">From research to ecosystem</h2>
+            <h2 className="mt-3 text-h2">{t("philosophy.title")}</h2>
             <p className="mt-4 text-body-lg text-muted-foreground">
-              Every project is an opportunity to learn. Every learning becomes a
-              feature. Every feature becomes a product. Every product enriches
-              the platform.
+              {t("philosophy.subtitle")}
             </p>
           </div>
 
           <div className="mt-16 flex flex-col items-center gap-3">
             {[
-              { icon: Cpu, label: "Research" },
-              { icon: Code, label: "Prototypes" },
-              { icon: Workflow, label: "Services" },
-              { icon: TrendingUp, label: "Case Studies" },
-              { icon: Zap, label: "Products" },
-              { icon: Cloud, label: "Platform" },
-              { icon: Server, label: "Ecosystem" },
+              { icon: Cpu, label: t("philosophy.research") },
+              { icon: Code, label: t("philosophy.prototypes") },
+              { icon: Workflow, label: t("philosophy.services") },
+              { icon: TrendingUp, label: t("philosophy.caseStudies") },
+              { icon: Zap, label: t("philosophy.productsStep") },
+              { icon: Cloud, label: t("philosophy.platform") },
+              { icon: Server, label: t("philosophy.ecosystem") },
             ].map((step, i) => (
               <div key={step.label} className="flex flex-col items-center">
                 <div className="flex items-center gap-3 rounded-full border border-border bg-card px-5 py-2.5">
@@ -322,11 +288,10 @@ export default function HomePage() {
         <Container>
           <div className="relative overflow-hidden rounded-xl border border-border bg-primary px-8 py-16 text-center md:px-16 md:py-20">
             <h2 className="text-h2 text-primary-foreground">
-              Ready to build something intelligent?
+              {t("cta.title")}
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-body-lg text-primary-foreground/80">
-              Let&apos;s discuss how Stiamond can help you engineer your next
-              digital system.
+              {t("cta.subtitle")}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button
@@ -336,7 +301,7 @@ export default function HomePage() {
                 className="bg-white text-primary hover:bg-white/90"
               >
                 <Link href="/contact">
-                  Get in Touch
+                  {t("cta.getInTouch")}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
@@ -346,7 +311,7 @@ export default function HomePage() {
                 asChild
                 className="border-white/30 text-primary-foreground hover:bg-white/10"
               >
-                <Link href="/pricing">View Pricing</Link>
+                <Link href="/pricing">{t("cta.viewPricing")}</Link>
               </Button>
             </div>
           </div>

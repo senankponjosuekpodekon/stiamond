@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,6 +11,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function LoginPage() {
+  const t = useTranslations("auth.login");
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -30,7 +32,7 @@ export default function LoginPage() {
     });
 
     if (res?.error) {
-      setError("Invalid credentials");
+      setError(t("invalidCredentials"));
       setLoading(false);
     } else {
       router.push("/app");
@@ -45,9 +47,9 @@ export default function LoginPage() {
           <Link href="/" className="inline-block">
             <span className="text-h3 font-bold">Stiamond</span>
           </Link>
-          <h1 className="mt-6 text-h3">Welcome back</h1>
+          <h1 className="mt-6 text-h3">{t("title")}</h1>
           <p className="mt-2 text-body-sm text-muted-foreground">
-            Sign in to your account to continue
+            {t("subtitle")}
           </p>
         </div>
 
@@ -60,28 +62,28 @@ export default function LoginPage() {
                 </div>
               )}
               <div>
-                <label className="text-body-sm font-medium">Email</label>
+                <label className="text-body-sm font-medium">{t("email")}</label>
                 <Input name="email" type="email" placeholder="you@company.com" className="mt-2" required />
               </div>
               <div>
                 <div className="flex items-center justify-between">
-                  <label className="text-body-sm font-medium">Password</label>
+                  <label className="text-body-sm font-medium">{t("password")}</label>
                   <Link href="/auth/forgot-password" className="text-caption text-primary hover:underline">
-                    Forgot password?
+                    {t("forgotPassword")}
                   </Link>
                 </div>
                 <Input name="password" type="password" placeholder="••••••••" className="mt-2" required />
               </div>
               <Button type="submit" variant="primary" size="lg" className="w-full" disabled={loading}>
-                {loading ? "Signing in..." : "Sign In"}
+                {loading ? t("signingIn") : t("signIn")}
                 {!loading && <ArrowRight className="h-4 w-4" />}
               </Button>
             </form>
 
             <p className="mt-6 text-center text-body-sm text-muted-foreground">
-              Don&apos;t have an account?{" "}
+              {t("noAccount")}{" "}
               <Link href="/register" className="font-medium text-primary hover:underline">
-                Sign up
+                {t("signUp")}
               </Link>
             </p>
           </CardContent>

@@ -1,28 +1,23 @@
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Brain, Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "AI Engineering",
-  description: "LLM integration, RAG systems, AI agents, and intelligent automation pipelines.",
-};
-
-const features = [
-  "LLM Integration & Fine-tuning",
-  "RAG (Retrieval-Augmented Generation)",
-  "AI Agents & Multi-agent Systems",
-  "Intelligent Automation Pipelines",
-  "Vector Databases & Embeddings",
-  "Model Evaluation & Monitoring",
-  "Prompt Engineering",
-  "AI Safety & Guardrails",
-];
-
-const stack = ["OpenAI", "Anthropic", "LangChain", "LlamaIndex", "Pinecone", "Weaviate", "Hugging Face", "PyTorch"];
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata("solutionsAi");
+}
 
 export default function AISolutionPage() {
+  const t = useTranslations("solutions.ai");
+  const features = [
+    t("features.f1"), t("features.f2"), t("features.f3"), t("features.f4"),
+    t("features.f5"), t("features.f6"), t("features.f7"), t("features.f8"),
+  ];
+  const stack = ["OpenAI", "Anthropic", "LangChain", "LlamaIndex", "Pinecone", "Weaviate", "Hugging Face", "PyTorch"];
+
   return (
     <>
       <section className="border-b border-border bg-gradient-hero">
@@ -31,15 +26,14 @@ export default function AISolutionPage() {
             <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/8 text-primary">
               <Brain className="h-7 w-7" strokeWidth={1.5} />
             </div>
-            <h1 className="mt-6 max-w-3xl text-display">AI Engineering</h1>
+            <h1 className="mt-6 max-w-3xl text-display">{t("title")}</h1>
             <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground">
-              LLM integration, RAG systems, AI agents, and intelligent automation
-              pipelines that turn AI capabilities into production-grade systems.
+              {t("subtitle")}
             </p>
             <div className="mt-8">
               <Button variant="primary" size="lg" asChild>
                 <Link href="/contact">
-                  Start a Project
+                  {t("startProject")}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
@@ -52,7 +46,7 @@ export default function AISolutionPage() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="text-h3">What we build</h2>
+              <h2 className="text-h3">{t("whatWeBuild")}</h2>
               <ul className="mt-8 space-y-4">
                 {features.map((f) => (
                   <li key={f} className="flex items-center gap-3">
@@ -65,7 +59,7 @@ export default function AISolutionPage() {
               </ul>
             </div>
             <div>
-              <h2 className="text-h3">Our stack</h2>
+              <h2 className="text-h3">{t("ourStack")}</h2>
               <div className="mt-8 flex flex-wrap gap-3">
                 {stack.map((tech) => (
                   <span key={tech} className="rounded-lg border border-border bg-surface-1 px-4 py-2 text-body-sm font-medium">

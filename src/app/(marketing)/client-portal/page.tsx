@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -5,19 +6,21 @@ import { Input } from "@/components/ui/input";
 import { Lock, ArrowRight, LayoutDashboard, FileText, CreditCard } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Client Portal",
-  description: "Access your Stiamond client dashboard.",
-};
-
-const features = [
-  { icon: LayoutDashboard, title: "Project Dashboard", description: "Track progress, milestones, and deliverables in real time." },
-  { icon: FileText, title: "Documents", description: "Access contracts, proposals, and project documentation." },
-  { icon: CreditCard, title: "Invoices", description: "View and download invoices, payment history, and receipts." },
-];
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata("clientPortal");
+}
 
 export default function ClientPortalPage() {
+  const t = useTranslations("clientPortal");
+
+  const features = [
+    { icon: LayoutDashboard, title: t("features.dashboard.title"), description: t("features.dashboard.description") },
+    { icon: FileText, title: t("features.documents.title"), description: t("features.documents.description") },
+    { icon: CreditCard, title: t("features.invoices.title"), description: t("features.invoices.description") },
+  ];
+
   return (
     <>
       <section className="border-b border-border bg-gradient-hero">
@@ -26,9 +29,9 @@ export default function ClientPortalPage() {
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-primary/8 text-primary">
               <Lock className="h-7 w-7" strokeWidth={1.5} />
             </div>
-            <h1 className="mt-6 text-display">Client Portal</h1>
+            <h1 className="mt-6 text-display">{t("title")}</h1>
             <p className="mx-auto mt-6 max-w-2xl text-body-lg text-muted-foreground">
-              Secure access to your projects, documents, and invoices.
+              {t("subtitle")}
             </p>
           </div>
         </Container>
@@ -39,30 +42,30 @@ export default function ClientPortalPage() {
           <div className="mx-auto max-w-md">
             <Card>
               <CardContent className="p-8">
-                <h2 className="text-h5 font-semibold">Sign in to your portal</h2>
+                <h2 className="text-h5 font-semibold">{t("signIn")}</h2>
                 <p className="mt-2 text-body-sm text-muted-foreground">
-                  Enter your credentials to access your dashboard.
+                  {t("signInDesc")}
                 </p>
                 <form className="mt-6 space-y-4">
                   <div>
-                    <label className="text-body-sm font-medium">Email</label>
+                    <label className="text-body-sm font-medium">{t("email")}</label>
                     <Input type="email" placeholder="you@company.com" className="mt-2" />
                   </div>
                   <div>
-                    <label className="text-body-sm font-medium">Password</label>
+                    <label className="text-body-sm font-medium">{t("password")}</label>
                     <Input type="password" placeholder="••••••••" className="mt-2" />
                   </div>
                   <Button variant="primary" size="lg" asChild className="w-full">
                     <Link href="/login">
-                      Sign In
+                      {t("signInBtn")}
                       <ArrowRight className="h-4 w-4" />
                     </Link>
                   </Button>
                 </form>
                 <p className="mt-6 text-center text-body-sm text-muted-foreground">
-                  Don&apos;t have an account?{" "}
+                  {t("noAccount")}{" "}
                   <Link href="/register" className="font-medium text-primary hover:underline">
-                    Request access
+                    {t("requestAccess")}
                   </Link>
                 </p>
               </CardContent>
@@ -74,7 +77,7 @@ export default function ClientPortalPage() {
       <section className="border-t border-border bg-surface-1/40 py-20">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-h3">What you get</h2>
+            <h2 className="text-h3">{t("whatYouGet")}</h2>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             {features.map((f) => (

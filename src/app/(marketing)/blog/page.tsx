@@ -1,14 +1,16 @@
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description: "Insights on AI, software engineering, cloud architecture, and growth systems.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata("blog");
+}
 
 export default function BlogPage() {
+  const t = useTranslations("blog");
   const posts = getAllPosts();
 
   return (
@@ -16,10 +18,10 @@ export default function BlogPage() {
       <section className="border-b border-border bg-gradient-hero">
         <Container>
           <div className="py-20 md:py-28">
-            <p className="text-overline font-semibold uppercase text-accent">Resources</p>
-            <h1 className="mt-3 max-w-3xl text-display">Blog</h1>
+            <p className="text-overline font-semibold uppercase text-accent">{t("overline")}</p>
+            <h1 className="mt-3 max-w-3xl text-display">{t("title")}</h1>
             <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground">
-              Insights on AI, software engineering, cloud architecture, and growth systems.
+              {t("subtitle")}
             </p>
           </div>
         </Container>
@@ -28,7 +30,7 @@ export default function BlogPage() {
       <section className="py-20 md:py-28">
         <Container>
           {posts.length === 0 ? (
-            <p className="text-body-lg text-muted-foreground">No posts yet. Check back soon.</p>
+            <p className="text-body-lg text-muted-foreground">{t("noPosts")}</p>
           ) : (
             <div className="grid gap-8 lg:grid-cols-2">
               {posts.map((post) => (

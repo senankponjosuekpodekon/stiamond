@@ -51,3 +51,8 @@ Stiamond designs AI-powered software, cloud infrastructure, and digital growth s
 - Website: https://stiamond.net
 - Contact: https://stiamond.net/contact
 - Pricing: https://stiamond.net/pricing
+
+## Languages
+
+- English: https://stiamond.net/llms.txt
+- Français: https://stiamond.net/llms-fr.txt

@@ -1,32 +1,34 @@
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { ShieldCheck, Lock, Eye, Bug, FileCheck, Server } from "lucide-react";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Security",
-  description: "Stiamond's security practices and infrastructure.",
-};
-
-const practices = [
-  { icon: Lock, title: "Encryption", description: "TLS 1.3 in transit, AES-256 at rest. All data encrypted by default." },
-  { icon: ShieldCheck, title: "RBAC", description: "Role-based access control with least-privilege principle." },
-  { icon: Eye, title: "Audit Logs", description: "Comprehensive logging of all access and modifications." },
-  { icon: Bug, title: "Vulnerability Scanning", description: "Regular dependency audits and automated security scanning." },
-  { icon: FileCheck, title: "Compliance", description: "GDPR-aligned data handling and OWASP best practices." },
-  { icon: Server, title: "Infrastructure", description: "Edge-deployed on Cloudflare. PostgreSQL on Neon with isolation." },
-];
+export async function generateMetadata(): Promise<Metadata> {
+  return generatePageMetadata("security");
+}
 
 export default function SecurityPage() {
+  const t = useTranslations("security");
+
+  const practices = [
+    { icon: Lock, title: t("practices.encryption.title"), description: t("practices.encryption.description") },
+    { icon: ShieldCheck, title: t("practices.rbac.title"), description: t("practices.rbac.description") },
+    { icon: Eye, title: t("practices.audit.title"), description: t("practices.audit.description") },
+    { icon: Bug, title: t("practices.scanning.title"), description: t("practices.scanning.description") },
+    { icon: FileCheck, title: t("practices.compliance.title"), description: t("practices.compliance.description") },
+    { icon: Server, title: t("practices.infrastructure.title"), description: t("practices.infrastructure.description") },
+  ];
+
   return (
     <>
       <section className="border-b border-border bg-gradient-hero">
         <Container>
           <div className="py-20 md:py-28">
-            <p className="text-overline font-semibold uppercase text-accent">Security</p>
-            <h1 className="mt-3 max-w-3xl text-display">Security by design</h1>
+            <p className="text-overline font-semibold uppercase text-accent">{t("overline")}</p>
+            <h1 className="mt-3 max-w-3xl text-display">{t("title")}</h1>
             <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground">
-              Security is not an add-on. It&apos;s embedded in every layer of our
-              architecture — from code to infrastructure to operations.
+              {t("subtitle")}
             </p>
           </div>
         </Container>
@@ -50,12 +52,11 @@ export default function SecurityPage() {
 
       <section className="border-t border-border bg-surface-1/40 py-20">
         <Container size="md">
-          <h2 className="text-h3">Responsible disclosure</h2>
+          <h2 className="text-h3">{t("disclosure.title")}</h2>
           <p className="mt-4 text-body text-muted-foreground">
-            If you discover a security vulnerability, please report it responsibly to{" "}
+            {t("disclosure.body")}{" "}
             <a href="mailto:security@stiamond.net" className="text-primary hover:underline">security@stiamond.net</a>.
-            We commit to acknowledging receipt within 48 hours and providing a fix timeline
-            within 72 hours.
+            {t("disclosure.commitment")}
           </p>
         </Container>
       </section>

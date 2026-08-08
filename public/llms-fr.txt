@@ -1,0 +1,53 @@
+# Stiamond
+
+> Entreprise d'Ingénierie IA, Logiciel & Cloud
+
+Stiamond conçoit des logiciels propulsés par l'IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance des entreprises.
+
+## Expertise
+
+- Ingénierie IA : Intégration LLM, systèmes RAG, agents IA, automatisation intelligente
+- Ingénierie Logicielle : Logiciels sur mesure, plateformes web, produits SaaS
+- Infrastructure Cloud : Architecture scalable, DevOps, CI/CD, infrastructure as code
+- Systèmes de Croissance : SEO, stratégie de contenu, automatisation marketing, croissance data-driven
+- Automatisation : Orchestration de workflows, optimisation des processus, pipelines intelligents
+
+## Produits
+
+- MEDIM : Plateforme d'intelligence médicale propulsée par l'IA
+- AI Platform : Passerelle IA multi-modèles avec routage intelligent (Gemini, Groq, Ollama, OpenAI)
+- APIs : APIs developer-first pour l'IA, les données et l'infrastructure
+- SDK Développeur : Outils pour construire avec la plateforme Stiamond
+- Marketplace : Marketplace d'intégrations pour l'écosystème Stiamond
+
+## Services
+
+- Ingénierie IA : Chatbots, RAG, agents IA, intégration LLM
+- Ingénierie Logicielle : Applications web, SaaS, APIs, microservices
+- Cloud : Architecture, DevOps, CI/CD, Docker, Kubernetes
+- Automatisation : Automatisation des processus, orchestration de workflows
+- Croissance : SEO/GEO, contenu, automatisation marketing, analytics
+- Conseil : Stratégie technique, revue d'architecture, formation d'équipes
+
+## Industries
+
+- Santé
+- Retail
+- Finance
+- Éducation
+- Logistique
+- Services Professionnels
+
+## Documentation
+
+- Référence API : https://stiamond.net/developers/api
+- SDK : https://stiamond.net/developers/sdk
+- Authentification : https://stiamond.net/developers/authentication
+- Statut : https://stiamond.net/developers/status
+- Changelog : https://stiamond.net/developers/changelog
+
+## Contact
+
+- Site web : https://stiamond.net
+- Contact : https://stiamond.net/contact
+- Tarifs : https://stiamond.net/pricing
