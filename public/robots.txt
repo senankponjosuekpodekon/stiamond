@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-# Block AI training crawlers (optional - adjust based on policy)
-# CCBot: disallow
-# GPTBot: allow
-# Claude-Web: allow
-
-Sitemap: https://stiamond.net/sitemap.xml
