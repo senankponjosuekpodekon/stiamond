@@ -1,0 +1,7 @@
+name = "stiamond"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".next/static"
+
+[vars]
+NEXTAUTH_URL = "https://stiamond.net"

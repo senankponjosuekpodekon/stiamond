@@ -3,6 +3,7 @@ import { Poppins, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import { AnalyticsProvider } from "@/components/analytics";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -95,7 +96,9 @@ export default async function RootLayout({
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <AnalyticsProvider>
+            {children}
+          </AnalyticsProvider>
         </NextIntlClientProvider>
       </body>
     </html>
