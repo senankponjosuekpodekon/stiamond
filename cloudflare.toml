@@ -1,8 +1,8 @@
-# Cloudflare Pages Configuration
+# Cloudflare Pages Configuration (OpenNext adapter)
 #
 # In Cloudflare Pages dashboard, set:
-#   Build command: npx @cloudflare/next-on-pages
-#   Build output directory: .vercel/output/static
+#   Build command: npx opennextjs-cloudflare build
+#   Build output directory: .open-next
 #   Deploy command: (leave empty — Cloudflare handles deploy automatically)
 #
 # Environment variables (set in Cloudflare dashboard):
@@ -16,3 +16,6 @@
 name = "stiamond"
 compatibility_date = "2024-12-01"
 compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = ".open-next"
