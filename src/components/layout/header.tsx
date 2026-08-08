@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -56,6 +57,7 @@ export function Header() {
           </div>
 
           <div className="flex items-center gap-2">
+            <LanguageSwitcher className="hidden sm:flex" />
             <ThemeToggle />
             <Button variant="ghost" size="sm" asChild className="hidden sm:inline-flex">
               <Link href="/client-portal">{t("clientPortal")}</Link>
@@ -104,6 +106,9 @@ export function Header() {
             >
               {t("clientPortal")}
             </Link>
+            <div className="px-3 py-2">
+              <LanguageSwitcher />
+            </div>
           </nav>
         </Container>
       </div>

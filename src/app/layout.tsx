@@ -3,8 +3,30 @@ import { Poppins, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
 import { AnalyticsProvider } from "@/components/analytics";
+import { headers } from "next/headers";
 import en from "../../messages/en.json";
+import fr from "../../messages/fr.json";
 import "./globals.css";
+
+const messagesMap = { en, fr };
+
+type Locale = "en" | "fr";
+
+async function getLocale(): Promise<Locale> {
+  const headerStore = await headers();
+  const cookieHeader = headerStore.get("cookie") || "";
+  const cookieLocale = cookieHeader
+    .split("; ")
+    .find((row) => row.startsWith("stiamond-locale="))
+    ?.split("=")[1] as Locale | undefined;
+  if (cookieLocale && cookieLocale in messagesMap) return cookieLocale;
+
+  const acceptLang = headerStore.get("accept-language") || "";
+  const browserLang = acceptLang.split(",")[0].trim().split("-")[0].toLowerCase();
+  if (browserLang === "fr") return "fr";
+
+  return "en";
+}
 
 const poppins = Poppins({
   variable: "--font-sans",
@@ -39,8 +61,8 @@ export const metadata: Metadata = {
   creator: "Stiamond",
   openGraph: {
     type: "website",
-    locale: "fr_FR",
-    alternateLocale: ["en_US"],
+    locale: "en_US",
+    alternateLocale: ["fr_FR"],
     url: "https://stiamond.net",
     siteName: "Stiamond",
     title: "Stiamond — AI, Software & Cloud Engineering",
@@ -75,18 +97,21 @@ const themeScript = `
 })();
 `;
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = "en";
-  const messages = en;
+  const locale = await getLocale();
+  const messages = messagesMap[locale];
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <head suppressHydrationWarning>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <link rel="alternate" hrefLang="en" href="https://stiamond.net" />
+        <link rel="alternate" hrefLang="fr" href="https://stiamond.net?lang=fr" />
+        <link rel="alternate" hrefLang="x-default" href="https://stiamond.net" />
       </head>
       <body
         className={cn(
