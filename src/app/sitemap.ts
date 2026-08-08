@@ -7,14 +7,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/company",
     "/solutions",
-    "/services",
+    "/solutions/software",
+    "/solutions/ai",
+    "/solutions/cloud",
+    "/solutions/growth",
     "/products",
     "/industries",
-    "/resources",
     "/pricing",
     "/contact",
+    "/docs",
     "/developers",
-    "/case-studies",
   ];
 
   return routes.map((route) => ({
