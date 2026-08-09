@@ -35,7 +35,7 @@ export default function LoginPage() {
       setError(t("invalidCredentials"));
       setLoading(false);
     } else {
-      router.push("/app");
+      router.push("/admin");
       router.refresh();
     }
   };
