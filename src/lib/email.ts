@@ -88,6 +88,11 @@ export async function sendReplyEmail({
       <div style="background: #f5f5f5; padding: 16px; border-radius: 8px; margin: 16px 0;">
         <p style="margin: 0; white-space: pre-wrap;">${message.replace(/\n/g, "<br />")}</p>
       </div>
+      ${isClientEmail ? `
+      <p style="color: #555; font-size: 14px; margin: 16px 0;">
+        You can reply directly to this email, or use the link below to view the full conversation and reply online.
+      </p>
+      ` : ""}
       <p>
         <a href="${conversationUrl}" style="display: inline-block; background: #1a4d8f; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 500;">
           View conversation & reply
