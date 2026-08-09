@@ -15,8 +15,8 @@
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "pages:build": "npx opennextjs-cloudflare build",
-    "pages:deploy": "npx wrangler pages deploy .open-next",
-    "preview": "npx wrangler pages dev .open-next"
+    "pages:deploy": "npx wrangler deploy",
+    "preview": "npx wrangler dev"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.7.1",
