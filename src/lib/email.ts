@@ -54,3 +54,64 @@ export async function sendContactNotification(data: ContactFormData) {
   logger.info("Email: contact notification sent", { id: result?.id, to: TO_EMAIL });
   return { skipped: false as const, id: result?.id };
 }
+
+type ReplyEmailParams = {
+  to: string;
+  recipientName: string;
+  senderName: string;
+  message: string;
+  conversationUrl: string;
+  isClientEmail: boolean;
+};
+
+export async function sendReplyEmail({
+  to,
+  recipientName,
+  senderName,
+  message,
+  conversationUrl,
+  isClientEmail,
+}: ReplyEmailParams) {
+  const resend = getResend();
+  if (!resend) {
+    return { skipped: true as const };
+  }
+
+  const subject = isClientEmail
+    ? `Re: Your message to Stiamond — ${senderName}`
+    : `New reply from ${senderName}`;
+
+  const html = `
+    <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+      <h2>${isClientEmail ? "Stiamond Team replied to your message" : `New reply from ${senderName}`}</h2>
+      <p>Hi ${recipientName},</p>
+      <div style="background: #f5f5f5; padding: 16px; border-radius: 8px; margin: 16px 0;">
+        <p style="margin: 0; white-space: pre-wrap;">${message.replace(/\n/g, "<br />")}</p>
+      </div>
+      <p>
+        <a href="${conversationUrl}" style="display: inline-block; background: #1a4d8f; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 500;">
+          View conversation & reply
+        </a>
+      </p>
+      <p style="color: #888; font-size: 13px; margin-top: 24px;">
+        Stiamond — Intelligent software for ambitious teams
+      </p>
+    </div>
+  `;
+
+  const { data: result, error } = await resend.emails.send({
+    from: FROM_EMAIL,
+    to: [to],
+    replyTo: isClientEmail ? TO_EMAIL : undefined,
+    subject,
+    html,
+  });
+
+  if (error) {
+    logger.error("Email: reply email failed", new Error(error.message), { to, subject });
+    throw new Error(error.message);
+  }
+
+  logger.info("Email: reply notification sent", { id: result?.id, to });
+  return { skipped: false as const, id: result?.id };
+}

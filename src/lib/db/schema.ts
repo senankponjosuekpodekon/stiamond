@@ -57,5 +57,14 @@ export const contactMessages = pgTable("contact_messages", {
   company: varchar("company", { length: 255 }),
   projectType: varchar("project_type", { length: 100 }).notNull(),
   message: text("message").notNull(),
+  replyToken: varchar("reply_token", { length: 64 }).unique(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const messageReplies = pgTable("message_replies", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  contactMessageId: uuid("contact_message_id").references(() => contactMessages.id).notNull(),
+  senderType: varchar("sender_type", { length: 10 }).notNull(),
+  message: text("message").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });

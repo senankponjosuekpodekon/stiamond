@@ -1,14 +1,30 @@
 import { db } from "@/lib/db";
-import { contactMessages } from "@/lib/db/schema";
+import { contactMessages, messageReplies } from "@/lib/db/schema";
+import { asc } from "drizzle-orm";
+import { MessageConversation } from "./message-conversation";
 
 export const runtime = "nodejs";
 
 export default async function AdminMessagesPage() {
-  let messages: typeof contactMessages.$inferSelect[] = [];
+  let messages: (typeof contactMessages.$inferSelect)[] = [];
+  let repliesMap: Record<string, (typeof messageReplies.$inferSelect)[]> = {};
 
   if (process.env.DATABASE_URL) {
     try {
       messages = await db.select().from(contactMessages);
+
+      if (messages.length > 0) {
+        const allReplies = await db
+          .select()
+          .from(messageReplies)
+          .orderBy(asc(messageReplies.createdAt));
+
+        for (const reply of allReplies) {
+          const key = reply.contactMessageId;
+          if (!repliesMap[key]) repliesMap[key] = [];
+          repliesMap[key].push(reply);
+        }
+      }
     } catch {
       // DB not available
     }
@@ -19,7 +35,7 @@ export default async function AdminMessagesPage() {
       <div>
         <h2 className="text-h3">Contact Messages</h2>
         <p className="mt-2 text-body text-muted-foreground">
-          Messages submitted through the contact form.
+          Messages submitted through the contact form. Reply directly to clients.
         </p>
       </div>
 
@@ -28,35 +44,13 @@ export default async function AdminMessagesPage() {
           <p className="text-body text-muted-foreground">No messages yet.</p>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-6">
           {messages.map((msg) => (
-            <div key={msg.id} className="rounded-lg border border-border bg-card p-6">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <div className="flex items-center gap-3">
-                    <span className="font-medium">
-                      {msg.firstName} {msg.lastName}
-                    </span>
-                    <span className="rounded-md bg-surface-1 px-2.5 py-0.5 text-caption font-medium text-muted-foreground">
-                      {msg.projectType}
-                    </span>
-                  </div>
-                  {msg.company && (
-                    <div className="text-body-sm text-muted-foreground">{msg.company}</div>
-                  )}
-                  <a
-                    href={`mailto:${msg.email}`}
-                    className="text-body-sm text-primary hover:underline"
-                  >
-                    {msg.email}
-                  </a>
-                </div>
-                <time className="text-caption text-muted-foreground">
-                  {new Date(msg.createdAt).toLocaleDateString()}
-                </time>
-              </div>
-              <p className="mt-4 text-body text-muted-foreground">{msg.message}</p>
-            </div>
+            <MessageConversation
+              key={msg.id}
+              message={msg}
+              replies={repliesMap[msg.id] || []}
+            />
           ))}
         </div>
       )}
