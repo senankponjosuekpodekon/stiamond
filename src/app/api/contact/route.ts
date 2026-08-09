@@ -3,6 +3,7 @@ import { contactSchema } from "@/lib/validations/contact";
 import { db } from "@/lib/db";
 import { contactMessages } from "@/lib/db/schema";
 import { sendContactNotification } from "@/lib/email";
+import { logger } from "@/lib/logger";
 
 export const runtime = "nodejs";
 
@@ -27,7 +28,7 @@ export async function POST(request: Request) {
     try {
       await sendContactNotification(data);
     } catch (emailError) {
-      console.error("Failed to send contact notification email:", emailError);
+      logger.error("Contact email notification failed", emailError, { email: data.email });
     }
 
     return NextResponse.json(
@@ -35,6 +36,7 @@ export async function POST(request: Request) {
       { status: 200 }
     );
   } catch (error) {
+    logger.apiError("/api/contact", "POST", error);
     if (error instanceof Error) {
       return NextResponse.json(
         { error: error.message },

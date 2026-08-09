@@ -3,12 +3,15 @@ import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
 import { users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
+import { logger } from "@/lib/logger";
 
 export const runtime = "nodejs";
 
 export async function POST(request: Request) {
+  let bodyEmail: string | undefined;
   try {
     const body = await request.json();
+    bodyEmail = body.email;
     const { firstName, lastName, email, password } = body;
 
     if (!firstName || !lastName || !email || !password) {
@@ -59,6 +62,7 @@ export async function POST(request: Request) {
       { status: 201 }
     );
   } catch (error) {
+    logger.apiError("/api/register", "POST", error, { email: bodyEmail });
     if (error instanceof Error) {
       return NextResponse.json(
         { error: error.message },
