@@ -5,16 +5,9 @@ import { users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import Link from "next/link";
 import { FileText, Mail, Users, LayoutDashboard, ArrowLeft, Settings } from "lucide-react";
+import { NavLinks } from "./nav-links";
 
 export const runtime = "nodejs";
-
-const navItems = [
-  { label: "Overview", href: "/admin", icon: LayoutDashboard },
-  { label: "Blog Posts", href: "/admin/blog", icon: FileText },
-  { label: "Messages", href: "/admin/messages", icon: Mail },
-  { label: "Users", href: "/admin/users", icon: Users },
-  { label: "Settings", href: "/admin/settings", icon: Settings },
-];
 
 export default async function AdminLayout({
   children,
@@ -53,18 +46,7 @@ export default async function AdminLayout({
         <div className="flex h-16 items-center border-b border-border px-6">
           <span className="text-body font-semibold">Admin Panel</span>
         </div>
-        <nav className="flex-1 space-y-1 p-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="flex items-center gap-3 rounded-md px-3 py-2 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-surface-1 hover:text-foreground"
-            >
-              <item.icon className="h-4 w-4" strokeWidth={1.5} />
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <NavLinks />
         <div className="border-t border-border p-4">
           <Link
             href="/"
