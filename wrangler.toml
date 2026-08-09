@@ -13,5 +13,5 @@ service = "stiamond"
 
 [vars]
 AUTH_URL = "https://stiamond.net"
-CONTACT_FROM_EMAIL = "Stiamond <onboarding@resend.dev>"
+CONTACT_FROM_EMAIL = "Stiamond <onboarding@stiamond.net>"
 CONTACT_TO_EMAIL = "hello@stiamond.net"

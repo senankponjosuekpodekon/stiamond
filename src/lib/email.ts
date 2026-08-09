@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import type { ContactFormData } from "@/lib/validations/contact";
 import { logger } from "@/lib/logger";
 
-const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "Stiamond <onboarding@resend.dev>";
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "Stiamond <onboarding@stiamond.net>";
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "hello@stiamond.net";
 
 let _resend: Resend | null = null;
