@@ -49,7 +49,13 @@ export async function POST(
       contactMessageId: id,
       senderType: "admin",
       message: message.trim(),
+      isRead: true,
     });
+
+    await db
+      .update(contactMessages)
+      .set({ isRead: true })
+      .where(eq(contactMessages.id, id));
 
     const baseUrl = process.env.AUTH_URL || "http://localhost:3000";
     const conversationUrl = `${baseUrl}/messages/${replyToken}`;

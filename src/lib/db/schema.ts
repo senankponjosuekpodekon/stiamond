@@ -1,4 +1,4 @@
-import { pgTable, uuid, varchar, timestamp, text, pgEnum } from "drizzle-orm/pg-core";
+import { pgTable, uuid, varchar, timestamp, text, pgEnum, boolean } from "drizzle-orm/pg-core";
 
 export const userRoleEnum = pgEnum("user_role", ["admin", "client", "viewer"]);
 
@@ -58,6 +58,7 @@ export const contactMessages = pgTable("contact_messages", {
   projectType: varchar("project_type", { length: 100 }).notNull(),
   message: text("message").notNull(),
   replyToken: varchar("reply_token", { length: 64 }).unique(),
+  isRead: boolean("is_read").default(false).notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
@@ -66,5 +67,6 @@ export const messageReplies = pgTable("message_replies", {
   contactMessageId: uuid("contact_message_id").references(() => contactMessages.id).notNull(),
   senderType: varchar("sender_type", { length: 10 }).notNull(),
   message: text("message").notNull(),
+  isRead: boolean("is_read").default(false).notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
