@@ -3,6 +3,7 @@ import { Poppins, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
 import { AnalyticsProvider } from "@/components/analytics";
+import { Providers } from "@/components/providers";
 import { headers } from "next/headers";
 import en from "../../messages/en.json";
 import fr from "../../messages/fr.json";
@@ -137,9 +138,11 @@ export default async function RootLayout({
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <AnalyticsProvider>
-            {children}
-          </AnalyticsProvider>
+          <Providers>
+            <AnalyticsProvider>
+              {children}
+            </AnalyticsProvider>
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/validations/contact";
 import { db } from "@/lib/db";
 import { contactMessages } from "@/lib/db/schema";
+import { sendContactNotification } from "@/lib/email";
 
 export const runtime = "nodejs";
 
@@ -21,6 +22,12 @@ export async function POST(request: Request) {
       });
     } else {
       console.log("Contact form submission (no DB):", data);
+    }
+
+    try {
+      await sendContactNotification(data);
+    } catch (emailError) {
+      console.error("Failed to send contact notification email:", emailError);
     }
 
     return NextResponse.json(
