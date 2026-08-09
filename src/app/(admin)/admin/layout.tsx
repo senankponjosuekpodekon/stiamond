@@ -4,7 +4,7 @@ import { db } from "@/lib/db";
 import { users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import Link from "next/link";
-import { FileText, Mail, Users, LayoutDashboard, ArrowLeft, Settings } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { NavLinks } from "./nav-links";
 
 export const runtime = "nodejs";

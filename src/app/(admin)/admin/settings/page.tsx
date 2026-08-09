@@ -5,7 +5,7 @@ import { SettingsForm } from "./settings-form";
 export const runtime = "nodejs";
 
 export default async function AdminSettingsPage() {
-  let settingsMap: Record<string, string> = {};
+  const settingsMap: Record<string, string> = {};
 
   if (process.env.DATABASE_URL) {
     try {

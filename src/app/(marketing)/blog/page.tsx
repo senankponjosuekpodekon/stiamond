@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import Link from "next/link";
 import { db } from "@/lib/db";
@@ -24,7 +24,7 @@ type BlogPostItem = {
 };
 
 export default async function BlogPage() {
-  const t = useTranslations("blog");
+  const t = await getTranslations("blog");
 
   const allPosts: BlogPostItem[] = [];
 
