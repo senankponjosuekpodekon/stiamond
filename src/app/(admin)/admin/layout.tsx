@@ -4,7 +4,7 @@ import { db } from "@/lib/db";
 import { users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import Link from "next/link";
-import { FileText, Mail, Users, LayoutDashboard, ArrowLeft } from "lucide-react";
+import { FileText, Mail, Users, LayoutDashboard, ArrowLeft, Settings } from "lucide-react";
 
 export const runtime = "nodejs";
 
@@ -13,6 +13,7 @@ const navItems = [
   { label: "Blog Posts", href: "/admin/blog", icon: FileText },
   { label: "Messages", href: "/admin/messages", icon: Mail },
   { label: "Users", href: "/admin/users", icon: Users },
+  { label: "Settings", href: "/admin/settings", icon: Settings },
 ];
 
 export default async function AdminLayout({

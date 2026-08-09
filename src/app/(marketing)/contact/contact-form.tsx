@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,6 +14,22 @@ export default function ContactForm() {
   const t = useTranslations("contact");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [contactEmail, setContactEmail] = useState("hello@stiamond.net");
+  const [contactPhone, setContactPhone] = useState("+1 (555) 000-0000");
+  const [contactLocation, setContactLocation] = useState("Remote · Global");
+
+  useEffect(() => {
+    fetch("/api/settings")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.settings) {
+          if (data.settings.contact_email) setContactEmail(data.settings.contact_email);
+          if (data.settings.contact_phone) setContactPhone(data.settings.contact_phone);
+          if (data.settings.contact_location) setContactLocation(data.settings.contact_location);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   const {
     register,
@@ -41,9 +57,9 @@ export default function ContactForm() {
   };
 
   const contactInfo = [
-    { icon: Mail, label: t("email"), value: "hello@stiamond.net" },
-    { icon: Phone, label: t("phone"), value: "+1 (555) 000-0000" },
-    { icon: MapPin, label: t("location"), value: t("locationValue") },
+    { icon: Mail, label: t("email"), value: contactEmail },
+    { icon: Phone, label: t("phone"), value: contactPhone },
+    { icon: MapPin, label: t("location"), value: contactLocation },
   ];
 
   if (success) {
