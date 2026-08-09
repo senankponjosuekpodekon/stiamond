@@ -7,7 +7,7 @@ export const runtime = "nodejs";
 
 export default async function AdminMessagesPage() {
   let messages: (typeof contactMessages.$inferSelect)[] = [];
-  let repliesMap: Record<string, (typeof messageReplies.$inferSelect)[]> = {};
+  const repliesMap: Record<string, (typeof messageReplies.$inferSelect)[]> = {};
 
   if (process.env.DATABASE_URL) {
     try {

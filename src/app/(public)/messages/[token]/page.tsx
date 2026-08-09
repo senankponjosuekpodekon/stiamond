@@ -2,6 +2,7 @@ import { db } from "@/lib/db";
 import { contactMessages, messageReplies } from "@/lib/db/schema";
 import { eq, asc } from "drizzle-orm";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { ClientConversation } from "./client-conversation";
 
 export const runtime = "nodejs";
@@ -45,7 +46,7 @@ export default async function ConversationPage({
     <div className="flex min-h-screen flex-col bg-surface-1/30">
       <header className="border-b border-border bg-background">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-4">
-          <a href="/" className="text-h4 font-bold">Stiamond</a>
+          <Link href="/" className="text-h4 font-bold">Stiamond</Link>
           <span className="text-body-sm text-muted-foreground">Conversation</span>
         </div>
       </header>
