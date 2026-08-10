@@ -29,6 +29,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL("https://stiamond.net"),
+    verification: {
+      google: "x1LHfAoFnYnfk2a8WETx3nd37_MJr9b0c5V-BL60fH8",
+    },
     title: {
       default: title,
       template: `%s — Stiamond`,
