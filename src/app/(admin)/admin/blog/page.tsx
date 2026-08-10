@@ -1,7 +1,8 @@
 import { db } from "@/lib/db";
 import { blogPosts } from "@/lib/db/schema";
 import Link from "next/link";
-import { Plus, Pencil, Trash2 } from "lucide-react";
+import { Plus, Pencil } from "lucide-react";
+import { DeleteButton } from "./delete-button";
 
 export const runtime = "nodejs";
 
@@ -80,15 +81,7 @@ export default async function AdminBlogPage() {
                       >
                         <Pencil className="h-4 w-4" />
                       </Link>
-                      <form action={`/api/admin/blog/${post.id}`} method="post">
-                        <input type="hidden" name="_method" value="DELETE" />
-                        <button
-                          type="submit"
-                          className="rounded-md p-2 text-muted-foreground hover:bg-destructive/10 hover:text-destructive"
-                        >
-                          <Trash2 className="h-4 w-4" />
-                        </button>
-                      </form>
+                      <DeleteButton postId={post.id} />
                     </div>
                   </td>
                 </tr>

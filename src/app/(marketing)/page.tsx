@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import {
@@ -33,12 +33,32 @@ import type { Metadata } from "next";
 export const runtime = "nodejs";
 
 export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const isFr = locale === "fr";
+  
   return {
-    title: "Stiamond — Web, E-commerce & AI Automation Studio",
-    description: "Stiamond builds websites, online stores, ad campaigns, and AI automation agents for SMBs and entrepreneurs. Based in Cotonou, working with clients worldwide.",
+    title: isFr
+      ? "Stiamond — Studio Web, E-commerce & Automatisation IA"
+      : "Stiamond — Web, E-commerce & AI Automation Studio",
+    description: isFr
+      ? "Stiamond conçoit des sites web, boutiques en ligne, campagnes publicitaires et agents d'automatisation IA pour PME et entrepreneurs. Basé à Cotonou, clients dans le monde entier."
+      : "Stiamond builds websites, online stores, ad campaigns, and AI automation agents for SMBs and entrepreneurs. Based in Cotonou, working with clients worldwide.",
+    alternates: {
+      languages: {
+        en: "https://stiamond.net",
+        fr: "https://stiamond.net/fr",
+        "x-default": "https://stiamond.net",
+      },
+    },
     openGraph: {
-      title: "Stiamond — Web, E-commerce & AI Automation Studio",
-      description: "Websites, online stores, ad campaigns, and AI automation. One person covering development, design, marketing, and automation.",
+      locale: isFr ? "fr_FR" : "en_US",
+      alternateLocale: [isFr ? "en_US" : "fr_FR"],
+      title: isFr
+        ? "Stiamond — Studio Web, E-commerce & Automatisation IA"
+        : "Stiamond — Web, E-commerce & AI Automation Studio",
+      description: isFr
+        ? "Sites web, boutiques en ligne, campagnes publicitaires et automatisation IA. Une personne couvre développement, design, marketing et automatisation."
+        : "Websites, online stores, ad campaigns, and AI automation. One person covering development, design, marketing, and automation.",
     },
   };
 }

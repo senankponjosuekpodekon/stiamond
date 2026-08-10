@@ -1,46 +1,39 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 import { Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTransition } from "react";
 
 type Locale = "en" | "fr";
 
 export function LanguageSwitcher({ className }: { className?: string }) {
-  const [locale, setLocale] = useState<Locale>("en");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    const stored = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("stiamond-locale="))
-      ?.split("=")[1] as Locale | undefined;
-    if (stored) setLocale(stored);
-  }, []);
+  const locale = useLocale() as Locale;
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isPending, startTransition] = useTransition();
 
   const switchLocale = (newLocale: Locale) => {
-    setLocale(newLocale);
-    document.cookie = `stiamond-locale=${newLocale};path=/;max-age=${60 * 60 * 24 * 365}`;
-    window.location.reload();
+    startTransition(() => {
+      const segments = pathname.split("/").filter(Boolean);
+      if (segments[0] === "en" || segments[0] === "fr") {
+        segments.shift();
+      }
+      const pathWithoutLocale = segments.length > 0 ? `/${segments.join("/")}` : "/";
+      const newPath = newLocale === "en" ? pathWithoutLocale : `/${newLocale}${pathWithoutLocale}`;
+      router.push(newPath);
+    });
   };
-
-  if (!mounted) {
-    return (
-      <div className={cn("flex items-center gap-1", className)}>
-        <Globe className="h-4 w-4 text-muted-foreground" />
-        <span className="text-caption font-medium text-muted-foreground">EN</span>
-      </div>
-    );
-  }
 
   return (
     <div className={cn("flex items-center gap-1", className)}>
       <Globe className="h-4 w-4 text-muted-foreground" />
       <button
         onClick={() => switchLocale("en")}
+        disabled={isPending}
         className={cn(
-          "rounded px-1.5 py-0.5 text-caption font-medium transition-colors",
+          "rounded px-1.5 py-0.5 text-caption font-medium transition-colors disabled:opacity-50",
           locale === "en"
             ? "text-foreground"
             : "text-muted-foreground hover:text-foreground"
@@ -51,8 +44,9 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       <span className="text-muted-foreground">/</span>
       <button
         onClick={() => switchLocale("fr")}
+        disabled={isPending}
         className={cn(
-          "rounded px-1.5 py-0.5 text-caption font-medium transition-colors",
+          "rounded px-1.5 py-0.5 text-caption font-medium transition-colors disabled:opacity-50",
           locale === "fr"
             ? "text-foreground"
             : "text-muted-foreground hover:text-foreground"

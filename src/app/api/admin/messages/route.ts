@@ -14,6 +14,10 @@ export async function GET() {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
+    if (!process.env.DATABASE_URL) {
+      return NextResponse.json({ conversations: [] });
+    }
+
     const messages = await db
       .select()
       .from(contactMessages)
@@ -60,6 +64,10 @@ export async function PATCH(request: Request) {
       messageIds?: string[];
       replyIds?: string[];
     };
+
+    if (!process.env.DATABASE_URL) {
+      return NextResponse.json({ message: "Database not configured" }, { status: 503 });
+    }
 
     if (messageIds && messageIds.length > 0) {
       for (const id of messageIds) {

@@ -19,6 +19,10 @@ export async function DELETE(
 
     const { id } = await params;
 
+    if (!process.env.DATABASE_URL) {
+      return NextResponse.json({ error: "Database not configured" }, { status: 503 });
+    }
+
     // Delete replies first (foreign key constraint)
     await db
       .delete(messageReplies)
