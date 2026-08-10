@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -7,12 +7,14 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
 
+export const runtime = "nodejs";
+
 export async function generateMetadata(): Promise<Metadata> {
   return generatePageMetadata("solutions");
 }
 
-export default function SolutionsPage() {
-  const t = useTranslations("solutions");
+export default async function SolutionsPage() {
+  const t = await getTranslations("solutions");
 
   const solutions = [
     {

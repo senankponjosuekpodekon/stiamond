@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Code, Check, ArrowRight } from "lucide-react";
@@ -6,12 +6,14 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
 
+export const runtime = "nodejs";
+
 export async function generateMetadata(): Promise<Metadata> {
   return generatePageMetadata("solutionsSoftware");
 }
 
-export default function SoftwareSolutionPage() {
-  const t = useTranslations("solutions.software");
+export default async function SoftwareSolutionPage() {
+  const t = await getTranslations("solutions.software");
   const features = [
     t("features.f1"), t("features.f2"), t("features.f3"), t("features.f4"),
     t("features.f5"), t("features.f6"), t("features.f7"), t("features.f8"),

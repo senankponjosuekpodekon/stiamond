@@ -1,14 +1,16 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
+
+export const runtime = "nodejs";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generatePageMetadata("privacy");
 }
 
-export default function PrivacyPage() {
-  const t = useTranslations("privacy");
+export default async function PrivacyPage() {
+  const t = await getTranslations("privacy");
   const s3Items = t.raw("s3Items") as string[];
   const s5Items = t.raw("s5Items") as string[];
 

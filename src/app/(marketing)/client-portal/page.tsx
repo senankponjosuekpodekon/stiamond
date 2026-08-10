@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,6 +8,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
 
+export const runtime = "nodejs";
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
     ...generatePageMetadata("clientPortal"),
@@ -15,8 +17,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function ClientPortalPage() {
-  const t = useTranslations("clientPortal");
+export default async function ClientPortalPage() {
+  const t = await getTranslations("clientPortal");
 
   const features = [
     { icon: LayoutDashboard, title: t("features.dashboard.title"), description: t("features.dashboard.description") },

@@ -1,14 +1,16 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
+
+export const runtime = "nodejs";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generatePageMetadata("terms");
 }
 
-export default function TermsPage() {
-  const t = useTranslations("terms");
+export default async function TermsPage() {
+  const t = await getTranslations("terms");
 
   return (
     <Container>

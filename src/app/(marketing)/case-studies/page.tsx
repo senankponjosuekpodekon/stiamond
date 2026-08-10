@@ -1,17 +1,19 @@
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
-import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
 
+export const runtime = "nodejs";
+
 export async function generateMetadata(): Promise<Metadata> {
   return generatePageMetadata("caseStudies");
 }
 
-export default function CaseStudiesPage() {
-  const t = useTranslations("caseStudies");
+export default async function CaseStudiesPage() {
+  const t = await getTranslations("caseStudies");
 
   const cases = [
     {

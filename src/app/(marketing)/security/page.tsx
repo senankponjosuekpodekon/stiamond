@@ -1,15 +1,17 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import { ShieldCheck, Lock, Eye, Bug, FileCheck, Server } from "lucide-react";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
 
+export const runtime = "nodejs";
+
 export async function generateMetadata(): Promise<Metadata> {
   return generatePageMetadata("security");
 }
 
-export default function SecurityPage() {
-  const t = useTranslations("security");
+export default async function SecurityPage() {
+  const t = await getTranslations("security");
 
   const practices = [
     { icon: Lock, title: t("practices.encryption.title"), description: t("practices.encryption.description") },
