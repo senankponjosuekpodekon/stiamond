@@ -10,37 +10,47 @@
     "getStarted": "Get Started"
   },
   "home": {
-    "badge": "AI-Powered Engineering",
-    "title": "Building the next generation of <highlight>intelligent software</highlight>",
-    "subtitle": "Stiamond designs AI-powered software, cloud infrastructure, and digital growth systems that accelerate business performance.",
+    "badge": "Web · E-commerce · AI Automation",
+    "title": "Stiamond builds <highlight>websites, online stores, and AI automation</highlight> for SMBs and entrepreneurs",
+    "subtitle": "One person who covers development, design, marketing, and automation. Based in Cotonou, working with French and English-speaking clients worldwide.",
     "ctaPrimary": "Start a Project",
     "ctaSecondary": "Explore Solutions",
     "stats": {
-      "pillars": "Pillars of Expertise",
-      "pages": "Pages of Architecture",
-      "lighthouse": "Lighthouse Target",
-      "roadmap": "Roadmap Vision"
+      "stores": "E-commerce stores built",
+      "campaigns": "Ad campaigns managed",
+      "agent": "AI agents in production",
+      "direct": "Direct contact with the founder"
     },
     "pillars": {
       "overline": "Our Expertise",
-      "title": "Four pillars of engineering",
-      "subtitle": "We combine deep technical expertise with strategic thinking to deliver systems that scale.",
+      "title": "Four pillars, one person",
+      "subtitle": "Development, marketing, AI automation, and creative — what most agencies split across 3-4 people, you get in one direct contact.",
       "software": {
         "title": "Software Engineering",
-        "description": "Custom software, web platforms, and SaaS products built with modern architecture."
+        "description": "Custom web apps, sites, and SaaS with React, Vue, Laravel, NestJS. WordPress and Shopify for faster delivery."
       },
       "ai": {
-        "title": "AI Engineering",
-        "description": "LLM integration, RAG systems, AI agents, and intelligent automation pipelines."
+        "title": "AI Automation",
+        "description": "n8n agents for customer service, social media management, and business process automation. Live in production."
       },
       "cloud": {
-        "title": "Cloud Infrastructure",
-        "description": "Scalable cloud architecture, DevOps, CI/CD, and infrastructure as code."
+        "title": "Deployment & DevOps",
+        "description": "CI/CD pipelines, VPS management, Cloudflare deployment, and managed PostgreSQL."
       },
       "growth": {
-        "title": "Growth Systems",
-        "description": "SEO, content strategy, marketing automation, and data-driven growth engines."
+        "title": "Growth & Marketing",
+        "description": "Meta, Google, TikTok Ads, SEO, Systeme.io funnels, and conversion optimization. 69+ campaigns managed."
       }
+    },
+    "lab": {
+      "overline": "Stiamond Lab",
+      "title": "Projects in R&D",
+      "subtitle": "We build our own products. This is what's currently in development — not available as a service yet.",
+      "tradingOs": "AI signal generation and trading across all markets",
+      "learningOs": "Adaptive learning platform inspired by Epitech methodology",
+      "conversationalAgent": "Conversational AI agent for customer service, integrable on any website",
+      "bankingPlatform": "Banking platform — transactions, cards, tontines",
+      "marketplace": "Digital product marketplace"
     },
     "products": {
       "overline": "Products",
@@ -54,25 +64,25 @@
     },
     "values": {
       "overline": "Why Stiamond",
-      "title": "Engineered for trust",
-      "subtitle": "Every system we build follows the same principles — security, scale, and composability.",
+      "title": "Built on trust",
+      "subtitle": "You work directly with the founder. No account managers, no juniors learning on your project.",
       "security": {
-        "title": "Security First",
-        "description": "RBAC, JWT, WAF, audit logs — enterprise-grade by default."
+        "title": "Direct Contact",
+        "description": "You talk to the person who builds your project. From first call to final delivery."
       },
       "scale": {
-        "title": "Global Scale",
-        "description": "Edge-deployed on Cloudflare. Sub-50ms worldwide."
+        "title": "Proven Results",
+        "description": "18+ e-commerce stores, 69+ ad campaigns, AI agents running in production."
       },
       "composable": {
-        "title": "Composable",
-        "description": "Modular architecture. Every layer independently scalable."
+        "title": "Full-Stack Coverage",
+        "description": "Development, design, marketing, and automation — one person, one point of contact."
       }
     },
     "philosophy": {
       "overline": "Our Philosophy",
-      "title": "From research to ecosystem",
-      "subtitle": "Every project is an opportunity to learn. Every learning becomes a feature. Every feature becomes a product. Every product enriches the platform.",
+      "title": "Core and Lab",
+      "subtitle": "Two pillars: Core (what we deliver to clients) and Lab (what we build in-house). Every client project teaches us something that becomes a product.",
       "research": "Research",
       "prototypes": "Prototypes",
       "services": "Services",
@@ -82,8 +92,8 @@
       "ecosystem": "Ecosystem"
     },
     "cta": {
-      "title": "Ready to build something intelligent?",
-      "subtitle": "Let's discuss how Stiamond can help you engineer your next digital system.",
+      "title": "Ready to build something?",
+      "subtitle": "Let's discuss your project. You'll work directly with me from first call to final delivery.",
       "getInTouch": "Get in Touch",
       "viewPricing": "View Pricing"
     }

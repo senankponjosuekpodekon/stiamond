@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,13 +20,33 @@ import {
   Brain,
   Server,
   Workflow,
-  ShieldCheck,
+  User,
   Globe,
   Layers,
+  FlaskConical,
+  ShoppingBag,
+  MessageSquare,
+  GraduationCap,
+  Banknote,
+  Store,
 } from "lucide-react";
+import type { Metadata } from "next";
 
-export default function HomePage() {
-  const t = useTranslations("home");
+export const runtime = "nodejs";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Stiamond — Web, E-commerce & AI Automation Studio",
+    description: "Stiamond builds websites, online stores, ad campaigns, and AI automation agents for SMBs and entrepreneurs. Based in Cotonou, working with clients worldwide.",
+    openGraph: {
+      title: "Stiamond — Web, E-commerce & AI Automation Studio",
+      description: "Websites, online stores, ad campaigns, and AI automation. One person covering development, design, marketing, and automation.",
+    },
+  };
+}
+
+export default async function HomePage() {
+  const t = await getTranslations("home");
 
   const pillars = [
     {
@@ -56,10 +76,10 @@ export default function HomePage() {
   ];
 
   const stats = [
-    { value: "5+", label: t("stats.pillars") },
-    { value: "40+", label: t("stats.pages") },
-    { value: "100", label: t("stats.lighthouse") },
-    { value: "5yr", label: t("stats.roadmap") },
+    { value: "18+", label: t("stats.stores") },
+    { value: "69+", label: t("stats.campaigns") },
+    { value: "Live", label: t("stats.agent") },
+    { value: "1", label: t("stats.direct") },
   ];
 
   const products = [
@@ -70,9 +90,17 @@ export default function HomePage() {
   ];
 
   const values = [
-    { icon: ShieldCheck, title: t("values.security.title"), description: t("values.security.description") },
-    { icon: Globe, title: t("values.scale.title"), description: t("values.scale.description") },
+    { icon: User, title: t("values.security.title"), description: t("values.security.description") },
+    { icon: TrendingUp, title: t("values.scale.title"), description: t("values.scale.description") },
     { icon: Layers, title: t("values.composable.title"), description: t("values.composable.description") },
+  ];
+
+  const labProjects = [
+    { icon: TrendingUp, name: "Trading OS", description: t("lab.tradingOs") },
+    { icon: GraduationCap, name: "Learning OS", description: t("lab.learningOs") },
+    { icon: MessageSquare, name: "Conversational AI Agent", description: t("lab.conversationalAgent") },
+    { icon: Banknote, name: "Banking Platform", description: t("lab.bankingPlatform") },
+    { icon: Store, name: "Digital Marketplace", description: t("lab.marketplace") },
   ];
 
   return (
@@ -243,6 +271,43 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+        </Container>
+      </section>
+
+      {/* Stiamond Lab — R&D projects */}
+      <section className="border-t border-border bg-surface-1/40 py-20 md:py-28">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-overline font-semibold uppercase text-accent">
+              {t("lab.overline")}
+            </p>
+            <h2 className="mt-3 text-h2">{t("lab.title")}</h2>
+            <p className="mt-4 text-body-lg text-muted-foreground">
+              {t("lab.subtitle")}
+            </p>
+          </div>
+
+          <Stagger className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {labProjects.map((project) => (
+              <StaggerItem key={project.name}>
+                <Card className="h-full border-dashed">
+                  <CardContent className="pt-6">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-surface-2 text-muted-foreground">
+                      <project.icon className="h-5 w-5" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="mt-4 text-h5 font-semibold">{project.name}</h3>
+                    <p className="mt-2 text-body-sm text-muted-foreground">
+                      {project.description}
+                    </p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-caption font-medium text-muted-foreground/60">
+                      <FlaskConical className="h-3 w-3" />
+                      R&D Internal
+                    </span>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
+            ))}
+          </Stagger>
         </Container>
       </section>
 

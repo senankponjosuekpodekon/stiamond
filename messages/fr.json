@@ -10,37 +10,47 @@
     "getStarted": "Commencer"
   },
   "home": {
-    "badge": "Ingénierie IA",
-    "title": "Construire la prochaine génération de <highlight>logiciels intelligents</highlight>",
-    "subtitle": "Stiamond conçoit des logiciels IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance business.",
+    "badge": "Web · E-commerce · Automatisation IA",
+    "title": "Stiamond conçoit des <highlight>sites web, boutiques en ligne et automatisations IA</highlight> pour les PME et entrepreneurs",
+    "subtitle": "Une seule personne qui couvre développement, design, marketing et automatisation. Basé à Cotonou, je travaille avec des clients francophones et anglophones à distance.",
     "ctaPrimary": "Démarrer un projet",
     "ctaSecondary": "Explorer les solutions",
     "stats": {
-      "pillars": "Piliers d'expertise",
-      "pages": "Pages d'architecture",
-      "lighthouse": "Objectif Lighthouse",
-      "roadmap": "Vision roadmap"
+      "stores": "Boutiques e-commerce livrées",
+      "campaigns": "Campagnes publicitaires gérées",
+      "agent": "Agents IA en production",
+      "direct": "Contact direct avec le fondateur"
     },
     "pillars": {
       "overline": "Notre expertise",
-      "title": "Quatre piliers d'ingénierie",
-      "subtitle": "Nous combinons une expertise technique approfondie avec une réflexion stratégique pour livrer des systèmes qui passent à l'échelle.",
+      "title": "Quatre piliers, une personne",
+      "subtitle": "Développement, marketing, automatisation IA et créa — ce que la plupart des agences répartissent sur 3-4 personnes, vous l'avez en un seul interlocuteur.",
       "software": {
         "title": "Ingénierie Logicielle",
-        "description": "Logiciels sur mesure, plateformes web et produits SaaS construits avec une architecture moderne."
+        "description": "Apps web sur mesure, sites et SaaS avec React, Vue, Laravel, NestJS. WordPress et Shopify pour une livraison plus rapide."
       },
       "ai": {
-        "title": "Ingénierie IA",
-        "description": "Intégration LLM, systèmes RAG, agents IA et pipelines d'automatisation intelligents."
+        "title": "Automatisation IA",
+        "description": "Agents n8n pour le service client, la gestion des réseaux sociaux et l'automatisation des processus business. En production."
       },
       "cloud": {
-        "title": "Infrastructure Cloud",
-        "description": "Architecture cloud scalable, DevOps, CI/CD et infrastructure as code."
+        "title": "Déploiement & DevOps",
+        "description": "Pipelines CI/CD, gestion de VPS, déploiement Cloudflare et PostgreSQL managé."
       },
       "growth": {
-        "title": "Systèmes de Croissance",
-        "description": "SEO, stratégie de contenu, automatisation marketing et moteurs de croissance data-driven."
+        "title": "Croissance & Marketing",
+        "description": "Meta, Google, TikTok Ads, SEO, funnels Systeme.io et optimisation de conversion. 69+ campagnes gérées."
       }
+    },
+    "lab": {
+      "overline": "Stiamond Lab",
+      "title": "Projets en R&D",
+      "subtitle": "Nous construisons nos propres produits. Voici ce qui est actuellement en développement — pas encore disponible comme service.",
+      "tradingOs": "Génération de signaux IA et trading sur tous les marchés",
+      "learningOs": "Plateforme d'apprentissage adaptatif inspirée de la méthodologie Epitech",
+      "conversationalAgent": "Agent IA conversationnel pour le service client, intégrable sur n'importe quel site web",
+      "bankingPlatform": "Plateforme bancaire — transactions, cartes, tontines",
+      "marketplace": "Marketplace de produits digitaux"
     },
     "products": {
       "overline": "Produits",
@@ -55,24 +65,24 @@
     "values": {
       "overline": "Pourquoi Stiamond",
       "title": "Conçu pour la confiance",
-      "subtitle": "Chaque système que nous construisons suit les mêmes principes — sécurité, échelle et composabilité.",
+      "subtitle": "Vous travaillez directement avec le fondateur. Pas de compte manager, pas de juniors qui apprennent sur votre projet.",
       "security": {
-        "title": "Sécurité d'abord",
-        "description": "RBAC, JWT, WAF, logs d'audit — niveau entreprise par défaut."
+        "title": "Contact Direct",
+        "description": "Vous parlez à la personne qui construit votre projet. Du premier appel à la livraison finale."
       },
       "scale": {
-        "title": "Échelle Mondiale",
-        "description": "Déployé en edge sur Cloudflare. Sous 50ms dans le monde entier."
+        "title": "Résultats Prouvés",
+        "description": "18+ boutiques e-commerce, 69+ campagnes publicitaires, agents IA en production."
       },
       "composable": {
-        "title": "Composable",
-        "description": "Architecture modulaire. Chaque couche est indépendamment scalable."
+        "title": "Couverture Full-Stack",
+        "description": "Développement, design, marketing et automatisation — une personne, un seul interlocuteur."
       }
     },
     "philosophy": {
       "overline": "Notre philosophie",
-      "title": "De la recherche à l'écosystème",
-      "subtitle": "Chaque projet est une opportunité d'apprendre. Chaque apprentissage devient une fonctionnalité. Chaque fonctionnalité devient un produit. Chaque produit enrichit la plateforme.",
+      "title": "Core et Lab",
+      "subtitle": "Deux piliers : Core (ce que nous livrons aux clients) et Lab (ce que nous construisons en interne). Chaque projet client nous apprend quelque chose qui devient un produit.",
       "research": "Recherche",
       "prototypes": "Prototypes",
       "services": "Services",
@@ -82,8 +92,8 @@
       "ecosystem": "Écosystème"
     },
     "cta": {
-      "title": "Prêt à construire quelque chose d'intelligent ?",
-      "subtitle": "Discutons de la façon dont Stiamond peut vous aider à concevoir votre prochain système digital.",
+      "title": "Prêt à construire quelque chose ?",
+      "subtitle": "Discutons de votre projet. Vous travaillerez directement avec moi du premier appel à la livraison finale.",
       "getInTouch": "Nous contacter",
       "viewPricing": "Voir les tarifs"
     }
