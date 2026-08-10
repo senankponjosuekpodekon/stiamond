@@ -9,7 +9,10 @@ import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return generatePageMetadata("clientPortal");
+  return {
+    ...generatePageMetadata("clientPortal"),
+    robots: { index: false, follow: false },
+  };
 }
 
 export default function ClientPortalPage() {
