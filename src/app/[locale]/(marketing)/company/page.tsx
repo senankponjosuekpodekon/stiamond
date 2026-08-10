@@ -3,7 +3,7 @@ import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Target, Eye, ArrowRight, Heart, Lightbulb, ShieldCheck, Globe, User } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
 

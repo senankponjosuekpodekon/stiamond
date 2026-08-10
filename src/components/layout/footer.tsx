@@ -1,3 +1,4 @@
+import { Link as IntlLink } from "@/i18n/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -36,8 +37,8 @@ export function Footer() {
       title: t("resources"),
       links: [
         { label: t("blog"), href: "/blog" },
-        { label: t("documentation"), href: "/docs" },
-        { label: t("developers"), href: "/developers" },
+        { label: t("documentation"), href: "/docs", nonLocale: true },
+        { label: t("developers"), href: "/developers", nonLocale: true },
         { label: t("caseStudies"), href: "/case-studies" },
       ],
     },
@@ -49,7 +50,7 @@ export function Footer() {
         <div className="py-20">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
             <div className="col-span-2 lg:col-span-1">
-              <Link href="/" className="flex items-center gap-2">
+              <IntlLink href="/" className="flex items-center gap-2">
                 <Image
                   src="/logo.png"
                   alt="Stiamond"
@@ -58,7 +59,7 @@ export function Footer() {
                   className="rounded-lg"
                 />
                 <span className="text-body font-semibold">Stiamond</span>
-              </Link>
+              </IntlLink>
               <p className="mt-4 max-w-xs text-body-sm text-muted-foreground">
                 {t("tagline")}
               </p>
@@ -72,12 +73,21 @@ export function Footer() {
                 <ul className="mt-4 space-y-3">
                   {section.links.map((link) => (
                     <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="text-body-sm text-muted-foreground transition-colors hover:text-foreground"
-                      >
-                        {link.label}
-                      </Link>
+                      {link.nonLocale ? (
+                        <Link
+                          href={link.href}
+                          className="text-body-sm text-muted-foreground transition-colors hover:text-foreground"
+                        >
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <IntlLink
+                          href={link.href}
+                          className="text-body-sm text-muted-foreground transition-colors hover:text-foreground"
+                        >
+                          {link.label}
+                        </IntlLink>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -90,24 +100,24 @@ export function Footer() {
               © {new Date().getFullYear()} Stiamond. {t("rights")}
             </p>
             <div className="flex items-center gap-6">
-              <Link
+              <IntlLink
                 href="/privacy"
                 className="text-caption text-muted-foreground hover:text-foreground"
               >
                 {t("privacy")}
-              </Link>
-              <Link
+              </IntlLink>
+              <IntlLink
                 href="/terms"
                 className="text-caption text-muted-foreground hover:text-foreground"
               >
                 {t("terms")}
-              </Link>
-              <Link
+              </IntlLink>
+              <IntlLink
                 href="/security"
                 className="text-caption text-muted-foreground hover:text-foreground"
               >
                 {t("security")}
-              </Link>
+              </IntlLink>
             </div>
           </div>
         </div>

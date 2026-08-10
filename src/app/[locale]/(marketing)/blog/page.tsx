@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { db } from "@/lib/db";
 import { blogPosts } from "@/lib/db/schema";
 import { eq, desc } from "drizzle-orm";

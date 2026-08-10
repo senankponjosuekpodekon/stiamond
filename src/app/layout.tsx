@@ -99,6 +99,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const locale = await getLocale();
+  const messages = (await import(`../../messages/${locale}.json`)).default;
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -115,7 +116,7 @@ export default async function RootLayout({
           "font-sans antialiased"
         )}
       >
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <AnalyticsProvider>
               {children}

@@ -2,7 +2,7 @@ import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Code, GraduationCap, Briefcase, Rocket, Mail, Globe, Brain, TrendingUp } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 
 export const runtime = "nodejs";
