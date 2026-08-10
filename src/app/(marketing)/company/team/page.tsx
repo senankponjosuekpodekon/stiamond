@@ -64,6 +64,17 @@ export default async function TeamPage() {
         "Digital product marketplace",
       ],
     },
+    {
+      icon: Briefcase,
+      title: "Project Management & Leadership",
+      items: [
+        "IT project management — planning, coordination, delivery",
+        "DSI / CIO advisory — technical strategy for growing businesses",
+        "Lead Tech — team coordination, code review, architecture decisions",
+        "Vendor management — selecting and coordinating external providers",
+        "Agile methodology — sprints, retros, and continuous delivery",
+      ],
+    },
   ];
 
   return (
@@ -138,8 +149,9 @@ export default async function TeamPage() {
                 </p>
                 <p>
                   Today, Stiamond is a solo studio that covers what most agencies split across 3-4 people:
-                  <strong className="text-foreground"> development, design, marketing, and AI automation</strong>.
-                  You work directly with me — not a junior account manager.
+                  <strong className="text-foreground"> development, design, marketing, AI automation, and IT project management</strong>.
+                  You work directly with me — not a junior account manager. I also take on DSI (CIO) advisory
+                  and Lead Tech roles for businesses that need technical leadership without a full-time hire.
                 </p>
                 <p>
                   I'm currently pursuing a Google Marketing certification, with a Data Analytics

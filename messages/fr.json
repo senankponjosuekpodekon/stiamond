@@ -264,44 +264,56 @@
   "pricing": {
     "overline": "Tarifs",
     "title": "Des tarifs simples et transparents",
-    "subtitle": "Choisissez le plan adapté à votre étape. Pas de frais cachés, pas de surprises.",
-    "popular": "Populaire",
+    "subtitle": "D'une simple landing page à la direction technique continue. Choisissez le niveau adapté à votre étape.",
+    "popular": "Le plus choisi",
     "plans": {
+      "entry": {
+        "name": "Entry",
+        "description": "Landing pages, sites simples et tâches ponctuelles.",
+        "price": "800 $",
+        "period": "/projet",
+        "features": ["Landing page ou site simple", "Jusqu'à 20 heures", "Setup WordPress ou Shopify", "SEO de base", "Garantie 14 jours", "Support email"],
+        "cta": "Démarrer un projet"
+      },
       "starter": {
         "name": "Starter",
-        "description": "Pour les petits projets et les MVPs.",
+        "description": "Sites complets, boutiques e-commerce et agents d'automatisation.",
         "price": "2 500 $",
         "period": "/projet",
-        "features": ["1 pilier d'ingénierie", "Jusqu'à 40 heures", "Livraison par projet", "Support email", "Garantie 30 jours"],
+        "features": ["Site sur mesure ou boutique e-commerce", "Jusqu'à 40 heures", "Setup agent d'automatisation IA", "Setup campagne publicitaire", "Garantie 30 jours", "Support email"],
         "cta": "Démarrer un projet"
       },
       "growth": {
         "name": "Growth",
-        "description": "Pour les entreprises en croissance qui ont besoin d'ingénierie continue.",
-        "price": "8 000 $",
+        "description": "Ingénierie, marketing et automatisation continus pour les entreprises en croissance.",
+        "price": "3 000 $",
         "period": "/mois",
-        "features": ["Jusqu'à 3 piliers d'ingénierie", "Jusqu'à 160 heures/mois", "Ingénieur dédié", "Support prioritaire", "Roadmap trimestrielle", "Garantie 90 jours"],
-        "cta": "Passer à l'échelle avec nous"
+        "features": ["Jusqu'à 3 piliers : Dev, Marketing, Automatisation", "Jusqu'à 120 heures/mois", "Contact direct avec le fondateur", "Support prioritaire", "Appel stratégie mensuel", "Garantie 90 jours"],
+        "cta": "Passer à l'échelle"
       },
       "enterprise": {
-        "name": "Enterprise",
-        "description": "Pour les grandes équipes et les systèmes complexes.",
+        "name": "Enterprise / DSI",
+        "description": "Direction technique, gestion de projet et couverture full-stack.",
         "price": "Sur Mesure",
         "period": "",
-        "features": ["Les 4 piliers d'ingénierie", "Heures illimitées", "Équipe dédiée", "Support 24/7", "Garantie SLA", "Intervention sur site", "Intégrations sur mesure"],
+        "features": ["Les 4 piliers + gestion de projet", "Rôle DSI / Lead Tech", "Heures illimitées", "Coordination d'équipe & gestion de prestataires", "Garantie SLA", "Sur site ou à distance", "Intégrations sur mesure"],
         "cta": "Contacter les ventes"
       }
     },
     "faq": {
       "title": "Questions fréquentes",
       "q1": "Qu'est-ce qui est inclus dans les heures ?",
-      "a1": "Ingénierie, design, revue de code, tests et déploiement. Les réunions et la planification sont incluses.",
+      "a1": "Développement, design, revue de code, tests, déploiement et gestion de projet. Les réunions et appels stratégie sont inclus.",
       "q2": "Puis-je changer de plan ?",
       "a2": "Oui, vous pouvez monter ou descendre de plan à tout moment. Les changements prennent effet au prochain cycle de facturation.",
       "q3": "Proposez-vous des tarifs personnalisés ?",
-      "a3": "Pour les clients Enterprise, nous adaptons les tarifs selon la portée, la taille de l'équipe et les exigences SLA.",
+      "a3": "Pour les clients Enterprise/DSI, les tarifs sont adaptés selon la portée, la taille de l'équipe et les exigences SLA. Les clients locaux (Bénin/Afrique de l'Ouest) bénéficient de tarifs adaptés.",
       "q4": "Quelles technologies utilisez-vous ?",
-      "a4": "Next.js, TypeScript, Python, Go, Cloudflare, AWS et frameworks AI/ML modernes."
+      "a4": "React, Vue, Next.js, Laravel, NestJS, Flutter, TailwindCSS, PostgreSQL, n8n, Cloudflare. WordPress et Shopify pour une livraison plus rapide.",
+      "q5": "Proposez-vous de la gestion de projet et des services DSI ?",
+      "a5": "Oui. Au-delà du développement, je propose de la gestion de projet informatique, du conseil DSI (CIO) et des services de Lead Tech — coordination d'équipes, de prestataires et décisions techniques pour les entreprises en croissance.",
+      "q6": "Quels moyens de paiement acceptez-vous ?",
+      "a6": "Paiements internationaux via Wise (USD, EUR, GBP, CAD). Clients locaux via mobile money ou virement bancaire. Paiement typiquement 50% à la commande, 50% à la livraison, ou par jalons."
     }
   },
   "company": {

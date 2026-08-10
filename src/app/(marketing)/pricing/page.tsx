@@ -17,13 +17,22 @@ export default async function PricingPage() {
 
   const plans = [
     {
+      name: t("plans.entry.name"),
+      description: t("plans.entry.description"),
+      price: t("plans.entry.price"),
+      period: t("plans.entry.period"),
+      features: t.raw("plans.entry.features") as string[],
+      cta: t("plans.entry.cta"),
+      popular: false,
+    },
+    {
       name: t("plans.starter.name"),
       description: t("plans.starter.description"),
       price: t("plans.starter.price"),
       period: t("plans.starter.period"),
       features: t.raw("plans.starter.features") as string[],
       cta: t("plans.starter.cta"),
-      popular: false,
+      popular: true,
     },
     {
       name: t("plans.growth.name"),
@@ -32,7 +41,7 @@ export default async function PricingPage() {
       period: t("plans.growth.period"),
       features: t.raw("plans.growth.features") as string[],
       cta: t("plans.growth.cta"),
-      popular: true,
+      popular: false,
     },
     {
       name: t("plans.enterprise.name"),
@@ -50,6 +59,8 @@ export default async function PricingPage() {
     { q: t("faq.q2"), a: t("faq.a2") },
     { q: t("faq.q3"), a: t("faq.a3") },
     { q: t("faq.q4"), a: t("faq.a4") },
+    { q: t("faq.q5"), a: t("faq.a5") },
+    { q: t("faq.q6"), a: t("faq.a6") },
   ];
 
   return (
@@ -68,7 +79,7 @@ export default async function PricingPage() {
 
       <section className="py-20 md:py-28">
         <Container>
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-4">
             {plans.map((plan) => (
               <div
                 key={plan.name}

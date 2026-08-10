@@ -264,44 +264,56 @@
   "pricing": {
     "overline": "Pricing",
     "title": "Simple, transparent pricing",
-    "subtitle": "Choose the plan that fits your stage. No hidden fees, no surprises.",
-    "popular": "Popular",
+    "subtitle": "From a single landing page to ongoing engineering leadership. Pick the level that fits your stage.",
+    "popular": "Most chosen",
     "plans": {
+      "entry": {
+        "name": "Entry",
+        "description": "Landing pages, simple sites, and one-off tasks.",
+        "price": "$800",
+        "period": "/project",
+        "features": ["Landing page or simple website", "Up to 20 hours", "WordPress or Shopify setup", "Basic SEO setup", "14-day warranty", "Email support"],
+        "cta": "Start a Project"
+      },
       "starter": {
         "name": "Starter",
-        "description": "For small projects and MVPs.",
+        "description": "Full websites, e-commerce stores, and automation agents.",
         "price": "$2,500",
         "period": "/project",
-        "features": ["1 engineering pillar", "Up to 40 hours", "Project-based delivery", "Email support", "30-day warranty"],
+        "features": ["Custom website or e-commerce store", "Up to 40 hours", "AI automation agent setup", "Ad campaign setup", "30-day warranty", "Email support"],
         "cta": "Start a Project"
       },
       "growth": {
         "name": "Growth",
-        "description": "For scaling businesses that need ongoing engineering.",
-        "price": "$8,000",
+        "description": "Ongoing engineering, marketing, and automation for scaling businesses.",
+        "price": "$3,000",
         "period": "/month",
-        "features": ["Up to 3 engineering pillars", "Up to 160 hours/month", "Dedicated engineer", "Priority support", "Quarterly roadmap", "90-day warranty"],
+        "features": ["Up to 3 pillars: Dev, Marketing, Automation", "Up to 120 hours/month", "Direct contact with founder", "Priority support", "Monthly strategy call", "90-day warranty"],
         "cta": "Scale with Us"
       },
       "enterprise": {
-        "name": "Enterprise",
-        "description": "For large teams and complex systems.",
+        "name": "Enterprise / DSI",
+        "description": "Technical leadership, project management, and full-stack coverage.",
         "price": "Custom",
         "period": "",
-        "features": ["All 4 engineering pillars", "Unlimited hours", "Dedicated team", "24/7 support", "SLA guarantee", "On-site available", "Custom integrations"],
+        "features": ["All 4 pillars + project management", "DSI / Lead Tech role", "Unlimited hours", "Team coordination & vendor management", "SLA guarantee", "On-site or remote", "Custom integrations"],
         "cta": "Contact Sales"
       }
     },
     "faq": {
       "title": "Frequently asked questions",
       "q1": "What's included in the hours?",
-      "a1": "Engineering, design, code review, testing, and deployment. Meetings and planning are included.",
+      "a1": "Development, design, code review, testing, deployment, and project management. Meetings and strategy calls are included.",
       "q2": "Can I switch plans?",
       "a2": "Yes, you can upgrade or downgrade anytime. Changes take effect on the next billing cycle.",
       "q3": "Do you offer custom pricing?",
-      "a3": "For Enterprise clients, we tailor pricing based on scope, team size, and SLA requirements.",
+      "a3": "For Enterprise/DSI clients, pricing is tailored based on scope, team size, and SLA requirements. Local clients (Benin/West Africa) get adapted rates.",
       "q4": "What technologies do you use?",
-      "a4": "Next.js, TypeScript, Python, Go, Cloudflare, AWS, and modern AI/ML frameworks."
+      "a4": "React, Vue, Next.js, Laravel, NestJS, Flutter, TailwindCSS, PostgreSQL, n8n, Cloudflare. WordPress and Shopify for faster delivery.",
+      "q5": "Do you offer project management and DSI services?",
+      "a5": "Yes. Beyond development, I provide IT project management, DSI (CIO) advisory, and technical lead services — coordinating teams, vendors, and technical decisions for growing businesses.",
+      "q6": "What payment methods do you accept?",
+      "a6": "International payments via Wise (USD, EUR, GBP, CAD). Local clients via mobile money or bank transfer. Payment is typically 50% upfront, 50% on delivery, or milestone-based."
     }
   },
   "company": {
