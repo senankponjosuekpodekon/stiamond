@@ -2,32 +2,10 @@ import type { Metadata } from "next";
 import { Poppins, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 import { AnalyticsProvider } from "@/components/analytics";
 import { Providers } from "@/components/providers";
-import { headers } from "next/headers";
-import en from "../../messages/en.json";
-import fr from "../../messages/fr.json";
 import "./globals.css";
-
-const messagesMap = { en, fr };
-
-type Locale = "en" | "fr";
-
-async function getLocale(): Promise<Locale> {
-  const headerStore = await headers();
-  const cookieHeader = headerStore.get("cookie") || "";
-  const cookieLocale = cookieHeader
-    .split("; ")
-    .find((row) => row.startsWith("stiamond-locale="))
-    ?.split("=")[1] as Locale | undefined;
-  if (cookieLocale && cookieLocale in messagesMap) return cookieLocale;
-
-  const acceptLang = headerStore.get("accept-language") || "";
-  const browserLang = acceptLang.split(",")[0].trim().split("-")[0].toLowerCase();
-  if (browserLang === "fr") return "fr";
-
-  return "en";
-}
 
 const poppins = Poppins({
   variable: "--font-sans",
@@ -44,18 +22,19 @@ const jetbrainsMono = JetBrains_Mono({
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
-  const meta = (messagesMap[locale] as Record<string, unknown>).metadata as Record<string, { title: string; description: string }>;
-  const site = meta.site;
+  const t = await getTranslations({ locale, namespace: "metadata.site" });
+  const title = t("title");
+  const description = t("description");
   const ogLocale = locale === "fr" ? "fr_FR" : "en_US";
   const altLocale = locale === "fr" ? "en_US" : "fr_FR";
 
   return {
     metadataBase: new URL("https://stiamond.net"),
     title: {
-      default: site.title,
+      default: title,
       template: `%s — Stiamond`,
     },
-    description: site.description,
+    description,
     keywords: [
       "AI engineering",
       "software development",
@@ -76,13 +55,13 @@ export async function generateMetadata(): Promise<Metadata> {
       alternateLocale: [altLocale],
       url: "https://stiamond.net",
       siteName: "Stiamond",
-      title: site.title,
-      description: site.description,
+      title,
+      description,
     },
     twitter: {
       card: "summary_large_image",
-      title: site.title,
-      description: site.description,
+      title,
+      description,
     },
     robots: {
       index: true,
@@ -120,7 +99,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const locale = await getLocale();
-  const messages = messagesMap[locale];
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -137,7 +115,7 @@ export default async function RootLayout({
           "font-sans antialiased"
         )}
       >
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider>
           <Providers>
             <AnalyticsProvider>
               {children}

@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
-import { getLocaleFromHeaders } from "@/lib/seo";
+import { getTranslations, getLocale } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import {
@@ -34,7 +33,7 @@ import type { Metadata } from "next";
 export const runtime = "nodejs";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocaleFromHeaders();
+  const locale = await getLocale();
   const isFr = locale === "fr";
   
   return {
