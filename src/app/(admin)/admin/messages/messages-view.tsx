@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Send, Mail, MailOpen, ChevronLeft, MessageSquare } from "lucide-react";
+import { Send, Mail, MailOpen, ChevronLeft, MessageSquare, Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type Conversation = {
@@ -95,6 +95,23 @@ export function MessagesView({
     },
     []
   );
+
+  const handleDelete = async (convId: string) => {
+    if (!confirm("Delete this conversation? This cannot be undone.")) return;
+    try {
+      const res = await fetch(`/api/admin/messages/${convId}`, {
+        method: "DELETE",
+      });
+      if (!res.ok) throw new Error("Failed to delete");
+      setConversations((prev) => prev.filter((c) => c.id !== convId));
+      if (selectedId === convId) {
+        setSelectedId(null);
+        setMobileView("list");
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to delete");
+    }
+  };
 
   const handleSelect = (conv: Conversation) => {
     setSelectedId(conv.id);
@@ -293,9 +310,18 @@ export function MessagesView({
                     </a>
                   </div>
                 </div>
-                <time className="text-caption text-muted-foreground">
-                  {new Date(selected.createdAt).toLocaleDateString()}
-                </time>
+                <div className="flex items-center gap-3">
+                  <time className="text-caption text-muted-foreground">
+                    {new Date(selected.createdAt).toLocaleDateString()}
+                  </time>
+                  <button
+                    onClick={() => handleDelete(selected.id)}
+                    className="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-destructive/10 hover:text-destructive"
+                    title="Delete conversation"
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </button>
+                </div>
               </div>
 
               {/* Messages */}
