@@ -1,23 +1,37 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { HeartPulse, Banknote, ShoppingCart, Factory, GraduationCap, Building2 } from "lucide-react";
+import { ShoppingCart, GraduationCap, Presentation, Banknote, HeartPulse, Building2 } from "lucide-react";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
+
+export const runtime = "nodejs";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generatePageMetadata("industries");
 }
 
-export default function IndustriesPage() {
-  const t = useTranslations("industries");
+export default async function IndustriesPage() {
+  const t = await getTranslations("industries");
 
   const industries = [
     {
-      icon: HeartPulse,
-      title: t("healthcare.title"),
-      description: t("healthcare.description"),
-      useCases: t.raw("healthcare.useCases") as string[],
+      icon: ShoppingCart,
+      title: t("retail.title"),
+      description: t("retail.description"),
+      useCases: t.raw("retail.useCases") as string[],
+    },
+    {
+      icon: GraduationCap,
+      title: t("education.title"),
+      description: t("education.description"),
+      useCases: t.raw("education.useCases") as string[],
+    },
+    {
+      icon: Presentation,
+      title: t("coaching.title"),
+      description: t("coaching.description"),
+      useCases: t.raw("coaching.useCases") as string[],
     },
     {
       icon: Banknote,
@@ -26,22 +40,10 @@ export default function IndustriesPage() {
       useCases: t.raw("finance.useCases") as string[],
     },
     {
-      icon: ShoppingCart,
-      title: t("retail.title"),
-      description: t("retail.description"),
-      useCases: t.raw("retail.useCases") as string[],
-    },
-    {
-      icon: Factory,
-      title: t("manufacturing.title"),
-      description: t("manufacturing.description"),
-      useCases: t.raw("manufacturing.useCases") as string[],
-    },
-    {
-      icon: GraduationCap,
-      title: t("education.title"),
-      description: t("education.description"),
-      useCases: t.raw("education.useCases") as string[],
+      icon: HeartPulse,
+      title: t("healthcare.title"),
+      description: t("healthcare.description"),
+      useCases: t.raw("healthcare.useCases") as string[],
     },
     {
       icon: Building2,

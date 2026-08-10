@@ -374,30 +374,30 @@
     "overline": "Industries",
     "title": "Des solutions pour chaque secteur",
     "subtitle": "Nous adaptons notre expertise IA, logicielle et cloud aux défis uniques de chaque industrie que nous servons.",
+    "retail": {
+      "title": "Retail & E-commerce",
+      "description": "18+ boutiques e-commerce livrées, 69+ campagnes publicitaires gérées. Shopify, WooCommerce, optimisation de conversion et photographie produit.",
+      "useCases": ["Shopify & WooCommerce", "Optimisation de Conversion", "Meta & Google Ads", "SEO & Analytics"]
+    },
+    "education": {
+      "title": "Éducation & Formation",
+      "description": "Plateformes d'apprentissage, funnels de cours et tutorat assisté par IA. Construits sur Systeme.io et plateformes custom.",
+      "useCases": ["Plateformes de Cours", "Funnels d'Inscription", "Tutorat IA", "Automatisation Email"]
+    },
+    "coaching": {
+      "title": "Coaching & Formation",
+      "description": "Tunnels de vente, landing pages et acquisition client automatisée pour coachs, formateurs et consultants.",
+      "useCases": ["Funnels Systeme.io", "Génération de Leads", "Automatisation de Booking", "Stratégie de Contenu"]
+    },
+    "finance": {
+      "title": "Finance",
+      "description": "Facturation automatisée, reporting financier et pipelines de données pour petites institutions financières et projets fintech.",
+      "useCases": ["Automatisation de Facturation", "Reporting Financier", "Pipelines de Données", "Analytics & Dashboards"]
+    },
     "healthcare": {
       "title": "Santé",
       "description": "Diagnostics par IA, imagerie médicale, gestion des patients et systèmes de support à la décision clinique.",
       "useCases": ["Diagnostics IA", "Imagerie Médicale", "Dossiers Patients", "Télémédecine"]
-    },
-    "finance": {
-      "title": "Finance",
-      "description": "Détection de fraude, évaluation des risques, trading algorithmique et systèmes de conformité automatisés.",
-      "useCases": ["Détection de Fraude", "Modèles de Risque", "Bots de Trading", "Automatisation de Conformité"]
-    },
-    "retail": {
-      "title": "Retail & E-commerce",
-      "description": "Recommandations personnalisées, optimisation des stocks et expériences client pilotées par l'IA.",
-      "useCases": ["Moteurs de Recommandation", "IA Inventaire", "Pricing Dynamique", "Recherche Visuelle"]
-    },
-    "manufacturing": {
-      "title": "Industrie",
-      "description": "Maintenance prédictive, optimisation de la chaîne d'approvisionnement et contrôle qualité IoT.",
-      "useCases": ["Maintenance Prédictive", "IA Chaîne d'Approvisionnement", "Contrôle Qualité", "Monitoring IoT"]
-    },
-    "education": {
-      "title": "Éducation",
-      "description": "Parcours d'apprentissage personnalisés, tutorat IA et systèmes d'évaluation automatisés.",
-      "useCases": ["Tutorat IA", "Apprentissage Adaptatif", "Notation Auto", "Génération de Contenu"]
     },
     "realEstate": {
       "title": "Immobilier",

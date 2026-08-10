@@ -374,30 +374,30 @@
     "overline": "Industries",
     "title": "Solutions for every sector",
     "subtitle": "We adapt our AI, software, and cloud expertise to the unique challenges of each industry we serve.",
+    "retail": {
+      "title": "Retail & E-commerce",
+      "description": "18+ e-commerce stores built, 69+ ad campaigns managed. Shopify, WooCommerce, conversion optimization, and product photography.",
+      "useCases": ["Shopify & WooCommerce", "Conversion Optimization", "Meta & Google Ads", "SEO & Analytics"]
+    },
+    "education": {
+      "title": "Education & Training",
+      "description": "Learning platforms, course funnels, and AI-assisted tutoring. Built on Systeme.io and custom platforms.",
+      "useCases": ["Course Platforms", "Enrollment Funnels", "AI Tutoring", "Email Automation"]
+    },
+    "coaching": {
+      "title": "Coaching & Formation",
+      "description": "Sales funnels, landing pages, and automated client acquisition for coaches, trainers, and consultants.",
+      "useCases": ["Systeme.io Funnels", "Lead Generation", "Booking Automation", "Content Strategy"]
+    },
+    "finance": {
+      "title": "Finance",
+      "description": "Automated invoicing, financial reporting, and data pipelines for small financial institutions and fintech projects.",
+      "useCases": ["Invoice Automation", "Financial Reporting", "Data Pipelines", "Dashboard Analytics"]
+    },
     "healthcare": {
       "title": "Healthcare",
       "description": "AI-powered diagnostics, medical imaging, patient management, and clinical decision support systems.",
       "useCases": ["AI Diagnostics", "Medical Imaging", "Patient Records", "Telemedicine"]
-    },
-    "finance": {
-      "title": "Finance",
-      "description": "Fraud detection, risk assessment, algorithmic trading, and automated compliance systems.",
-      "useCases": ["Fraud Detection", "Risk Models", "Trading Bots", "Compliance Automation"]
-    },
-    "retail": {
-      "title": "Retail & E-commerce",
-      "description": "Personalized recommendations, inventory optimization, and AI-driven customer experiences.",
-      "useCases": ["Recommendation Engines", "Inventory AI", "Dynamic Pricing", "Visual Search"]
-    },
-    "manufacturing": {
-      "title": "Manufacturing",
-      "description": "Predictive maintenance, supply chain optimization, and IoT-enabled quality control.",
-      "useCases": ["Predictive Maintenance", "Supply Chain AI", "Quality Control", "IoT Monitoring"]
-    },
-    "education": {
-      "title": "Education",
-      "description": "Personalized learning paths, AI tutoring, and automated assessment systems.",
-      "useCases": ["AI Tutoring", "Adaptive Learning", "Auto-grading", "Content Generation"]
     },
     "realEstate": {
       "title": "Real Estate",
