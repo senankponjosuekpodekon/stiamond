@@ -1,5 +1,7 @@
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale } from "next-intl/server";
 
 export default async function AppLayout({
   children,
@@ -12,8 +14,12 @@ export default async function AppLayout({
     redirect("/login");
   }
 
+  const locale = await getLocale();
+  const messages = (await import(`../../../messages/${locale}.json`)).default;
+
   return (
-    <div className="min-h-screen bg-surface-1/30">
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <div className="min-h-screen bg-surface-1/30">
       <aside className="fixed inset-y-0 left-0 hidden w-64 border-r border-border bg-background lg:flex lg:flex-col">
         <div className="flex h-16 items-center border-b border-border px-6">
           <span className="text-body font-semibold">Stiamond</span>
@@ -59,6 +65,7 @@ export default async function AppLayout({
         </header>
         <main className="p-6">{children}</main>
       </div>
-    </div>
+      </div>
+    </NextIntlClientProvider>
   );
 }

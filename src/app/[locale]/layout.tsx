@@ -1,4 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 
 export const runtime = "nodejs";
@@ -16,5 +17,11 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return children;
+  const messages = (await import(`../../../messages/${locale}.json`)).default;
+
+  return (
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      {children}
+    </NextIntlClientProvider>
+  );
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getTranslations } from "next-intl/server";
 import { AnalyticsProvider } from "@/components/analytics";
 import { Providers } from "@/components/providers";
@@ -99,7 +98,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const locale = await getLocale();
-  const messages = (await import(`../../messages/${locale}.json`)).default;
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -116,13 +114,11 @@ export default async function RootLayout({
           "font-sans antialiased"
         )}
       >
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Providers>
-            <AnalyticsProvider>
-              {children}
-            </AnalyticsProvider>
-          </Providers>
-        </NextIntlClientProvider>
+        <Providers>
+          <AnalyticsProvider>
+            {children}
+          </AnalyticsProvider>
+        </Providers>
       </body>
     </html>
   );
