@@ -1,4 +1,3 @@
-import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Zap, Check, ArrowRight, MessageSquare, Share2, Bot, BarChart } from "lucide-react";
