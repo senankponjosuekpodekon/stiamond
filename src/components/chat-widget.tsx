@@ -282,7 +282,7 @@ export function ChatWidget() {
                     <div>
                       <MessageCircle className="mx-auto mb-2 h-8 w-8 opacity-30" />
                       <p>Waiting for a reply...</p>
-                      <p className="mt-1 text-caption">We'll notify you here when we respond.</p>
+                      <p className="mt-1 text-caption">We&apos;ll notify you here when we respond.</p>
                     </div>
                   </div>
                 )}

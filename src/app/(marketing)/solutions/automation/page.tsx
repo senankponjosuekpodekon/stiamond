@@ -106,7 +106,7 @@ export default async function AutomationSolutionPage() {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-overline font-semibold uppercase text-accent">Features</p>
-            <h2 className="mt-3 text-h2">What's included</h2>
+            <h2 className="mt-3 text-h2">What&apos;s included</h2>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
             {features.map((f) => (

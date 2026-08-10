@@ -154,9 +154,9 @@ export default async function CompanyPage() {
       <section className="border-t border-border py-20 md:py-28">
         <Container>
           <div className="relative overflow-hidden rounded-xl border border-border bg-primary px-8 py-16 text-center md:px-16 md:py-20">
-            <h2 className="text-h2 text-primary-foreground">Let's build something together</h2>
+            <h2 className="text-h2 text-primary-foreground">Let&apos;s build something together</h2>
             <p className="mx-auto mt-4 max-w-xl text-body-lg text-primary-foreground/80">
-              You'll work directly with me from first call to final delivery.
+              You&apos;ll work directly with me from first call to final delivery.
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <Button variant="secondary" size="lg" asChild className="bg-white text-primary hover:bg-white/90">

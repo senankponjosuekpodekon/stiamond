@@ -1,4 +1,3 @@
-import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,8 +15,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function TeamPage() {
-  const t = await getTranslations("company");
-
   const journey = [
     {
       icon: GraduationCap,
@@ -141,10 +138,10 @@ export default async function TeamPage() {
                   What began as curiosity turned into a craft — and then into a career.
                 </p>
                 <p>
-                  After earning bachelor's degrees in Applied Economics and English Linguistics,
+                  After earning bachelor&apos;s degrees in Applied Economics and English Linguistics,
                   I joined Epitech Coding Academy to formalize my full-stack development skills.
                   The combination of economics, linguistics, and software engineering gave me a
-                  unique angle: I don't just build software — I understand the business logic behind it
+                  unique angle: I don&apos;t just build software — I understand the business logic behind it
                   and the audience it serves.
                 </p>
                 <p>
@@ -154,16 +151,16 @@ export default async function TeamPage() {
                   and Lead Tech roles for businesses that need technical leadership without a full-time hire.
                 </p>
                 <p>
-                  I'm currently pursuing a Google Marketing certification, with a Data Analytics
-                  certification next, and a Master's degree (IAE Lille or Paris-Saclay) in progress.
-                  Continuous learning isn't a slogan — it's the workflow.
+                  I&apos;m currently pursuing a Google Marketing certification, with a Data Analytics
+                  certification next, and a Master&apos;s degree (IAE Lille or Paris-Saclay) in progress.
+                  Continuous learning isn&apos;t a slogan — it&apos;s the workflow.
                 </p>
               </div>
 
               <div className="mt-8 rounded-lg border border-border bg-surface-1/40 p-6">
                 <p className="text-body font-medium">
                   &ldquo;One person who covers development, creative, marketing, and automation.
-                  That's the difference — and it's why clients work with me directly.&rdquo;
+                  That&apos;s the difference — and it&apos;s why clients work with me directly.&rdquo;
                 </p>
               </div>
             </div>
@@ -203,9 +200,9 @@ export default async function TeamPage() {
       <section className="border-t border-border py-20 md:py-28">
         <Container>
           <div className="relative overflow-hidden rounded-xl border border-border bg-primary px-8 py-16 text-center md:px-16 md:py-20">
-            <h2 className="text-h2 text-primary-foreground">Let's build something together</h2>
+            <h2 className="text-h2 text-primary-foreground">Let&apos;s build something together</h2>
             <p className="mx-auto mt-4 max-w-xl text-body-lg text-primary-foreground/80">
-              You'll work directly with me from first call to final delivery.
+              You&apos;ll work directly with me from first call to final delivery.
             </p>
             <div className="mt-8 flex justify-center">
               <Button variant="secondary" size="lg" asChild className="bg-white text-primary hover:bg-white/90">

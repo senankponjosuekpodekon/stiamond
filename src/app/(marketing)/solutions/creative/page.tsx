@@ -1,6 +1,6 @@
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
-import { Palette, Video, Filter, Check, ArrowRight, Image, Film, Mail } from "lucide-react";
+import { Palette, Filter, Check, ArrowRight, Image, Film, Mail } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -106,7 +106,7 @@ export default async function CreativeSolutionPage() {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-overline font-semibold uppercase text-accent">Features</p>
-            <h2 className="mt-3 text-h2">What's included</h2>
+            <h2 className="mt-3 text-h2">What&apos;s included</h2>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
             {features.map((f) => (
@@ -127,7 +127,7 @@ export default async function CreativeSolutionPage() {
                 <h2 className="text-h3">Why this matters</h2>
                 <p className="mt-4 text-body-lg text-muted-foreground">
                   Most clients work with 3-4 different providers for design, video, ads, and funnels.
-                  With Stiamond, it's one person who understands your brand across all channels —
+                  With Stiamond, it&apos;s one person who understands your brand across all channels —
                   ensuring visual consistency and message alignment everywhere.
                 </p>
                 <p className="mt-4 text-body text-muted-foreground">

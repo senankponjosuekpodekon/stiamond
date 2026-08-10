@@ -104,7 +104,7 @@ export default async function FAQPage() {
           <div className="mt-16 rounded-xl border border-border bg-surface-1/40 p-8 text-center">
             <h2 className="text-h3">Still have questions?</h2>
             <p className="mt-2 text-body text-muted-foreground">
-              Send a message and I'll reply within 24 hours.
+              Send a message and I&apos;ll reply within 24 hours.
             </p>
             <div className="mt-6">
               <Button variant="primary" asChild>
