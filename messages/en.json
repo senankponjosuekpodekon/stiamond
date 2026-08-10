@@ -222,7 +222,7 @@
     "medim": {
       "tagline": "AI-powered medical intelligence platform",
       "description": "Diagnostic assistance, medical imaging analysis, and clinical decision support powered by specialized AI models.",
-      "features": ["AI Diagnostic Assistance", "Medical Imaging Analysis", "Clinical Decision Support", "HIPAA Compliant"]
+      "features": ["AI Diagnostic Assistance", "Medical Imaging Analysis", "Clinical Decision Support", "Health Compliance Targeted"]
     },
     "aiPlatform": {
       "tagline": "Multi-model AI gateway with intelligent routing",
@@ -241,7 +241,9 @@
     },
     "status": {
       "inDevelopment": "In Development",
-      "planned": "Planned"
+      "planned": "Planned",
+      "live": "Live",
+      "rd": "R&D Internal"
     },
     "cta": {
       "title": "Interested in our products?",

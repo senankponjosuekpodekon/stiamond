@@ -222,7 +222,7 @@
     "medim": {
       "tagline": "Plateforme d'intelligence médicale par IA",
       "description": "Assistance au diagnostic, analyse d'imagerie médicale et support à la décision clinique propulsés par des modèles IA spécialisés.",
-      "features": ["Assistance au Diagnostic IA", "Analyse d'Imagerie Médicale", "Support à la Décision Clinique", "Conforme HIPAA"]
+      "features": ["Assistance au Diagnostic IA", "Analyse d'Imagerie Médicale", "Support à la Décision Clinique", "Conformité Santé Visée"]
     },
     "aiPlatform": {
       "tagline": "Passerelle IA multi-modèles avec routage intelligent",
@@ -241,7 +241,9 @@
     },
     "status": {
       "inDevelopment": "En Développement",
-      "planned": "Planifié"
+      "planned": "Planifié",
+      "live": "En Production",
+      "rd": "R&D Interne"
     },
     "cta": {
       "title": "Intéressé par nos produits ?",

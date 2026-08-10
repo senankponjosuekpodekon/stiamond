@@ -1,4 +1,5 @@
-import { Container } from "@/components/container";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 export default function DocsLayout({
   children,
@@ -6,8 +7,10 @@ export default function DocsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <Container size="md" className="py-16">
-      {children}
-    </Container>
+    <>
+      <Header />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </>
   );
 }

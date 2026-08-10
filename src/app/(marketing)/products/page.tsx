@@ -16,6 +16,14 @@ export default function ProductsPage() {
 
   const products = [
     {
+      icon: Zap,
+      name: "Automation",
+      tagline: t("automation.tagline"),
+      description: t("automation.description"),
+      features: t.raw("automation.features") as string[],
+      status: t("status.live"),
+    },
+    {
       icon: Cpu,
       name: "MEDIM",
       tagline: t("medim.tagline"),
@@ -30,14 +38,6 @@ export default function ProductsPage() {
       description: t("aiPlatform.description"),
       features: t.raw("aiPlatform.features") as string[],
       status: t("status.inDevelopment"),
-    },
-    {
-      icon: Zap,
-      name: "Automation",
-      tagline: t("automation.tagline"),
-      description: t("automation.description"),
-      features: t.raw("automation.features") as string[],
-      status: t("status.planned"),
     },
     {
       icon: Server,

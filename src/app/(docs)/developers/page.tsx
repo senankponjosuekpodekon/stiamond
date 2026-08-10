@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Card, CardContent } from "@/components/ui/card";
 import { Terminal, Code2, BookOpen, Github, ArrowRight } from "lucide-react";
@@ -6,31 +6,20 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
 
+export const runtime = "nodejs";
+
 export async function generateMetadata(): Promise<Metadata> {
   return generatePageMetadata("developers");
 }
 
-const codeExample = `import { Stiamond } from "@stiamond/sdk";
-
-const client = new Stiamond({
-  apiKey: process.env.STIAMOND_API_KEY,
-});
-
-const result = await client.ai.complete({
-  model: "stiamond-pro",
-  prompt: "Explain quantum computing",
-});
-
-console.log(result.text);`;
-
-export default function DevelopersPage() {
-  const t = useTranslations("developers");
+export default async function DevelopersPage() {
+  const t = await getTranslations("developers");
 
   const resources = [
-    { icon: Code2, title: t("resources.apiRef.title"), description: t("resources.apiRef.description"), href: "/docs" },
-    { icon: Terminal, title: t("resources.sdks.title"), description: t("resources.sdks.description"), href: "/docs" },
-    { icon: BookOpen, title: t("resources.guides.title"), description: t("resources.guides.description"), href: "/docs" },
-    { icon: Github, title: t("resources.openSource.title"), description: t("resources.openSource.description"), href: "https://github.com/senankponjosuekpodekon/stiamond" },
+    { icon: Code2, title: "Our Stack", description: "Next.js, React, Vue, Laravel, NestJS, Flutter, TailwindCSS, Drizzle ORM.", href: "/docs" },
+    { icon: Terminal, title: "Automation & AI", description: "n8n agents, workflow orchestration, and AI-powered automation in production.", href: "/solutions" },
+    { icon: BookOpen, title: "How We Work", description: "Agile process, CI/CD, deployment strategy, and project management.", href: "/docs" },
+    { icon: Github, title: "Open Source", description: "We build in the open. Explore our projects and contributions.", href: "https://github.com/senankponjosuekpodekon" },
   ];
 
   return (
@@ -69,30 +58,6 @@ export default function DevelopersPage() {
                 </Card>
               </Link>
             ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="border-t border-border bg-surface-1/40 py-16 md:py-20">
-        <Container>
-          <div className="mx-auto max-w-2xl">
-            <h2 className="text-h3">{t("quickStart")}</h2>
-            <p className="mt-2 text-body text-muted-foreground">
-              {t("quickStartDesc")}
-            </p>
-            <div className="mt-6 overflow-hidden rounded-lg border border-border bg-card">
-              <div className="flex items-center gap-2 border-b border-border px-4 py-3">
-                <div className="flex gap-1.5">
-                  <div className="h-3 w-3 rounded-full bg-surface-3" />
-                  <div className="h-3 w-3 rounded-full bg-surface-3" />
-                  <div className="h-3 w-3 rounded-full bg-surface-3" />
-                </div>
-                <span className="ml-2 text-caption text-muted-foreground">quick-start.ts</span>
-              </div>
-              <pre className="overflow-x-auto p-4 text-body-sm leading-relaxed">
-                <code className="font-mono text-muted-foreground">{codeExample}</code>
-              </pre>
-            </div>
           </div>
         </Container>
       </section>
