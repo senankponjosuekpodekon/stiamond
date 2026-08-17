@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/developers",
     "/blog",
     "/case-studies",
+    "/mentorship",
     "/client-portal",
     "/privacy",
     "/terms",

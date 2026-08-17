@@ -137,6 +137,47 @@ export default async function SolutionsPage() {
 
       <section className="border-t border-border py-20 md:py-28">
         <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-overline font-semibold uppercase text-accent">{t("timelines.overline")}</p>
+            <h2 className="mt-3 text-h2">{t("timelines.title")}</h2>
+            <p className="mt-4 text-body-lg text-muted-foreground">
+              {t("timelines.subtitle")}
+            </p>
+          </div>
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {(t.raw("timelines.items") as { type: string; duration: string; description: string }[]).map((item) => (
+              <div key={item.type} className="rounded-lg border border-border bg-card p-6 text-center">
+                <div className="text-h3 font-bold text-primary">{item.duration}</div>
+                <div className="mt-2 text-body font-semibold">{item.type}</div>
+                <p className="mt-2 text-body-sm text-muted-foreground">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-border py-20 md:py-28">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-overline font-semibold uppercase text-accent">{t("quality.overline")}</p>
+            <h2 className="mt-3 text-h2">{t("quality.title")}</h2>
+            <p className="mt-4 text-body-lg text-muted-foreground">
+              {t("quality.subtitle")}
+            </p>
+          </div>
+          <div className="mt-16 grid gap-6 sm:grid-cols-3">
+            {(t.raw("quality.items") as { title: string; description: string }[]).map((item) => (
+              <div key={item.title} className="rounded-lg border border-border bg-card p-6">
+                <h3 className="text-body font-semibold">{item.title}</h3>
+                <p className="mt-2 text-body-sm text-muted-foreground">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-border py-20 md:py-28">
+        <Container>
           <div className="relative overflow-hidden rounded-xl border border-border bg-primary px-8 py-16 text-center md:px-16 md:py-20">
             <h2 className="text-h2 text-primary-foreground">{t("cta.title")}</h2>
             <p className="mx-auto mt-4 max-w-xl text-body-lg text-primary-foreground/80">

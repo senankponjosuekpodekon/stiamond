@@ -84,6 +84,10 @@
       "composable": {
         "title": "Full-Stack Coverage",
         "description": "Development, design, marketing, and automation — one person, one point of contact."
+      },
+      "management": {
+        "title": "End-to-End Management",
+        "description": "Strategy, execution, and delivery handled by one person — from first brief to production deployment."
       }
     },
     "philosophy": {
@@ -136,7 +140,8 @@
     "security": "Security",
     "automation": "AI Automation",
     "creative": "Creative & Content",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "mentorship": "Mentorship"
   },
   "solutions": {
     "overline": "Solutions",
@@ -164,6 +169,52 @@
       "title": "Ready to engineer your next system?",
       "subtitle": "Let's discuss how our solutions can accelerate your business.",
       "getInTouch": "Get in Touch"
+    },
+    "timelines": {
+      "overline": "Delivery Times",
+      "title": "How fast can we ship?",
+      "subtitle": "Real timelines based on past projects. No vague promises — these are the actual delivery windows.",
+      "items": [
+        {
+          "type": "Landing Page",
+          "duration": "1–2 weeks",
+          "description": "Single-page site with contact form, SEO setup, and mobile optimization."
+        },
+        {
+          "type": "E-commerce Store",
+          "duration": "2–4 weeks",
+          "description": "Full Shopify or WooCommerce store with products, payments, and analytics."
+        },
+        {
+          "type": "Automation Agent",
+          "duration": "2–4 weeks",
+          "description": "n8n AI agent for social media, customer service, or business workflows."
+        },
+        {
+          "type": "Custom Platform",
+          "duration": "4–8 weeks",
+          "description": "Custom web app or SaaS with auth, database, and integrations."
+        }
+      ]
+    },
+    "quality": {
+      "overline": "Quality Standards",
+      "title": "Built to perform",
+      "subtitle": "Every project is measured against real performance benchmarks — not just \"it works\".",
+      "items": [
+        {
+          "title": "Core Web Vitals",
+          "description": "LCP under 2.5s, CLS under 0.1, INP under 200ms. Google's real-world performance metrics."
+        },
+        {
+          "title": "Clean Code",
+          "description": "TypeScript, proper architecture, and code reviews. No spaghetti code that breaks on the first update."
+        },
+        {
+          "title": "SEO-Ready",
+          "description": "Structured data, meta tags, sitemap, and semantic HTML. Built to rank from day one."
+        }
+      ]
     },
     "software": {
       "title": "Software Engineering",
@@ -435,7 +486,7 @@
       "q2": "Can I switch plans?",
       "a2": "Yes, you can upgrade or downgrade anytime. Changes take effect on the next billing cycle.",
       "q3": "Do you offer custom pricing?",
-      "a3": "For Enterprise/DSI clients, pricing is tailored based on scope, team size, and SLA requirements. Local clients (Benin/West Africa) get adapted rates.",
+      "a3": "For Enterprise/DSI clients, pricing is tailored based on scope, team size, and SLA requirements. Contact me for a personalized quote.",
       "q4": "What technologies do you use?",
       "a4": "React, Vue, Next.js, Laravel, NestJS, Flutter, TailwindCSS, PostgreSQL, n8n, Cloudflare. WordPress and Shopify for faster delivery.",
       "q5": "Do you offer project management and DSI services?",
@@ -902,6 +953,73 @@
     "learnMore": "Learn more",
     "viewAll": "View All Products"
   },
+  "mentorship": {
+    "overline": "Mentorship & Training",
+    "title": "Learn directly from the founder",
+    "subtitle": "One-on-one mentorship, targeted consultations, and structured training on the skills I use every day — development, automation, marketing, and project management.",
+    "diagnostic": {
+      "name": "Diagnostic Session",
+      "tagline": "Find your path",
+      "description": "A single session to assess your current level, define a personalized learning roadmap, and identify the fastest route to your goal.",
+      "features": [
+        "45–60 minute session",
+        "Level assessment",
+        "Personalized learning roadmap",
+        "Written roadmap delivered after session"
+      ],
+      "duration": "single session",
+      "price": "$40–60"
+    },
+    "consultation": {
+      "name": "Targeted Consultation",
+      "tagline": "Solve a specific problem",
+      "description": "A focused session on one topic — WooCommerce setup, first n8n agent, Meta Ads strategy, or any specific challenge you're facing.",
+      "features": [
+        "30–45 minute session",
+        "One specific topic",
+        "Actionable next steps",
+        "Follow-up summary by email"
+      ],
+      "duration": "per session",
+      "price": "$50–80"
+    },
+    "formation": {
+      "name": "Structured Training",
+      "tagline": "Master a skill in 4–6 weeks",
+      "description": "A multi-week program with modules, exercises, and direct support. Topics: n8n automation, Systeme.io funnels, WordPress/Shopify, or Meta/Google Ads.",
+      "features": [
+        "4–6 week program",
+        "Multiple modules + exercises",
+        "Direct support between sessions",
+        "Final project review"
+      ],
+      "duration": "4–6 weeks",
+      "price": "$400–800"
+    },
+    "approach": {
+      "title": "How it works",
+      "subtitle": "Simple, direct, and focused on your goals.",
+      "items": [
+        {
+          "title": "Book a session",
+          "description": "Send a message describing your goal. I'll reply within 24 hours with available slots."
+        },
+        {
+          "title": "Work together",
+          "description": "Sessions are hands-on and practical. No theory dumps — we work on your real challenges."
+        },
+        {
+          "title": "Keep the momentum",
+          "description": "You get a written summary and next steps after each session. Support continues between sessions."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to level up?",
+      "subtitle": "Send a message and I'll help you find the right format for your goals.",
+      "button": "Get in touch"
+    }
+  },
   "metadata": {
     "site": {
       "title": "Stiamond — AI, Software & Cloud Engineering",
@@ -994,6 +1112,10 @@
     "creative": {
       "title": "Creative & Content Production — Ads, Video, Funnels | Stiamond",
       "description": "Ad creatives, short-form video, and Systeme.io funnels from one person. Meta, TikTok, Google ads with creative production and conversion-ready funnels."
+    },
+    "mentorship": {
+      "title": "Mentorship & Training — 1-on-1 Sessions | Stiamond",
+      "description": "Learn directly from the founder: diagnostic sessions, targeted consultations, and structured training on development, automation, marketing, and project management."
     }
   }
 }

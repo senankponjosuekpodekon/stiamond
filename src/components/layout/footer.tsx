@@ -38,6 +38,7 @@ export function Footer() {
       links: [
         { label: t("blog"), href: "/blog" },
         { label: t("faq"), href: "/faq" },
+        { label: t("mentorship"), href: "/mentorship" },
         { label: t("documentation"), href: "/docs", nonLocale: true },
         { label: t("caseStudies"), href: "/case-studies" },
       ],

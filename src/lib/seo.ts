@@ -37,6 +37,7 @@ export async function generatePageMetadata(
     faq: "/faq",
     automation: "/solutions/automation",
     creative: "/solutions/creative",
+    mentorship: "/mentorship",
   };
 
   const route = routeMap[namespace] ?? "";

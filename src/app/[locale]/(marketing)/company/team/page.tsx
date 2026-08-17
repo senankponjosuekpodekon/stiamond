@@ -188,7 +188,7 @@ export default async function TeamPage() {
                     </div>
                     <div className="flex items-center gap-3 text-body-sm text-muted-foreground">
                       <Briefcase className="h-4 w-4 text-primary" strokeWidth={1.5} />
-                      {isFr ? "18+ boutiques e-commerce · 69+ campagnes pub" : "18+ e-commerce stores · 69+ ad campaigns"}
+                      {isFr ? "18+ boutiques e-com · 7+ sites vitrines · 69+ campagnes pub" : "18+ e-com stores · 7+ websites · 69+ ad campaigns"}
                     </div>
                     <div className="flex items-center gap-3 text-body-sm text-muted-foreground">
                       <Brain className="h-4 w-4 text-primary" strokeWidth={1.5} />
@@ -227,6 +227,9 @@ export default async function TeamPage() {
                     <p>
                       {"Je prépare actuellement une certification Google Marketing, puis une certification Data Analytics, et un Master (IAE Lille ou Paris-Saclay) en cours. L'apprentissage continu n'est pas un slogan — c'est le mode de fonctionnement."}
                     </p>
+                    <p>
+                      {"Pour des besoins spécifiques (design, vidéo), je m'appuie ponctuellement sur un réseau de collaborateurs de confiance — tout en restant votre interlocuteur unique du début à la fin. Vous ne parlez qu'à moi, je coordonne le reste."}
+                    </p>
                   </>
                 ) : (
                   <>
@@ -251,6 +254,11 @@ export default async function TeamPage() {
                       I&apos;m currently pursuing a Google Marketing certification, with a Data Analytics
                       certification next, and a Master&apos;s degree (IAE Lille or Paris-Saclay) in progress.
                       Continuous learning isn&apos;t a slogan — it&apos;s the workflow.
+                    </p>
+                    <p>
+                      For specific needs (design, video), I rely on a trusted network of collaborators —
+                      while remaining your single point of contact from start to finish. You only talk to me,
+                      I coordinate the rest.
                     </p>
                   </>
                 )}

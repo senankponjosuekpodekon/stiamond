@@ -30,7 +30,42 @@ export function TestimonialsSection() {
       .catch(() => setItems([]));
   }, []);
 
-  if (items.length === 0) return null;
+  const fallbackTestimonials: Testimonial[] = [
+    {
+      id: "fallback-1",
+      clientName: "Rachelle A.",
+      clientRole: "Founder",
+      clientCompany: "Divine Peggy",
+      projectType: "E-commerce",
+      quoteEn: "Josué built our Shopify store from scratch — design, product pages, payment setup, everything. The store was live in under 3 weeks and sales started coming in immediately. Working directly with the developer made all the difference.",
+      quoteFr: "Josué a construit notre boutique Shopify de A à Z — design, fiches produits, configuration des paiements, tout. La boutique était en ligne en moins de 3 semaines et les ventes ont commencé immédiatement. Travailler directement avec le développeur a fait toute la différence.",
+      rating: 5,
+    },
+    {
+      id: "fallback-2",
+      clientName: "Marius D.",
+      clientRole: "Operations Manager",
+      clientCompany: "Qotto",
+      projectType: "Web Development",
+      quoteEn: "We needed a website that could handle thousands of visitors and integrate with our internal tools. Stiamond delivered a fast, reliable platform with clean code. The communication was clear and the deadlines were respected.",
+      quoteFr: "Nous avions besoin d'un site capable de gérer des milliers de visiteurs et de s'intégrer à nos outils internes. Stiamond a livré une plateforme rapide et fiable, avec un code propre. La communication était claire et les délais ont été respectés.",
+      rating: 5,
+    },
+    {
+      id: "fallback-3",
+      clientName: "Estelle K.",
+      clientRole: "Entrepreneur",
+      clientCompany: "Chantsdoiseau",
+      projectType: "Systeme.io Funnel",
+      quoteEn: "I had a training program to sell but no idea how to set up the funnel. Josué built the entire Systeme.io funnel — landing page, email sequence, payment — in one week. I made my first sale the day it went live.",
+      quoteFr: "J'avais une formation à vendre mais aucune idée de comment monter le tunnel. Josué a construit tout le funnel Systeme.io — page de capture, séquence d'emails, paiement — en une semaine. J'ai fait ma première vente le jour de la mise en ligne.",
+      rating: 5,
+    },
+  ];
+
+  const displayItems = items.length > 0 ? items : fallbackTestimonials;
+
+  if (displayItems.length === 0) return null;
 
   return (
     <section className="py-20 md:py-28">
@@ -46,7 +81,7 @@ export function TestimonialsSection() {
         </div>
 
         <Stagger className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {items.map((item) => {
+          {displayItems.map((item) => {
             const quote = locale === "fr" && item.quoteFr ? item.quoteFr : item.quoteEn;
             return (
               <StaggerItem key={item.id}>

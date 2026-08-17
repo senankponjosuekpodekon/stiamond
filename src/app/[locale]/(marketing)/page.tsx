@@ -23,6 +23,7 @@ import {
   Workflow,
   User,
   Layers,
+  Briefcase,
   FlaskConical,
   MessageSquare,
   GraduationCap,
@@ -112,6 +113,7 @@ export default async function HomePage() {
     { icon: User, title: t("values.security.title"), description: t("values.security.description") },
     { icon: TrendingUp, title: t("values.scale.title"), description: t("values.scale.description") },
     { icon: Layers, title: t("values.composable.title"), description: t("values.composable.description") },
+    { icon: Briefcase, title: t("values.management.title"), description: t("values.management.description") },
   ];
 
   const labProjects = [
@@ -279,7 +281,7 @@ export default async function HomePage() {
               </p>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-3 lg:col-span-2">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:col-span-2">
               {values.map((value) => (
                 <div key={value.title} className="rounded-lg border border-border bg-card p-6">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/8 text-primary">
