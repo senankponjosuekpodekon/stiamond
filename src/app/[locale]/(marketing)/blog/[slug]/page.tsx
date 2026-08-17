@@ -117,7 +117,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
 
         <div className="mt-16 border-t border-border pt-8">
-          <Button variant="outline" asChild>
+          <Button variant="outline" size="lg" asChild>
             <Link href="/blog">
               <ArrowLeft className="h-4 w-4" />
               {t("allPosts")}

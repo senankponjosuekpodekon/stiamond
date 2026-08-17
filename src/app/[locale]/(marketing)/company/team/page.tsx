@@ -196,7 +196,7 @@ export default async function TeamPage() {
                     </div>
                   </div>
                   <div className="mt-8">
-                    <Button variant="outline" asChild className="w-full">
+                    <Button variant="outline" size="lg" asChild className="w-full">
                       <Link href="/contact">
                         <Mail className="h-4 w-4" />
                         {isFr ? "Me contacter" : "Get in touch"}

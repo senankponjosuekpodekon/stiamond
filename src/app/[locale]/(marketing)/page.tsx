@@ -255,7 +255,7 @@ export default async function HomePage() {
           </Stagger>
 
           <div className="mt-12 text-center">
-            <Button variant="outline" asChild>
+            <Button variant="outline" size="lg" asChild>
               <Link href="/products">
                 {t("products.viewAll")}
                 <ArrowRight className="h-4 w-4" />

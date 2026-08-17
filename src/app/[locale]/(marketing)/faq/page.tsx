@@ -198,7 +198,7 @@ export default async function FAQPage() {
                 : "Send a message and I'll reply within 24 hours."}
             </p>
             <div className="mt-6">
-              <Button variant="primary" asChild>
+              <Button variant="primary" size="lg" asChild>
                 <Link href="/contact">
                   {isFr ? "Me contacter" : "Get in touch"}
                   <ArrowRight className="h-4 w-4" />
