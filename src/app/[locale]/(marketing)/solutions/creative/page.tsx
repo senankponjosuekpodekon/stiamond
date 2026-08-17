@@ -3,14 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Palette, Filter, Check, ArrowRight, Image, Film, Mail } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
 export const runtime = "nodejs";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Creative & Marketing — Design, Video, Funnels | Stiamond",
-    description: "Ad creatives, short-form video, Systeme.io funnels, and marketing strategy. One person covering design, video, and marketing automation.",
-  };
+  return generatePageMetadata("creative");
 }
 
 export default async function CreativeSolutionPage() {

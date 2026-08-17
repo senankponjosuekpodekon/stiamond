@@ -19,7 +19,7 @@ export default async function DevelopersPage() {
     { icon: Code2, title: "Our Stack", description: "Next.js, React, Vue, Laravel, NestJS, Flutter, TailwindCSS, Drizzle ORM.", href: "/docs" },
     { icon: Terminal, title: "Automation & AI", description: "n8n agents, workflow orchestration, and AI-powered automation in production.", href: "/solutions" },
     { icon: BookOpen, title: "How We Work", description: "Agile process, CI/CD, deployment strategy, and project management.", href: "/docs" },
-    { icon: Github, title: "Open Source", description: "We build in the open. Explore our projects and contributions.", href: "https://github.com/senankponjosuekpodekon" },
+    { icon: Github, title: "Open Source", description: "We build in the open. Explore our projects and contributions.", href: "https://github.com/stiamond" },
   ];
 
   return (

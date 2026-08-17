@@ -5,7 +5,7 @@ import { Star, Quote } from "lucide-react";
 import { useLocale } from "next-intl";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
-import { FadeIn, Stagger, StaggerItem } from "@/components/motion";
+import { Stagger, StaggerItem } from "@/components/motion";
 
 type Testimonial = {
   id: string;

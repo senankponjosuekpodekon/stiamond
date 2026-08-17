@@ -982,6 +982,18 @@
     "developers": {
       "title": "Développeurs",
       "description": "Ressources développeur — docs API, SDKs, exemples de code et outils."
+    },
+    "faq": {
+      "title": "FAQ — Questions fréquentes | Stiamond",
+      "description": "Questions courantes sur le travail avec Stiamond : clients internationaux, méthodes de paiement (Wise), délais de projet, automatisation IA et mode de collaboration."
+    },
+    "automation": {
+      "title": "Agents d'Automatisation IA — Automatisation n8n | Stiamond",
+      "description": "Automatisez votre service client, vos réseaux sociaux et vos flux métier avec des agents IA propulsés par n8n. Agents en production pour des marques e-commerce."
+    },
+    "creative": {
+      "title": "Création de Contenu & Créatif — Pubs, Vidéo, Funnels | Stiamond",
+      "description": "Créatifs publicitaires, vidéos courtes et funnels Systeme.io par une seule personne. Pubs Meta, TikTok, Google avec production créative et tunnels prêts à convertir."
     }
   }
 }

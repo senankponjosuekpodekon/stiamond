@@ -3,14 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Zap, Check, ArrowRight, MessageSquare, Share2, Bot, BarChart } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/seo";
 
 export const runtime = "nodejs";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "AI Automation Agents — Customer Service & Social Media | Stiamond",
-    description: "Automate customer service and social media management with n8n AI agents. Live in production. Built and deployed by Stiamond.",
-  };
+  return generatePageMetadata("automation");
 }
 
 export default async function AutomationSolutionPage() {

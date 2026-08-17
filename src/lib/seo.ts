@@ -14,14 +14,41 @@ export async function generatePageMetadata(
   const meta = (messagesMap[locale] as Record<string, unknown>).metadata as Record<string, { title: string; description: string }>;
   const page = meta[namespace];
 
+  const routeMap: Record<string, string> = {
+    home: "",
+    solutions: "/solutions",
+    solutionsAi: "/solutions/ai",
+    solutionsCloud: "/solutions/cloud",
+    solutionsGrowth: "/solutions/growth",
+    solutionsSoftware: "/solutions/software",
+    products: "/products",
+    industries: "/industries",
+    pricing: "/pricing",
+    company: "/company",
+    contact: "/contact",
+    caseStudies: "/case-studies",
+    clientPortal: "/client-portal",
+    blog: "/blog",
+    privacy: "/privacy",
+    terms: "/terms",
+    security: "/security",
+    docs: "/docs",
+    developers: "/developers",
+    faq: "/faq",
+    automation: "/solutions/automation",
+    creative: "/solutions/creative",
+  };
+
+  const route = routeMap[namespace] ?? "";
+
   return {
     title: page.title,
     description: page.description,
     alternates: {
       languages: {
-        en: "https://stiamond.net",
-        fr: "https://stiamond.net/fr",
-        "x-default": "https://stiamond.net",
+        en: `https://stiamond.net${route}`,
+        fr: `https://stiamond.net/fr${route}`,
+        "x-default": `https://stiamond.net${route}`,
       },
     },
     openGraph: {
