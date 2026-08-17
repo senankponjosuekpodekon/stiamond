@@ -6,8 +6,13 @@ import { eq } from "drizzle-orm";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { NavLinks } from "./nav-links";
+import type { Metadata } from "next";
 
 export const runtime = "nodejs";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default async function AdminLayout({
   children,

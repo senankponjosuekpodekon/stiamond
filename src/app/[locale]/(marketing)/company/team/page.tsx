@@ -1,7 +1,7 @@
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, GraduationCap, Briefcase, Rocket, Mail, Globe, Brain, TrendingUp } from "lucide-react";
+import { Code, GraduationCap, Briefcase, Rocket, Mail, Globe, Brain, TrendingUp, ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { getLocale } from "next-intl/server";
 import type { Metadata } from "next";
@@ -195,11 +195,17 @@ export default async function TeamPage() {
                       {isFr ? "Agents IA en production (n8n)" : "AI agents in production (n8n)"}
                     </div>
                   </div>
-                  <div className="mt-8">
+                  <div className="mt-8 space-y-3">
                     <Button variant="outline" size="lg" asChild className="w-full">
                       <Link href="/contact">
                         <Mail className="h-4 w-4" />
                         {isFr ? "Me contacter" : "Get in touch"}
+                      </Link>
+                    </Button>
+                    <Button variant="ghost" size="lg" asChild className="w-full">
+                      <Link href="/mentorship">
+                        {isFr ? "Mentorat & Formation" : "Mentorship & Training"}
+                        <ArrowRight className="h-4 w-4" />
                       </Link>
                     </Button>
                   </div>
