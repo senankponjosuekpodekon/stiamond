@@ -1,56 +1,77 @@
 # Stiamond
 
-> AI, Software & Cloud Engineering Company
+> AI, Software & Cloud Engineering — Solo Studio
 
-Stiamond designs AI-powered software, cloud infrastructure, and digital growth systems that accelerate business performance.
+Stiamond is a solo studio led by Senankpon Josué Kpodekon, based in Cotonou, Benin. One person covering development, design, marketing, AI automation, and IT project management — what most agencies split across 3-4 people. Clients work directly with the founder, not an account manager.
 
-## Expertise
+## Expertise (6 Pillars)
 
+- Software Engineering: Custom software, web platforms, SaaS products (React, Vue, Next.js, Laravel, NestJS, Flutter)
 - AI Engineering: LLM integration, RAG systems, AI agents, intelligent automation
-- Software Engineering: Custom software, web platforms, SaaS products
-- Cloud Infrastructure: Scalable architecture, DevOps, CI/CD, infrastructure as code
+- Cloud Infrastructure: Scalable architecture, DevOps, CI/CD, Cloudflare deployment
 - Growth Systems: SEO, content strategy, marketing automation, data-driven growth
-- Automation: Workflow orchestration, process optimization, intelligent pipelines
+- Automation: n8n agents, workflow orchestration, process optimization (live in production)
+- Creative & Content: Ad creatives, short-form video, Systeme.io funnels, Meta/Google/TikTok ads
 
-## Products
+## Proven Results
 
-- MEDIM: AI-powered medical intelligence platform
-- AI Platform: Multi-model AI gateway with intelligent routing (Gemini, Groq, Ollama, OpenAI)
-- APIs: Developer-first APIs for AI, data, and infrastructure
-- Developer SDK: Tools for building with Stiamond's platform
-- Marketplace: Integration marketplace for Stiamond ecosystem
+- 18+ e-commerce stores built (Shopify, WooCommerce)
+- 7+ websites delivered
+- 69+ ad campaigns managed (Meta, Google, TikTok)
+- AI agents running in production
+- IT project management and DSI (CIO) advisory
 
-## Services
+## Delivery Times
 
-- AI Engineering: Chatbots, RAG, AI agents, LLM integration
-- Software Engineering: Web apps, SaaS, APIs, microservices
-- Cloud: Architecture, DevOps, CI/CD, Docker, Kubernetes
-- Automation: Process automation, workflow orchestration
-- Growth: SEO/GEO, content, marketing automation, analytics
-- Consulting: Technical strategy, architecture review, team training
+- Landing Page: 1-2 weeks
+- E-commerce Store: 2-4 weeks
+- Automation Agent: 2-4 weeks
+- Custom Platform: 4-8 weeks
+
+## Quality Standards
+
+- Core Web Vitals: LCP under 2.5s, CLS under 0.1, INP under 200ms
+- Clean code: TypeScript, proper architecture, code reviews
+- SEO-ready: Structured data, meta tags, sitemap, semantic HTML
 
 ## Industries
 
-- Healthcare
-- Retail
+- Retail & E-commerce
 - Finance
+- Healthcare
 - Education
-- Logistics
-- Professional Services
+- Real Estate
+- Manufacturing
+
+## Mentorship & Training
+
+- Diagnostic Session: 45-60 min level assessment and personalized learning roadmap
+- Targeted Consultation: 30-45 min focused on one specific topic
+- Structured Training: 4-6 week program with modules and direct support
+- Details: https://stiamond.net/mentorship
 
 ## Documentation
 
-- API Reference: https://stiamond.net/developers/api
-- SDK: https://stiamond.net/developers/sdk
-- Authentication: https://stiamond.net/developers/authentication
-- Status: https://stiamond.net/developers/status
-- Changelog: https://stiamond.net/developers/changelog
+- How we work: https://stiamond.net/docs
+- Developer resources: https://stiamond.net/developers
 
 ## Contact
 
 - Website: https://stiamond.net
 - Contact: https://stiamond.net/contact
 - Pricing: https://stiamond.net/pricing
+- Solutions: https://stiamond.net/solutions
+- Company: https://stiamond.net/company
+- Founder: https://stiamond.net/company/team
+- FAQ: https://stiamond.net/faq
+- Case Studies: https://stiamond.net/case-studies
+- Blog: https://stiamond.net/blog
+
+## Payment
+
+- International: Wise (USD, EUR, GBP, CAD)
+- Local: Mobile money or bank transfer
+- Typically 50% upfront, 50% on delivery, or milestone-based
 
 ## Languages
 

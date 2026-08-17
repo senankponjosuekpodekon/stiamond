@@ -1,53 +1,79 @@
 # Stiamond
 
-> Entreprise d'Ingénierie IA, Logiciel & Cloud
+> Ingénierie IA, Logiciel & Cloud — Studio Solo
 
-Stiamond conçoit des logiciels propulsés par l'IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance des entreprises.
+Stiamond est un studio solo dirigé par Senankpon Josué Kpodekon, basé à Cotonou, Bénin. Une seule personne couvre développement, design, marketing, automatisation IA et gestion de projet IT — ce que la plupart des agences répartissent sur 3-4 personnes. Les clients travaillent directement avec le fondateur, pas avec un account manager.
 
-## Expertise
+## Expertise (6 Piliers)
 
+- Ingénierie Logicielle : Logiciels sur mesure, plateformes web, produits SaaS (React, Vue, Next.js, Laravel, NestJS, Flutter)
 - Ingénierie IA : Intégration LLM, systèmes RAG, agents IA, automatisation intelligente
-- Ingénierie Logicielle : Logiciels sur mesure, plateformes web, produits SaaS
-- Infrastructure Cloud : Architecture scalable, DevOps, CI/CD, infrastructure as code
+- Infrastructure Cloud : Architecture scalable, DevOps, CI/CD, déploiement Cloudflare
 - Systèmes de Croissance : SEO, stratégie de contenu, automatisation marketing, croissance data-driven
-- Automatisation : Orchestration de workflows, optimisation des processus, pipelines intelligents
+- Automatisation : Agents n8n, orchestration de workflows, optimisation des processus (en production)
+- Créatif & Contenu : Créatifs publicitaires, vidéos courtes, funnels Systeme.io, pubs Meta/Google/TikTok
 
-## Produits
+## Résultats Prouvés
 
-- MEDIM : Plateforme d'intelligence médicale propulsée par l'IA
-- AI Platform : Passerelle IA multi-modèles avec routage intelligent (Gemini, Groq, Ollama, OpenAI)
-- APIs : APIs developer-first pour l'IA, les données et l'infrastructure
-- SDK Développeur : Outils pour construire avec la plateforme Stiamond
-- Marketplace : Marketplace d'intégrations pour l'écosystème Stiamond
+- 18+ boutiques e-commerce créées (Shopify, WooCommerce)
+- 7+ sites vitrines livrés
+- 69+ campagnes publicitaires gérées (Meta, Google, TikTok)
+- Agents IA en production
+- Gestion de projet IT et conseil DSI (CIO)
 
-## Services
+## Délais de Livraison
 
-- Ingénierie IA : Chatbots, RAG, agents IA, intégration LLM
-- Ingénierie Logicielle : Applications web, SaaS, APIs, microservices
-- Cloud : Architecture, DevOps, CI/CD, Docker, Kubernetes
-- Automatisation : Automatisation des processus, orchestration de workflows
-- Croissance : SEO/GEO, contenu, automatisation marketing, analytics
-- Conseil : Stratégie technique, revue d'architecture, formation d'équipes
+- Landing Page : 1-2 semaines
+- Boutique E-commerce : 2-4 semaines
+- Agent d'automatisation : 2-4 semaines
+- Plateforme sur mesure : 4-8 semaines
+
+## Standards de Qualité
+
+- Core Web Vitals : LCP sous 2,5s, CLS sous 0,1, INP sous 200ms
+- Code propre : TypeScript, architecture propre, code reviews
+- SEO-ready : Données structurées, meta tags, sitemap, HTML sémantique
 
 ## Industries
 
-- Santé
-- Retail
+- Retail & E-commerce
 - Finance
+- Santé
 - Éducation
-- Logistique
-- Services Professionnels
+- Immobilier
+- Industrie
+
+## Mentorat & Formation
+
+- Session diagnostic : 45-60 min, évaluation de niveau et parcours personnalisé
+- Consultation ciblée : 30-45 min sur un sujet précis
+- Formation structurée : 4-6 semaines avec modules et support direct
+- Détails : https://stiamond.net/fr/mentorship
 
 ## Documentation
 
-- Référence API : https://stiamond.net/developers/api
-- SDK : https://stiamond.net/developers/sdk
-- Authentification : https://stiamond.net/developers/authentication
-- Statut : https://stiamond.net/developers/status
-- Changelog : https://stiamond.net/developers/changelog
+- Comment nous travaillons : https://stiamond.net/docs
+- Ressources développeur : https://stiamond.net/developers
 
 ## Contact
 
 - Site web : https://stiamond.net
-- Contact : https://stiamond.net/contact
-- Tarifs : https://stiamond.net/pricing
+- Contact : https://stiamond.net/fr/contact
+- Tarifs : https://stiamond.net/fr/pricing
+- Solutions : https://stiamond.net/fr/solutions
+- Entreprise : https://stiamond.net/fr/company
+- Fondateur : https://stiamond.net/fr/company/team
+- FAQ : https://stiamond.net/fr/faq
+- Études de cas : https://stiamond.net/fr/case-studies
+- Blog : https://stiamond.net/fr/blog
+
+## Paiement
+
+- International : Wise (USD, EUR, GBP, CAD)
+- Local : Mobile money ou virement bancaire
+- Typiquement 50% à la commande, 50% à la livraison, ou par jalons
+
+## Langues
+
+- English : https://stiamond.net/llms.txt
+- Français : https://stiamond.net/llms-fr.txt
