@@ -968,7 +968,7 @@
         "Feuille de route remise après la session"
       ],
       "duration": "session unique",
-      "price": "20–30k FCFA"
+      "price": "$40–60"
     },
     "consultation": {
       "name": "Consultation ciblée",
@@ -981,7 +981,7 @@
         "Résumé par email après la session"
       ],
       "duration": "par session",
-      "price": "15–25k FCFA"
+      "price": "$50–80"
     },
     "formation": {
       "name": "Formation structurée",
@@ -994,7 +994,7 @@
         "Revue de projet final"
       ],
       "duration": "4–6 semaines",
-      "price": "100–200k FCFA"
+      "price": "$400–800"
     },
     "approach": {
       "title": "Comment ça marche",
