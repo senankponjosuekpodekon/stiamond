@@ -126,7 +126,7 @@ export default async function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute inset-0 bg-gradient-hero pointer-events-none" />
         <Container>
           <div className="flex flex-col items-center py-16 text-center sm:py-20 md:py-32 lg:py-40">
             <FadeIn delay={0}>
