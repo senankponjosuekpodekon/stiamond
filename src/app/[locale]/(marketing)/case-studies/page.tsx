@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
+import { TestimonialsSection } from "@/components/testimonials-section";
 
 export const runtime = "nodejs";
 
@@ -88,7 +89,14 @@ export default async function CaseStudiesPage() {
               </div>
             ))}
           </div>
+        </Container>
+      </section>
 
+      {/* Testimonials */}
+      <TestimonialsSection />
+
+      <section className="py-20 md:py-28">
+        <Container>
           <div className="mt-16 text-center">
             <Button variant="primary" size="lg" asChild>
               <Link href="/contact">
