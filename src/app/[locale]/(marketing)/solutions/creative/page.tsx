@@ -132,7 +132,7 @@ export default async function CreativeSolutionPage() {
                   69+ ad campaigns managed across Meta, Google, and TikTok. Real results, real data.
                 </p>
                 <div className="mt-8">
-                  <Button variant="primary" asChild>
+                  <Button variant="primary" size="lg" asChild>
                     <Link href="/contact">
                       Start your creative project
                       <ArrowRight className="h-4 w-4" />
@@ -140,7 +140,7 @@ export default async function CreativeSolutionPage() {
                   </Button>
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-4 sm:gap-6">
                 <div className="rounded-lg border border-border bg-card p-6 text-center">
                   <div className="text-h2 font-bold text-primary">69+</div>
                   <div className="mt-1 text-body-sm text-muted-foreground">Ad campaigns</div>

@@ -182,7 +182,7 @@ export default function ContactForm() {
                     <p className="mt-1 text-caption text-destructive">{errors.message.message}</p>
                   )}
                 </div>
-                <Button type="submit" variant="primary" size="lg" disabled={loading || isSubmitting}>
+                <Button type="submit" variant="primary" size="lg" disabled={loading || isSubmitting} className="w-full sm:w-auto">
                   {loading || isSubmitting ? t("form.sending") : t("form.send")}
                   {!loading && !isSubmitting && <ArrowRight className="h-4 w-4" />}
                 </Button>

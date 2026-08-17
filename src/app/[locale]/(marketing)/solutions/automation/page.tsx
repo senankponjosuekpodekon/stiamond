@@ -132,7 +132,7 @@ export default async function AutomationSolutionPage() {
                   Timeline: 2–4 weeks.
                 </p>
                 <div className="mt-8">
-                  <Button variant="primary" asChild>
+                  <Button variant="primary" size="lg" asChild>
                     <Link href="/contact">
                       Start your automation project
                       <ArrowRight className="h-4 w-4" />

@@ -79,7 +79,7 @@ export default async function PricingPage() {
 
       <section className="py-20 md:py-28">
         <Container>
-          <div className="grid gap-6 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {plans.map((plan) => (
               <div
                 key={plan.name}
