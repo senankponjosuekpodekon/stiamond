@@ -20,9 +20,9 @@ export function Footer() {
     {
       title: t("solutions"),
       links: [
-        { label: t("aiEngineering"), href: "/solutions/ai" },
         { label: t("softwareEngineering"), href: "/solutions/software" },
-        { label: t("cloudInfrastructure"), href: "/solutions/cloud" },
+        { label: t("automation"), href: "/solutions/automation" },
+        { label: t("creative"), href: "/solutions/creative" },
         { label: t("growthSystems"), href: "/solutions/growth" },
       ],
     },
@@ -37,8 +37,8 @@ export function Footer() {
       title: t("resources"),
       links: [
         { label: t("blog"), href: "/blog" },
+        { label: t("faq"), href: "/faq" },
         { label: t("documentation"), href: "/docs", nonLocale: true },
-        { label: t("developers"), href: "/developers", nonLocale: true },
         { label: t("caseStudies"), href: "/case-studies" },
       ],
     },

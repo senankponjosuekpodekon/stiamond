@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { FadeIn, Stagger, StaggerItem } from "@/components/motion";
+import { TestimonialsSection } from "@/components/testimonials-section";
 import {
   Cpu,
   Cloud,
@@ -74,16 +75,16 @@ export default async function HomePage() {
       href: "/solutions/software",
     },
     {
+      icon: Zap,
+      title: t("pillars.automation.title"),
+      description: t("pillars.automation.description"),
+      href: "/solutions/automation",
+    },
+    {
       icon: Brain,
       title: t("pillars.ai.title"),
       description: t("pillars.ai.description"),
       href: "/solutions/ai",
-    },
-    {
-      icon: Cloud,
-      title: t("pillars.cloud.title"),
-      description: t("pillars.cloud.description"),
-      href: "/solutions/cloud",
     },
     {
       icon: TrendingUp,
@@ -183,6 +184,9 @@ export default async function HomePage() {
           </div>
         </Container>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialsSection />
 
       {/* Pillars */}
       <section className="py-20 md:py-28">

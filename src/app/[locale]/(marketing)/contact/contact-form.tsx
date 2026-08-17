@@ -15,7 +15,7 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [contactEmail, setContactEmail] = useState("hello@stiamond.net");
-  const [contactPhone, setContactPhone] = useState("+1 (555) 000-0000");
+  const [contactPhone, setContactPhone] = useState("+229 00 00 00 00");
   const [contactLocation, setContactLocation] = useState("Remote · Global");
 
   useEffect(() => {
@@ -157,9 +157,10 @@ export default function ContactForm() {
                     className="mt-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-body-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   >
                     <option value="">{t("form.selectType")}</option>
-                    <option value="ai">{t("form.typeAi")}</option>
-                    <option value="software">{t("form.typeSoftware")}</option>
-                    <option value="cloud">{t("form.typeCloud")}</option>
+                    <option value="web">{t("form.typeWeb")}</option>
+                    <option value="ecommerce">{t("form.typeEcommerce")}</option>
+                    <option value="automation">{t("form.typeAutomation")}</option>
+                    <option value="creative">{t("form.typeCreative")}</option>
                     <option value="growth">{t("form.typeGrowth")}</option>
                     <option value="other">{t("form.typeOther")}</option>
                   </select>

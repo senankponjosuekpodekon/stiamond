@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Code, Brain, Cloud, TrendingUp, Zap, Server, Workflow, ArrowRight } from "lucide-react";
+import { Code, Brain, Cloud, TrendingUp, Zap, Server, Workflow, ArrowRight, Palette, Bot } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
@@ -18,11 +18,32 @@ export default async function SolutionsPage() {
 
   const solutions = [
     {
+      icon: TrendingUp,
+      title: t("growth.title"),
+      description: t("growth.subtitle"),
+      features: t.raw("features.growth") as string[],
+      href: "/solutions/growth",
+    },
+    {
       icon: Code,
       title: t("software.title"),
       description: t("software.subtitle"),
       features: t.raw("features.software") as string[],
       href: "/solutions/software",
+    },
+    {
+      icon: Bot,
+      title: t("automation.title"),
+      description: t("automation.subtitle"),
+      features: t.raw("automation.capabilities.items") as string[],
+      href: "/solutions/automation",
+    },
+    {
+      icon: Palette,
+      title: t("creative.title"),
+      description: t("creative.subtitle"),
+      features: t.raw("creative.capabilities.items") as string[],
+      href: "/solutions/creative",
     },
     {
       icon: Brain,
@@ -37,13 +58,6 @@ export default async function SolutionsPage() {
       description: t("cloud.subtitle"),
       features: t.raw("features.cloud") as string[],
       href: "/solutions/cloud",
-    },
-    {
-      icon: TrendingUp,
-      title: t("growth.title"),
-      description: t("growth.subtitle"),
-      features: t.raw("features.growth") as string[],
-      href: "/solutions/growth",
     },
   ];
 

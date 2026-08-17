@@ -17,6 +17,7 @@ const navLinks = [
   { key: "products", href: "/products" },
   { key: "industries", href: "/industries" },
   { key: "pricing", href: "/pricing" },
+  { key: "faq", href: "/faq" },
   { key: "contact", href: "/contact" },
 ];
 

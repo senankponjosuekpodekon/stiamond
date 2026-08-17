@@ -1,4 +1,4 @@
-import { pgTable, uuid, varchar, timestamp, text, pgEnum, boolean, serial } from "drizzle-orm/pg-core";
+import { pgTable, uuid, varchar, timestamp, text, pgEnum, boolean, serial, integer } from "drizzle-orm/pg-core";
 
 export const userRoleEnum = pgEnum("user_role", ["admin", "client", "viewer"]);
 
@@ -75,5 +75,22 @@ export const siteSettings = pgTable("site_settings", {
   id: serial("id").primaryKey(),
   key: varchar("key", { length: 100 }).notNull().unique(),
   value: text("value").notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
+export const testimonialStatusEnum = pgEnum("testimonial_status", ["draft", "published"]);
+
+export const testimonials = pgTable("testimonials", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  clientName: varchar("client_name", { length: 100 }).notNull(),
+  clientRole: varchar("client_role", { length: 100 }),
+  clientCompany: varchar("client_company", { length: 200 }),
+  projectType: varchar("project_type", { length: 100 }),
+  quoteEn: text("quote_en").notNull(),
+  quoteFr: text("quote_fr"),
+  rating: integer("rating").default(5).notNull(),
+  status: testimonialStatusEnum("status").default("draft").notNull(),
+  sortOrder: integer("sort_order").default(0).notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
