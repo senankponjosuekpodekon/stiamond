@@ -54,12 +54,12 @@ export function Footer() {
               <IntlLink href="/" className="flex items-center gap-2">
                 <Image
                   src="/logo.png"
-                  alt="Stiamond"
+                  alt="Stiamond Digital"
                   width={32}
                   height={32}
                   className="rounded-lg"
                 />
-                <span className="text-body font-semibold">Stiamond</span>
+                <span className="text-body font-semibold">Stiamond Digital</span>
               </IntlLink>
               <p className="mt-4 max-w-xs text-body-sm text-muted-foreground">
                 {t("tagline")}

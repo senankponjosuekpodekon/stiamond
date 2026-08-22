@@ -97,11 +97,32 @@ const organizationSchema = {
     "https://github.com/senankponjosuekpodekon",
     "https://stiamond.net",
   ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Cotonou",
+    addressCountry: "BJ",
+  },
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
     areaServed: ["BJ", "Worldwide"],
     availableLanguage: ["English", "French"],
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Stiamond Digital",
+  alternateName: "Stiamond",
+  url: "https://stiamond.net",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://stiamond.net/blog?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
   },
 };
 
@@ -129,6 +150,10 @@ export default async function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <link rel="alternate" hrefLang="en" href="https://stiamond.net" />
         <link rel="alternate" hrefLang="fr" href="https://stiamond.net/fr" />

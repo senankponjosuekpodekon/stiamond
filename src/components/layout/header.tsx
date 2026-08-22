@@ -33,14 +33,14 @@ export function Header() {
             <Link href="/" className="flex items-center gap-2.5">
               <Image
                 src="/logo.png"
-                alt="Stiamond"
+                alt="Stiamond Digital"
                 width={28}
                 height={28}
                 className="rounded-md"
                 priority
               />
               <span className="text-body font-semibold tracking-tight">
-                Stiamond
+                Stiamond Digital
               </span>
             </Link>
 
