@@ -7,11 +7,16 @@ import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import { blogPosts } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
-import { getPostBySlug } from "@/lib/blog";
+import { getPostBySlug, getAllPosts } from "@/lib/blog";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import type { Metadata } from "next";
 
 export const runtime = "nodejs";
+
+export async function generateStaticParams() {
+  const posts = getAllPosts();
+  return posts.map((post) => ({ slug: post.slug }));
+}
 
 type PostData = {
   title: string;
