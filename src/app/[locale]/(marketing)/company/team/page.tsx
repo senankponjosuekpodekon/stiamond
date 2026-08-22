@@ -226,7 +226,7 @@ export default async function TeamPage() {
                       {"Après des licences en Économie Appliquée et en Linguistique Anglaise, j'ai rejoint Epitech Coding Academy pour formaliser mes compétences en développement full-stack. La combinaison d'économie, de linguistique et d'ingénierie logicielle m'a donné un angle unique : je ne me contente pas de construire des logiciels — je comprends la logique business derrière et l'audience qu'ils servent."}
                     </p>
                     <p>
-                      {"Aujourd'hui, Stiamond est un studio solo qui couvre ce que la plupart des agences répartissent sur 3-4 personnes : "}
+                      {"Aujourd'hui, Stiamond Digital est un studio solo qui couvre ce que la plupart des agences répartissent sur 3-4 personnes : "}
                       <strong className="text-foreground">{"développement, design, marketing, automatisation IA et gestion de projet IT"}</strong>
                       {". Vous travaillez directement avec moi — pas un account manager junior. J'assure également des rôles de conseil DSI (CIO) et Lead Tech pour les entreprises qui ont besoin de leadership technique sans un recrutement à temps plein."}
                     </p>
@@ -251,7 +251,7 @@ export default async function TeamPage() {
                       and the audience it serves.
                     </p>
                     <p>
-                      Today, Stiamond is a solo studio that covers what most agencies split across 3-4 people:
+                      Today, Stiamond Digital is a solo studio that covers what most agencies split across 3-4 people:
                       <strong className="text-foreground"> development, design, marketing, AI automation, and IT project management</strong>.
                       You work directly with me — not a junior account manager. I also take on DSI (CIO) advisory
                       and Lead Tech roles for businesses that need technical leadership without a full-time hire.

@@ -498,7 +498,7 @@
   "company": {
     "overline": "À Propos",
     "title": "Concevoir l'avenir du logiciel intelligent",
-    "subtitle": "Stiamond est une entreprise d'IA & de logiciels qui construit des produits, des plateformes et des infrastructures pour la prochaine génération d'entreprises digitales.",
+    "subtitle": "Stiamond Digital est une entreprise d'IA & de logiciels qui construit des produits, des plateformes et des infrastructures pour la prochaine génération d'entreprises digitales.",
     "mission": {
       "title": "Notre Mission",
       "description": "Donner aux entreprises les moyens d'utiliser des logiciels IA, des infrastructures cloud et des systèmes de croissance accessibles, scalables et sécurisés. Nous transformons les défis techniques complexes en solutions élégantes et composables."
@@ -1022,12 +1022,12 @@
   },
   "metadata": {
     "site": {
-      "title": "Stiamond — IA, Logiciel & Cloud",
-      "description": "Stiamond conçoit des logiciels propulsés par l'IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance des entreprises."
+      "title": "Stiamond Digital — IA, Logiciel & Cloud",
+      "description": "Stiamond Digital conçoit des logiciels propulsés par l'IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance des entreprises."
     },
     "home": {
-      "title": "Stiamond — IA, Logiciel & Cloud",
-      "description": "Stiamond conçoit des logiciels propulsés par l'IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance des entreprises."
+      "title": "Stiamond Digital — IA, Logiciel & Cloud",
+      "description": "Stiamond Digital conçoit des logiciels propulsés par l'IA, des infrastructures cloud et des systèmes de croissance digitale qui accélèrent la performance des entreprises."
     },
     "solutions": {
       "title": "Solutions",

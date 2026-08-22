@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     title: {
       default: title,
-      template: `%s — Stiamond`,
+      template: `%s — Stiamond Digital`,
     },
     description,
     keywords: [
@@ -44,19 +44,20 @@ export async function generateMetadata(): Promise<Metadata> {
       "automation",
       "digital growth",
       "Stiamond",
+      "Stiamond Digital",
       "ingénierie IA",
       "développement logiciel",
       "infrastructure cloud",
       "croissance digitale",
     ],
-    authors: [{ name: "Stiamond" }],
-    creator: "Stiamond",
+    authors: [{ name: "Stiamond Digital" }],
+    creator: "Stiamond Digital",
     openGraph: {
       type: "website",
       locale: ogLocale,
       alternateLocale: [altLocale],
       url: "https://stiamond.net",
-      siteName: "Stiamond",
+      siteName: "Stiamond Digital",
       title,
       description,
     },
@@ -85,6 +86,25 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Stiamond Digital",
+  alternateName: "Stiamond",
+  url: "https://stiamond.net",
+  logo: "https://stiamond.net/icon.svg",
+  sameAs: [
+    "https://github.com/senankponjosuekpodekon",
+    "https://stiamond.net",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    areaServed: ["BJ", "Worldwide"],
+    availableLanguage: ["English", "French"],
+  },
+};
+
 const themeScript = `
 (function() {
   const theme = localStorage.getItem('stiamond-theme');
@@ -106,6 +126,10 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head suppressHydrationWarning>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <link rel="alternate" hrefLang="en" href="https://stiamond.net" />
         <link rel="alternate" hrefLang="fr" href="https://stiamond.net/fr" />
         <link rel="alternate" hrefLang="x-default" href="https://stiamond.net" />
