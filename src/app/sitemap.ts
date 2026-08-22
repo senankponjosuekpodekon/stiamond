@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/docs",
     "/developers",
     "/blog",
+    "/blog/stiamond-digital-nouvelle-adresse-stiamond-net",
     "/case-studies",
     "/mentorship",
     "/client-portal",
