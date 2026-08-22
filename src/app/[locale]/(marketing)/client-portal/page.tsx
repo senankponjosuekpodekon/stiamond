@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Lock, ArrowRight, LayoutDashboard, FileText, CreditCard } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
 
