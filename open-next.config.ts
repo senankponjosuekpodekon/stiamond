@@ -1,6 +1,6 @@
 import type { OpenNextConfig } from "@opennextjs/cloudflare";
 
-const config: OpenNextConfig = {
+const config = {
   default: {
     override: {
       wrapper: "cloudflare-node",
@@ -23,6 +23,10 @@ const config: OpenNextConfig = {
       queue: "dummy",
     },
   },
-};
+  // Externalize @vercel/og so Wrangler does not try to bundle its WASM/font binaries
+  dangerous: {
+    external: ["@vercel/og", "*.wasm?module"],
+  },
+} as unknown as OpenNextConfig;
 
 export default config;
