@@ -61,7 +61,7 @@ export default async function ClientPortalPage() {
                     <Input type="password" placeholder="••••••••" className="mt-2" />
                   </div>
                   <Button variant="primary" size="lg" asChild className="w-full">
-                    <Link href="/login">
+                    <Link href="/app/dashboard">
                       {t("signInBtn")}
                       <ArrowRight className="h-4 w-4" />
                     </Link>
