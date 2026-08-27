@@ -5,7 +5,7 @@ import { users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { LayoutDashboard, Briefcase, Receipt, LogOut } from "lucide-react";
+import { LayoutDashboard, Briefcase, Receipt, LogOut, User } from "lucide-react";
 
 export const runtime = "nodejs";
 
@@ -39,6 +39,7 @@ export default async function AppLayout({
     { href: "/app/dashboard", label: "Dashboard", icon: LayoutDashboard },
     { href: "/app/projects", label: "Projects", icon: Briefcase },
     { href: "/app/invoices", label: "Invoices", icon: Receipt },
+    { href: "/app/profile", label: "Profile", icon: User },
   ];
 
   return (
