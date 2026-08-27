@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { getLocale, getTranslations } from "next-intl/server";
 import { AnalyticsProvider } from "@/components/analytics";
 import { Providers } from "@/components/providers";
+import Script from "next/script";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -200,8 +201,14 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head suppressHydrationWarning>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXYL7FDF1P"></script>
-        <script
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-VXYL7FDF1P"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

@@ -1,7 +1,7 @@
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ShoppingBag, TrendingUp, Megaphone, Bot, Mail, CreditCard, ArrowRight, Check } from "lucide-react";
+import { ShoppingBag, Megaphone, Bot, CreditCard, ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { getLocale } from "next-intl/server";
 import type { Metadata } from "next";
