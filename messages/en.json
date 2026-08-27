@@ -545,6 +545,20 @@
             "Backups + monitoring"
           ],
           "cta": "Launch"
+        },
+        {
+          "name": "Idea to MVP",
+          "description": "From idea to a launched MVP in 4-6 weeks — validation, branding, landing page, waitlist, and prototype.",
+          "price": "$2,500",
+          "period": "from $2,500",
+          "features": [
+            "Idea validation & positioning",
+            "Brand identity & one-pager",
+            "Landing page + waitlist funnel",
+            "MVP scoping & tech choices",
+            "1-month coaching"
+          ],
+          "cta": "Build my MVP"
         }
       ]
     },
