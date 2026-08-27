@@ -531,6 +531,20 @@
             "Rapport de lancement"
           ],
           "cta": "Créer & lancer"
+        },
+        {
+          "name": "Cloud & SaaS",
+          "description": "VPS, CI/CD, Cloudflare, SSL et déploiement pour applications web et produits SaaS.",
+          "price": "1 500 $",
+          "period": "à partir de 1 500 $",
+          "features": [
+            "Setup VPS ou Cloud",
+            "Pipeline CI/CD",
+            "Cloudflare DNS + cache",
+            "SSL et bases de sécurité",
+            "Sauvegardes + monitoring"
+          ],
+          "cta": "Lancer"
         }
       ]
     },
