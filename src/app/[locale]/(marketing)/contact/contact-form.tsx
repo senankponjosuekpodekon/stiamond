@@ -184,6 +184,9 @@ export default function ContactForm() {
                     <option value="">{t("form.selectType")}</option>
                     <option value="web">{t("form.typeWeb")}</option>
                     <option value="ecommerce">{t("form.typeEcommerce")}</option>
+                    <option value="software">{t("form.typeSoftware")}</option>
+                    <option value="ai">{t("form.typeAi")}</option>
+                    <option value="cloud">{t("form.typeCloud")}</option>
                     <option value="automation">{t("form.typeAutomation")}</option>
                     <option value="creative">{t("form.typeCreative")}</option>
                     <option value="growth">{t("form.typeGrowth")}</option>

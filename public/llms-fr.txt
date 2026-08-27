@@ -45,6 +45,22 @@ Stiamond Digital est un studio solo dirigé par Senankpon Josué Kpodekon, aussi
 - Immobilier
 - Industrie
 
+## Tarifs & Packs
+
+- 4 packs principaux : Site Vitrine (900 $), Funnel Systeme.io (1 200 $), Présence Digitale Complète (2 500 $), Gestion de Campagnes (1 500 $/mois)
+- 8 packs spécialisés : Audit Express, Automatisation Métier, Refonte & Modernisation, Stratégie Marketing Digital, Cloud & SaaS, Idée à MVP, Retainer Growth, Conseil Lead Tech
+- Tous les prix, scopes et délais : https://stiamond.net/fr/pricing
+
+## Partenariats
+
+Livraison en marque blanche pour agences et marques établies : développement web, automatisation IA, e-commerce, funnels & pub, cloud et lead tech fractionnaire.
+- Détails : https://stiamond.net/fr/partners
+
+## Industrie E-commerce
+
+Solutions e-commerce dédiées : Shopify, WooCommerce, flux produits, optimisation de conversion, campagnes Meta/Google/TikTok.
+- Détails : https://stiamond.net/fr/industries/ecommerce
+
 ## Mentorat & Formation
 
 - Parcours : dev fullstack et électricien → automate industriel
