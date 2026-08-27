@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { passwordPolicyMessage } from "@/lib/auth/password";
 
 export default function RegisterPage() {
   const t = useTranslations("auth.register");
@@ -88,6 +89,7 @@ export default function RegisterPage() {
               <div>
                 <label className="text-body-sm font-medium">{t("password")}</label>
                 <Input name="password" type="password" placeholder="••••••••" className="mt-2" required />
+                <p className="mt-2 text-caption text-muted-foreground">{passwordPolicyMessage}</p>
               </div>
               <Button type="submit" variant="primary" size="lg" className="w-full" disabled={loading}>
                 {loading ? t("creating") : t("createAccount")}

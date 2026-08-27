@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { logger } from "@/lib/logger";
+import { registerSchema } from "@/lib/auth/password";
 
 export const runtime = "nodejs";
 
@@ -12,21 +13,16 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     bodyEmail = body.email;
-    const { firstName, lastName, email, password } = body;
 
-    if (!firstName || !lastName || !email || !password) {
+    const parsed = registerSchema.safeParse(body);
+    if (!parsed.success) {
       return NextResponse.json(
-        { error: "All fields are required" },
+        { error: parsed.error.issues.map((issue) => issue.message).join(". ") },
         { status: 400 }
       );
     }
 
-    if (password.length < 8) {
-      return NextResponse.json(
-        { error: "Password must be at least 8 characters" },
-        { status: 400 }
-      );
-    }
+    const { firstName, lastName, email, password } = parsed.data;
 
     if (!process.env.DATABASE_URL) {
       return NextResponse.json(
@@ -38,7 +34,7 @@ export async function POST(request: Request) {
     const [existing] = await db
       .select()
       .from(users)
-      .where(eq(users.email, email))
+      .where(eq(users.email, email.toLowerCase()))
       .limit(1);
 
     if (existing) {
@@ -53,7 +49,7 @@ export async function POST(request: Request) {
     await db.insert(users).values({
       firstName,
       lastName,
-      email,
+      email: email.toLowerCase(),
       passwordHash,
     });
 
