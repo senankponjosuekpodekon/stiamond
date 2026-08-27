@@ -105,6 +105,7 @@ const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
+    telephone: "+2290162937964",
     areaServed: ["BJ", "Worldwide"],
     availableLanguage: ["English", "French"],
   },
