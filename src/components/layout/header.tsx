@@ -60,9 +60,6 @@ export function Header() {
           <div className="flex items-center gap-2">
             <LanguageSwitcher className="hidden sm:flex" />
             <ThemeToggle />
-            <Button variant="ghost" size="sm" asChild className="hidden sm:inline-flex">
-              <Link href="/client-portal">{t("clientPortal")}</Link>
-            </Button>
             <Button variant="primary" size="sm" asChild>
               <Link href="/contact">{t("getStarted")}</Link>
             </Button>
@@ -100,13 +97,6 @@ export function Header() {
                 {t(link.key)}
               </Link>
             ))}
-            <Link
-              href="/client-portal"
-              onClick={() => setMobileOpen(false)}
-              className="rounded-md px-3 py-2.5 text-body font-medium text-muted-foreground transition-colors hover:bg-surface-1 hover:text-foreground"
-            >
-              {t("clientPortal")}
-            </Link>
             <div className="flex items-center gap-2 px-3 py-2">
               <LanguageSwitcher />
               <ThemeToggle />
