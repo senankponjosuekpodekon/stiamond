@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Cpu, Brain, Zap, Server, ArrowRight, Check } from "lucide-react";
+import { Cpu, Brain, Zap, Server, TrendingUp, GraduationCap, MessageSquare, Banknote, Store, ArrowRight, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/seo";
@@ -15,6 +15,15 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ProductsPage() {
   const t = await getTranslations("products");
+  const homeT = await getTranslations("home");
+
+  const labProjects = [
+    { icon: TrendingUp, name: "Trading OS", description: homeT("lab.tradingOs") },
+    { icon: GraduationCap, name: "Learning OS", description: homeT("lab.learningOs") },
+    { icon: MessageSquare, name: "Conversational AI Agent", description: homeT("lab.conversationalAgent") },
+    { icon: Banknote, name: "Banking Platform", description: homeT("lab.bankingPlatform") },
+    { icon: Store, name: "Digital Marketplace", description: homeT("lab.marketplace") },
+  ];
 
   const products = [
     {
@@ -90,6 +99,29 @@ export default async function ProductsPage() {
                       </li>
                     ))}
                   </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-border bg-surface-1/40 py-20 md:py-28">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-overline font-semibold uppercase text-accent">{homeT("lab.overline")}</p>
+            <h2 className="mt-3 text-h2">{homeT("lab.title")}</h2>
+            <p className="mt-4 text-body-lg text-muted-foreground">{homeT("lab.subtitle")}</p>
+          </div>
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {labProjects.map((project) => (
+              <Card key={project.name} className="h-full border-dashed">
+                <CardContent className="pt-6">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/8 text-primary">
+                    <project.icon className="h-5 w-5" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="mt-4 text-h5 font-bold">{project.name}</h3>
+                  <p className="mt-2 text-body text-muted-foreground">{project.description}</p>
                 </CardContent>
               </Card>
             ))}
