@@ -13,6 +13,7 @@ import {
   FileText,
   Mail,
   MessageCircle,
+  PlusCircle,
   Quote,
   Receipt,
   TrendingUp,
@@ -126,6 +127,13 @@ export default async function AdminOverview() {
           >
             <Users className="h-4 w-4" />
             Manage Users
+          </Link>
+          <Link
+            href="/admin/invoices/new"
+            className="inline-flex items-center gap-2 rounded-md border border-border px-4 py-2 text-body-sm font-medium transition-colors hover:bg-surface-1"
+          >
+            <PlusCircle className="h-4 w-4" />
+            New Invoice
           </Link>
         </div>
       </div>
