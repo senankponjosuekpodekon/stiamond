@@ -1,11 +1,12 @@
 import type { NextAuthConfig } from "next-auth";
 
-export const authConfig: Omit<NextAuthConfig, "providers"> = {
+export const authConfig: NextAuthConfig = {
   session: { strategy: "jwt" },
   trustHost: true,
   pages: {
     signIn: "/login",
   },
+  providers: [],
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
