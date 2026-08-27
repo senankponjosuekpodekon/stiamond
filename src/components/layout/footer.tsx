@@ -111,6 +111,12 @@ export function Footer() {
               >
                 {t("security")}
               </IntlLink>
+              <IntlLink
+                href="/cookie-policy"
+                className="text-caption text-muted-foreground hover:text-foreground"
+              >
+                {t("cookie")}
+              </IntlLink>
             </div>
           </div>
         </div>

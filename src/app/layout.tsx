@@ -3,6 +3,7 @@ import { Poppins, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { getLocale, getTranslations } from "next-intl/server";
 import { AnalyticsProvider } from "@/components/analytics";
+import { CookieBanner } from "@/components/cookie-banner";
 import { Providers } from "@/components/providers";
 import Script from "next/script";
 import "./globals.css";
@@ -254,6 +255,7 @@ export default async function RootLayout({
             {children}
           </AnalyticsProvider>
         </Providers>
+        <CookieBanner locale={locale} />
       </body>
     </html>
   );
