@@ -79,9 +79,21 @@ export function ChatWidget() {
 
   useEffect(() => {
     if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+      const el = scrollRef.current;
+      requestAnimationFrame(() => {
+        el.scrollTo({ top: el.scrollHeight, behavior: "auto" });
+      });
     }
   }, [messages]);
+
+  useEffect(() => {
+    if (open && scrollRef.current) {
+      const el = scrollRef.current;
+      requestAnimationFrame(() => {
+        el.scrollTo({ top: el.scrollHeight, behavior: "auto" });
+      });
+    }
+  }, [open]);
 
   useEffect(() => {
     if (open) setHasNewReply(false);
