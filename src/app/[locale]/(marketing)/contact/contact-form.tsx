@@ -1,17 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema, type ContactFormData } from "@/lib/validations/contact";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mail, Phone, MapPin, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Mail, Phone, MapPin, Calendar, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function ContactForm() {
   const t = useTranslations("contact");
+  const locale = useLocale();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [contactEmail, setContactEmail] = useState("hello@stiamond.net");
@@ -114,6 +115,30 @@ export default function ContactForm() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            <div className="mt-8 rounded-xl border border-border bg-card p-6">
+              <div className="flex items-center gap-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/8 text-primary">
+                  <Calendar className="h-5 w-5" strokeWidth={1.5} />
+                </div>
+                <div className="flex-1">
+                  <p className="text-caption text-muted-foreground">
+                    {locale === "fr" ? "Préférez un appel ?" : "Prefer a call?"}
+                  </p>
+                  <Button asChild size="sm" className="h-auto px-0 py-0 text-primary">
+                    <a
+                      href="https://calendly.com/stiamond"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2"
+                    >
+                      {locale === "fr" ? "Réserver un appel" : "Book a call"}
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
 
