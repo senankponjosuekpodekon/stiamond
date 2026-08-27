@@ -17,8 +17,8 @@ export async function generateMetadata(): Promise<Metadata> {
       ? "Fondateur — Senankpon Josué Kpodekon | Stiamond"
       : "Founder — Senankpon Josué Kpodekon | Stiamond",
     description: isFr
-      ? "Développeur full-stack, stratège marketing et expert en automatisation IA. Basé à Cotonou, travaille avec des clients dans le monde entier."
-      : "Full-stack developer, marketing strategist, and AI automation expert. Based in Cotonou, working with clients worldwide.",
+      ? "Développeur full-stack, stratège marketing, expert en automatisation IA et mentor. Certifications Google, Meta et Data Analytics en cours. Basé à Cotonou, travaille avec des clients dans le monde entier."
+      : "Full-stack developer, marketing strategist, AI automation expert and mentor. Google, Meta and Data Analytics certifications in progress. Based in Cotonou, working with clients worldwide.",
     alternates: {
       languages: {
         en: "https://stiamond.net/company/team",

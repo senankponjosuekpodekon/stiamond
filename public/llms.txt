@@ -6,7 +6,7 @@ Stiamond Digital is a solo studio led by Senankpon Josué Kpodekon, also known a
 
 ## Expertise (6 Pillars)
 
-- Software Engineering: Custom software, web platforms, SaaS products (React, Vue, Next.js, Laravel, NestJS, Flutter)
+- Software Engineering: Custom software, web platforms, SaaS products, showcase sites and redesigns at scale (React, Vue, Next.js, Laravel, NestJS, Flutter)
 - AI Engineering: LLM integration, RAG systems, AI agents, intelligent automation
 - Cloud Infrastructure: Scalable architecture, DevOps, CI/CD, Cloudflare deployment
 - Growth Systems: SEO, content strategy, marketing automation, data-driven growth
@@ -16,9 +16,11 @@ Stiamond Digital is a solo studio led by Senankpon Josué Kpodekon, also known a
 ## Proven Results
 
 - 18+ e-commerce stores built (Shopify, WooCommerce)
-- 7+ websites delivered
+- 7+ websites delivered, including showcase sites and redesigns at scale
 - 69+ ad campaigns managed (Meta, Google, TikTok)
 - AI agents running in production
+- Google Marketing, Meta Marketing, and Data Analytics certifications (in progress / planned)
+- 1-on-1 mentorship for full-stack dev and electrician-to-industrial-automation career changes
 - IT project management and DSI (CIO) advisory
 
 ## Delivery Times
@@ -45,6 +47,7 @@ Stiamond Digital is a solo studio led by Senankpon Josué Kpodekon, also known a
 
 ## Mentorship & Training
 
+- Career tracks: full-stack dev and electrician → industrial automation retraining
 - Diagnostic Session: 45-60 min level assessment and personalized learning roadmap
 - Targeted Consultation: 30-45 min focused on one specific topic
 - Structured Training: 4-6 week program with modules and direct support

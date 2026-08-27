@@ -6,7 +6,7 @@ Stiamond Digital est un studio solo dirigé par Senankpon Josué Kpodekon, aussi
 
 ## Expertise (6 Piliers)
 
-- Ingénierie Logicielle : Logiciels sur mesure, plateformes web, produits SaaS (React, Vue, Next.js, Laravel, NestJS, Flutter)
+- Ingénierie Logicielle : Logiciels sur mesure, plateformes web, produits SaaS, sites vitrines et refontes en volume (React, Vue, Next.js, Laravel, NestJS, Flutter)
 - Ingénierie IA : Intégration LLM, systèmes RAG, agents IA, automatisation intelligente
 - Infrastructure Cloud : Architecture scalable, DevOps, CI/CD, déploiement Cloudflare
 - Systèmes de Croissance : SEO, stratégie de contenu, automatisation marketing, croissance data-driven
@@ -16,9 +16,11 @@ Stiamond Digital est un studio solo dirigé par Senankpon Josué Kpodekon, aussi
 ## Résultats Prouvés
 
 - 18+ boutiques e-commerce créées (Shopify, WooCommerce)
-- 7+ sites vitrines livrés
+- 7+ sites vitrines livrés, dont sites vitrines et refontes en volume
 - 69+ campagnes publicitaires gérées (Meta, Google, TikTok)
 - Agents IA en production
+- Certifications Google Marketing, Meta Marketing et Data Analytics (en cours / planifiées)
+- Mentorat 1-on-1 pour reconversion dev fullstack et électricien → automate industriel
 - Gestion de projet IT et conseil DSI (CIO)
 
 ## Délais de Livraison
@@ -45,6 +47,7 @@ Stiamond Digital est un studio solo dirigé par Senankpon Josué Kpodekon, aussi
 
 ## Mentorat & Formation
 
+- Parcours : dev fullstack et électricien → automate industriel
 - Session diagnostic : 45-60 min, évaluation de niveau et parcours personnalisé
 - Consultation ciblée : 30-45 min sur un sujet précis
 - Formation structurée : 4-6 semaines avec modules et support direct
