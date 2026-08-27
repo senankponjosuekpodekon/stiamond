@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -15,6 +15,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function CaseStudiesPage() {
   const t = await getTranslations("caseStudies");
+  const locale = await getLocale();
+  const isFr = locale === "fr";
 
   return (
     <>
@@ -26,6 +28,37 @@ export default async function CaseStudiesPage() {
             <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground">
               {t("subtitle")}
             </p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-y border-border bg-surface-1/40 py-20 md:py-28">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-overline font-semibold uppercase text-accent">
+              {isFr ? "Impact" : "Impact"}
+            </p>
+            <h2 className="mt-3 text-h2">
+              {isFr ? "Chiffres à l'échelle" : "Numbers at scale"}
+            </h2>
+            <p className="mt-4 text-body-lg text-muted-foreground">
+              {isFr
+                ? "Des résultats concrets sur des projets e-commerce, automatisation et growth."
+                : "Concrete results from e-commerce, automation, and growth projects."}
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { value: "18+", label: isFr ? "Boutiques e-commerce" : "E-commerce stores" },
+              { value: "69+", label: isFr ? "Campagnes publicitaires" : "Ad campaigns" },
+              { value: "2-4", label: isFr ? "Semaines de livraison moyenne" : "Average delivery weeks" },
+              { value: "1", label: isFr ? "Seul interlocuteur" : "Single point of contact" },
+            ].map((s) => (
+              <div key={s.label} className="rounded-xl border border-border bg-card p-6 text-center">
+                <div className="text-h2 font-bold text-primary">{s.value}</div>
+                <p className="mt-2 text-body-sm text-muted-foreground">{s.label}</p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
