@@ -10,7 +10,7 @@ const intlMiddleware = createIntlMiddleware(routing);
 
 const protectedPaths = ["/app", "/dashboard", "/admin"];
 
-const nonLocalePaths = ["/login", "/register", "/docs", "/developers", "/messages"];
+const nonLocalePaths = ["/login", "/register", "/forgot-password", "/docs", "/developers", "/messages"];
 
 export default auth((req) => {
   const { pathname } = req.nextUrl;
