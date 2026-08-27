@@ -8,6 +8,8 @@ import { Mail, Phone, MapPin, Check, Loader2 } from "lucide-react";
 type PaymentMethodConfig = {
   bank: { enabled: boolean; details: string };
   crypto: { enabled: boolean; details: string };
+  mobile: { enabled: boolean; details: string };
+  other: { enabled: boolean; details: string };
   stripe: { enabled: boolean; details: string };
 };
 
@@ -30,12 +32,16 @@ export function SettingsForm({
       return {
         bank: { enabled: parsed.bank?.enabled ?? false, details: parsed.bank?.details ?? "" },
         crypto: { enabled: parsed.crypto?.enabled ?? false, details: parsed.crypto?.details ?? "" },
+        mobile: { enabled: parsed.mobile?.enabled ?? false, details: parsed.mobile?.details ?? "" },
+        other: { enabled: parsed.other?.enabled ?? false, details: parsed.other?.details ?? "" },
         stripe: { enabled: parsed.stripe?.enabled ?? false, details: parsed.stripe?.details ?? "" },
       };
     } catch {
       return {
         bank: { enabled: false, details: "" },
         crypto: { enabled: false, details: "" },
+        mobile: { enabled: false, details: "" },
+        other: { enabled: false, details: "" },
         stripe: { enabled: false, details: "" },
       };
     }

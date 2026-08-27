@@ -16,6 +16,8 @@ export default async function AdminInvoicesPage() {
     amount: string;
     status: string;
     paymentMethod: string | null;
+    paymentReference: string | null;
+    paymentProofUrl: string | null;
     paidAt: Date | null;
     dueDate: Date | null;
     createdAt: Date;
@@ -54,7 +56,18 @@ export default async function AdminInvoicesPage() {
                     <p className="text-body-sm text-muted-foreground">
                       Created {new Date(invoice.createdAt).toLocaleDateString()}
                       {invoice.paymentMethod && ` · ${invoice.paymentMethod}`}
+                      {invoice.paymentReference && ` · Ref: ${invoice.paymentReference}`}
                     </p>
+                    {invoice.paymentProofUrl && (
+                      <a
+                        href={invoice.paymentProofUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-body-sm text-primary hover:underline"
+                      >
+                        View payment proof
+                      </a>
+                    )}
                   </div>
                   <div className="flex items-center gap-4">
                     {invoice.dueDate && (

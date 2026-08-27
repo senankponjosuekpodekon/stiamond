@@ -55,8 +55,10 @@ export default async function InvoiceDetailPage({ params }: InvoicePageProps) {
   let paymentSettings: {
     bank: { enabled: boolean; details: string };
     crypto: { enabled: boolean; details: string };
+    mobile: { enabled: boolean; details: string };
+    other: { enabled: boolean; details: string };
     stripe: { enabled: boolean; details: string };
-  } = { bank: { enabled: false, details: "" }, crypto: { enabled: false, details: "" }, stripe: { enabled: false, details: "" } };
+  } = { bank: { enabled: false, details: "" }, crypto: { enabled: false, details: "" }, mobile: { enabled: false, details: "" }, other: { enabled: false, details: "" }, stripe: { enabled: false, details: "" } };
 
   if (process.env.DATABASE_URL) {
     try {

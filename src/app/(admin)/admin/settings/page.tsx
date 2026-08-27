@@ -27,6 +27,8 @@ export default async function AdminSettingsPage() {
       JSON.stringify({
         bank: { enabled: false, details: "" },
         crypto: { enabled: false, details: "" },
+        mobile: { enabled: false, details: "" },
+        other: { enabled: false, details: "" },
         stripe: { enabled: false, details: "" },
       }),
   };

@@ -47,6 +47,8 @@ export const invoices = pgTable("invoices", {
   amount: varchar("amount", { length: 50 }).notNull(),
   status: varchar("status", { length: 50 }).default("pending").notNull(),
   paymentMethod: varchar("payment_method", { length: 50 }),
+  paymentReference: text("payment_reference"),
+  paymentProofUrl: text("payment_proof_url"),
   paidAt: timestamp("paid_at"),
   dueDate: timestamp("due_date"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
