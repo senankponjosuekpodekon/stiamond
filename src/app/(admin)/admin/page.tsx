@@ -1,15 +1,40 @@
 import { db } from "@/lib/db";
-import { blogPosts, contactMessages, users } from "@/lib/db/schema";
-import { FileText, Mail, Users, TrendingUp } from "lucide-react";
+import {
+  blogPosts,
+  contactMessages,
+  invoices,
+  messageReplies,
+  projects,
+  testimonials,
+  users,
+} from "@/lib/db/schema";
+import {
+  Briefcase,
+  FileText,
+  Mail,
+  MessageCircle,
+  Quote,
+  Receipt,
+  TrendingUp,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
 
 export const runtime = "nodejs";
 
 export default async function AdminOverview() {
   let postCount = 0;
-  let messageCount = 0;
-  let userCount = 0;
   let publishedCount = 0;
+  let messageCount = 0;
+  let unreadMessages = 0;
+  let userCount = 0;
+  let projectCount = 0;
+  let activeProjects = 0;
+  let invoiceCount = 0;
+  let pendingInvoices = 0;
+  let testimonialCount = 0;
+  let publishedTestimonials = 0;
+  let replyCount = 0;
 
   if (process.env.DATABASE_URL) {
     try {
@@ -19,19 +44,39 @@ export default async function AdminOverview() {
 
       const allMessages = await db.select().from(contactMessages);
       messageCount = allMessages.length;
+      unreadMessages = allMessages.filter((m) => !m.isRead).length;
 
       const allUsers = await db.select().from(users);
       userCount = allUsers.length;
+
+      const allProjects = await db.select().from(projects);
+      projectCount = allProjects.length;
+      activeProjects = allProjects.filter((p) => p.status === "active").length;
+
+      const allInvoices = await db.select().from(invoices);
+      invoiceCount = allInvoices.length;
+      pendingInvoices = allInvoices.filter((i) => i.status === "pending").length;
+
+      const allTestimonials = await db.select().from(testimonials);
+      testimonialCount = allTestimonials.length;
+      publishedTestimonials = allTestimonials.filter((t) => t.status === "published").length;
+
+      const allReplies = await db.select().from(messageReplies);
+      replyCount = allReplies.length;
     } catch {
       // DB not available
     }
   }
 
   const stats = [
-    { icon: FileText, label: "Total Posts", value: postCount, sub: `${publishedCount} published` },
-    { icon: Mail, label: "Messages", value: messageCount, sub: "from contact form" },
     { icon: Users, label: "Users", value: userCount, sub: "registered" },
+    { icon: FileText, label: "Total Posts", value: postCount, sub: `${publishedCount} published` },
     { icon: TrendingUp, label: "Published", value: publishedCount, sub: "live posts" },
+    { icon: Mail, label: "Messages", value: messageCount, sub: `${unreadMessages} unread` },
+    { icon: MessageCircle, label: "Replies", value: replyCount, sub: "message replies" },
+    { icon: Briefcase, label: "Projects", value: projectCount, sub: `${activeProjects} active` },
+    { icon: Receipt, label: "Invoices", value: invoiceCount, sub: `${pendingInvoices} pending` },
+    { icon: Quote, label: "Testimonials", value: testimonialCount, sub: `${publishedTestimonials} published` },
   ];
 
   return (
@@ -39,7 +84,7 @@ export default async function AdminOverview() {
       <div>
         <h2 className="text-h3">Overview</h2>
         <p className="mt-2 text-body text-muted-foreground">
-          Manage your blog, messages, and users.
+          Manage your blog, messages, projects, invoices, testimonials and users.
         </p>
       </div>
 
