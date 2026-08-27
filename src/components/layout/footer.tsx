@@ -1,5 +1,4 @@
 import { Link as IntlLink } from "@/i18n/navigation";
-import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/container";
@@ -41,7 +40,7 @@ export function Footer() {
         { label: t("blog"), href: "/blog" },
         { label: t("faq"), href: "/faq" },
         { label: t("mentorship"), href: "/mentorship" },
-        { label: t("documentation"), href: "/docs", nonLocale: true },
+        { label: t("documentation"), href: "/docs" },
         { label: t("caseStudies"), href: "/case-studies" },
       ],
     },
@@ -76,21 +75,12 @@ export function Footer() {
                 <ul className="mt-4 space-y-3">
                   {section.links.map((link) => (
                     <li key={link.href}>
-                      {link.nonLocale ? (
-                        <Link
-                          href={link.href}
-                          className="text-body-sm text-muted-foreground transition-colors hover:text-foreground"
-                        >
-                          {link.label}
-                        </Link>
-                      ) : (
-                        <IntlLink
-                          href={link.href}
-                          className="text-body-sm text-muted-foreground transition-colors hover:text-foreground"
-                        >
-                          {link.label}
-                        </IntlLink>
-                      )}
+                      <IntlLink
+                        href={link.href}
+                        className="text-body-sm text-muted-foreground transition-colors hover:text-foreground"
+                      >
+                        {link.label}
+                      </IntlLink>
                     </li>
                   ))}
                 </ul>
