@@ -590,6 +590,20 @@
             "On-demand Slack"
           ],
           "cta": "Get advice"
+        },
+        {
+          "name": "E-commerce Store",
+          "description": "Turnkey Shopify, WooCommerce or WordPress store — products, payment, shipping, SEO and analytics.",
+          "price": "$2,500",
+          "period": "from $2,500",
+          "features": [
+            "Shopify / WooCommerce / WordPress setup",
+            "Responsive store design",
+            "Payments, shipping and tax setup",
+            "Product SEO + Google Merchant Center",
+            "Sales analytics and reporting"
+          ],
+          "cta": "Launch my store"
         }
       ]
     },

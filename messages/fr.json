@@ -590,6 +590,20 @@
             "Slack à la demande"
           ],
           "cta": "Me contacter"
+        },
+        {
+          "name": "Boutique E-commerce",
+          "description": "Boutique Shopify, WooCommerce ou WordPress clé en main — produits, paiement, livraison, SEO et analytics.",
+          "price": "2 500 $",
+          "period": "à partir de 2 500 $",
+          "features": [
+            "Setup Shopify / WooCommerce / WordPress",
+            "Design de boutique responsive",
+            "Paiements, frais de port et taxes",
+            "SEO produits + Google Merchant Center",
+            "Analytics et reporting ventes"
+          ],
+          "cta": "Lancer ma boutique"
         }
       ]
     },
