@@ -136,28 +136,32 @@ export function ChatWidget() {
     setLoading(true);
     setError("");
 
-    const userMsg: ChatMessage = {
-      id: crypto.randomUUID(),
-      senderType: "client",
-      message: input.trim(),
-      createdAt: new Date().toISOString(),
-    };
-    setMessages((prev) => [...prev, userMsg]);
+    const message = input.trim();
     setInput("");
 
     try {
       const res = await fetch(`/api/messages/${replyToken}/reply`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMsg.message }),
+        body: JSON.stringify({ message }),
       });
       if (!res.ok) {
         const err = await res.json();
         throw new Error(err.error || "Failed to send");
       }
+      const data = await res.json();
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: data.id,
+          senderType: "client",
+          message,
+          createdAt: data.createdAt,
+        },
+      ]);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");
-      setMessages((prev) => prev.filter((m) => m.id !== userMsg.id));
+      setInput(message);
     } finally {
       setLoading(false);
     }

@@ -30,11 +30,17 @@ export async function POST(
       return NextResponse.json({ error: "Conversation not found" }, { status: 404 });
     }
 
-    await db.insert(messageReplies).values({
-      contactMessageId: contactMsg.id,
-      senderType: "client",
-      message: message.trim(),
-    });
+    const [reply] = await db
+      .insert(messageReplies)
+      .values({
+        contactMessageId: contactMsg.id,
+        senderType: "client",
+        message: message.trim(),
+      })
+      .returning({
+        id: messageReplies.id,
+        createdAt: messageReplies.createdAt,
+      });
 
     const baseUrl = process.env.AUTH_URL || "http://localhost:3000";
     const conversationUrl = `${baseUrl}/messages/${token}`;
@@ -54,7 +60,10 @@ export async function POST(
 
     logger.info("Client reply sent", { contactMsgId: contactMsg.id, token });
 
-    return NextResponse.json({ message: "Reply sent successfully" }, { status: 200 });
+    return NextResponse.json(
+      { id: reply.id, createdAt: reply.createdAt, message: "Reply sent successfully" },
+      { status: 200 }
+    );
   } catch (error) {
     logger.apiError("/api/messages/[token]/reply", "POST", error);
     return NextResponse.json({ error: "Something went wrong" }, { status: 500 });
