@@ -7,6 +7,7 @@ export const contactSchema = z.object({
   company: z.string().optional(),
   projectType: z.string().min(1, "Please select a project type"),
   message: z.string().min(10, "Message must be at least 10 characters"),
+  metadata: z.object({}).passthrough().optional(),
 });
 
 export type ContactFormData = z.infer<typeof contactSchema>;

@@ -132,6 +132,14 @@ export function ChatWidget() {
       company: (formData.get("company") as string) || "",
       projectType: "other",
       message: formData.get("message") as string,
+      metadata: {
+        pageUrl: window.location.href,
+        userAgent: navigator.userAgent,
+        platform: navigator.platform,
+        language: navigator.language,
+        screen: `${window.screen.width}x${window.screen.height}`,
+        deviceMemory: (navigator as Navigator & { deviceMemory?: number }).deviceMemory,
+      },
     };
 
     try {

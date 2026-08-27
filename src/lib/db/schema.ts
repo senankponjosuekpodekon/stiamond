@@ -1,4 +1,4 @@
-import { pgTable, uuid, varchar, timestamp, text, pgEnum, boolean, serial, integer } from "drizzle-orm/pg-core";
+import { pgTable, uuid, varchar, timestamp, text, pgEnum, boolean, serial, integer, jsonb } from "drizzle-orm/pg-core";
 
 export const userRoleEnum = pgEnum("user_role", ["admin", "client", "viewer"]);
 
@@ -61,6 +61,15 @@ export const contactMessages = pgTable("contact_messages", {
   replyToken: varchar("reply_token", { length: 64 }).unique(),
   isRead: boolean("is_read").default(false).notNull(),
   lastClientActivityAt: timestamp("last_client_activity_at"),
+  metadata: jsonb("metadata"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const appLogs = pgTable("app_logs", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  level: varchar("level", { length: 20 }).notNull(),
+  message: text("message").notNull(),
+  context: jsonb("context"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 

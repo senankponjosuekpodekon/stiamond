@@ -16,6 +16,8 @@ type Conversation = {
   message: string;
   replyToken: string | null;
   isRead: boolean;
+  lastClientActivityAt: Date | null;
+  metadata: Record<string, unknown> | null;
   createdAt: Date;
   replies: Array<{
     id: string;
@@ -308,6 +310,19 @@ export function MessagesView({
                     >
                       {selected.email}
                     </a>
+                    {selected.lastClientActivityAt && (
+                      <p className="text-overline text-muted-foreground">
+                        Active on chat: {new Date(selected.lastClientActivityAt).toLocaleString()}
+                      </p>
+                    )}
+                    {selected.metadata && (
+                      <details className="mt-1">
+                        <summary className="cursor-pointer text-overline text-muted-foreground">Metadata</summary>
+                        <pre className="mt-1 max-w-xs whitespace-pre-wrap break-words rounded bg-surface-1 p-2 text-overline text-muted-foreground">
+                          {JSON.stringify(selected.metadata, null, 2)}
+                        </pre>
+                      </details>
+                    )}
                   </div>
                 </div>
                 <div className="flex items-center gap-3">

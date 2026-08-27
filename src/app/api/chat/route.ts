@@ -22,6 +22,12 @@ export async function POST(request: Request) {
 
     const replyToken = crypto.randomUUID().replace(/-/g, "");
 
+    const forwardedFor = request.headers.get("x-forwarded-for") ?? request.headers.get("x-real-ip");
+    const ip = forwardedFor ? forwardedFor.split(",")[0].trim() : null;
+    const userAgent = request.headers.get("user-agent") ?? null;
+
+    const metadata = data.metadata as Record<string, unknown> | undefined;
+
     const [inserted] = await db
       .insert(contactMessages)
       .values({
@@ -32,6 +38,11 @@ export async function POST(request: Request) {
         projectType: data.projectType,
         message: data.message,
         replyToken,
+        metadata: {
+          ...metadata,
+          ip,
+          userAgent,
+        } as Record<string, unknown>,
       })
       .returning({ id: contactMessages.id });
 

@@ -38,6 +38,7 @@ export async function GET() {
       );
       return {
         ...msg,
+        metadata: (msg.metadata as Record<string, unknown> | null) ?? null,
         replies: msgReplies,
         lastReplyAt,
         hasUnread: !msg.isRead || hasUnreadClientReplies,

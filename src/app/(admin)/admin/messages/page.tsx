@@ -16,6 +16,8 @@ export default async function AdminMessagesPage() {
     message: string;
     replyToken: string | null;
     isRead: boolean;
+    lastClientActivityAt: Date | null;
+    metadata: Record<string, unknown> | null;
     createdAt: Date;
     replies: Array<{
       id: string;
@@ -41,6 +43,7 @@ export default async function AdminMessagesPage() {
 
       conversations = messages.map((msg) => ({
         ...msg,
+        metadata: (msg.metadata as Record<string, unknown> | null) ?? null,
         replies: replies.filter((r) => r.contactMessageId === msg.id),
       }));
     } catch {
