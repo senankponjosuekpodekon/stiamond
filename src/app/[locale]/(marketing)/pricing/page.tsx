@@ -141,7 +141,46 @@ export default async function PricingPage() {
             <p className="mt-4 text-body-lg text-muted-foreground">{t("specialized.subtitle")}</p>
           </div>
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {specialized.map((plan) => (
+            {specialized.slice(0, 4).map((plan) => (
+              <div
+                key={plan.name}
+                className="relative rounded-xl border border-border bg-card p-8"
+              >
+                <h2 className="text-h5 font-semibold">{plan.name}</h2>
+                <p className="mt-2 text-body-sm text-muted-foreground">{plan.description}</p>
+                <div className="mt-6 flex items-baseline gap-1">
+                  <span className="text-h2 font-bold">{plan.price}</span>
+                  <span className="text-body-sm text-muted-foreground">{plan.period}</span>
+                </div>
+                <ul className="mt-8 space-y-3">
+                  {plan.features.map((f) => (
+                    <li key={f} className="flex items-center gap-3">
+                      <div className="flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <Check className="h-3 w-3" strokeWidth={2.5} />
+                      </div>
+                      <span className="text-body-sm">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  asChild
+                  className="mt-8 w-full"
+                >
+                  <Link href="/contact">{plan.cta}</Link>
+                </Button>
+              </div>
+            ))}
+          </div>
+
+          <div className="mx-auto mt-20 max-w-2xl text-center">
+            <p className="text-overline font-semibold uppercase text-accent">{t("specialized.retainerOverline")}</p>
+            <h2 className="mt-3 text-h2">{t("specialized.retainerTitle")}</h2>
+            <p className="mt-4 text-body-lg text-muted-foreground">{t("specialized.retainerSubtitle")}</p>
+          </div>
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {specialized.slice(4).map((plan) => (
               <div
                 key={plan.name}
                 className="relative rounded-xl border border-border bg-card p-8"

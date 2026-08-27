@@ -475,6 +475,9 @@
       "overline": "Packs spécialisés",
       "title": "Pour des besoins spécifiques",
       "subtitle": "Des projets ciblés avec des livrables et délais clairs.",
+      "retainerOverline": "Scale et accompagnement",
+      "retainerTitle": "Construire, lancer et grandir",
+      "retainerSubtitle": "Cloud, SaaS, MVP, retainers et conseil pour équipes en croissance.",
       "items": [
         {
           "name": "Audit Express",
