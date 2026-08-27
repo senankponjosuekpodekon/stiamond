@@ -12,6 +12,7 @@ export default async function AdminProjectsPage() {
   let projectList: {
     id: string;
     name: string;
+    packName: string | null;
     description: string | null;
     status: string;
     createdAt: Date;
@@ -53,6 +54,9 @@ export default async function AdminProjectsPage() {
                   </span>
                 </div>
                 <h2 className="mt-4 text-body font-semibold">{project.name}</h2>
+                {project.packName && (
+                  <p className="mt-2 text-body-sm text-primary">{project.packName}</p>
+                )}
                 <p className="mt-2 text-body-sm text-muted-foreground">{project.description}</p>
                 <p className="mt-4 text-caption text-muted-foreground">
                   Started {new Date(project.createdAt).toLocaleDateString()}

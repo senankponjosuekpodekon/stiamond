@@ -1,5 +1,6 @@
 import { db } from "@/lib/db";
 import { users } from "@/lib/db/schema";
+import { packOptions } from "@/lib/packs";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -52,6 +53,22 @@ export default async function NewProjectPage() {
           <div>
             <label className="text-body-sm font-medium">Project name</label>
             <Input name="name" type="text" placeholder="E-commerce redesign" required className="mt-2" />
+          </div>
+
+          <div>
+            <label className="text-body-sm font-medium">Pack (optional)</label>
+            <select
+              name="packName"
+              className="mt-2 w-full rounded-md border border-border bg-background px-3 py-2 text-body-sm text-foreground outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+            >
+              <option value="">Select a pack</option>
+              {packOptions.map((pack) => (
+                <option key={pack} value={pack}>
+                  {pack}
+                </option>
+              ))}
+              <option value="custom">Other / Custom</option>
+            </select>
           </div>
 
           <div>

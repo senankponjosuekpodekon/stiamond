@@ -16,7 +16,7 @@ export default async function ClientProjectsPage() {
     redirect("/login");
   }
 
-  let projectList: { id: string; name: string; description: string | null; status: string; createdAt: Date }[] = [];
+  let projectList: { id: string; name: string; packName: string | null; description: string | null; status: string; createdAt: Date }[] = [];
 
   if (process.env.DATABASE_URL) {
     try {
@@ -36,6 +36,7 @@ export default async function ClientProjectsPage() {
         .select({
           id: projects.id,
           name: projects.name,
+          packName: projects.packName,
           description: projects.description,
           status: projects.status,
           createdAt: projects.createdAt,
@@ -61,6 +62,9 @@ export default async function ClientProjectsPage() {
                   <div className="flex items-center justify-between">
                     <h2 className="text-body font-semibold">{p.name}</h2>
                     <span className="rounded-full bg-primary/10 px-2 py-0.5 text-caption text-primary">{p.status}</span>
+                  {p.packName && (
+                    <p className="mt-2 text-body-sm text-primary">{p.packName}</p>
+                  )}
                   </div>
                   <p className="mt-2 text-body-sm text-muted-foreground">{p.description}</p>
                   <p className="mt-4 text-caption text-muted-foreground">

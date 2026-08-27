@@ -33,6 +33,7 @@ export const projects = pgTable("projects", {
   id: uuid("id").primaryKey().defaultRandom(),
   userId: uuid("user_id").references(() => users.id).notNull(),
   name: varchar("name", { length: 255 }).notNull(),
+  packName: varchar("pack_name", { length: 100 }),
   description: text("description"),
   status: varchar("status", { length: 50 }).default("active").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),

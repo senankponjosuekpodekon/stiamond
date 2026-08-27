@@ -1,0 +1,16 @@
+export const packOptions = [
+  "Site Vitrine",
+  "Funnel Systeme.io",
+  "Complete Digital Presence",
+  "Campaign Management",
+  "Audit Express",
+  "Redesign & Modernization",
+  "Digital Marketing Strategy",
+  "E-commerce Store",
+  "Idea to MVP",
+  "Cloud & SaaS Launch",
+  "Business Automation",
+  "Growth Retainer",
+  "Lead Tech Advisory",
+  "Custom",
+];

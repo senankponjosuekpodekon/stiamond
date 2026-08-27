@@ -7,6 +7,7 @@ import { redirect } from "next/navigation";
 export async function createProject(formData: FormData) {
   const userId = formData.get("userId") as string;
   const name = formData.get("name") as string;
+  const packName = (formData.get("packName") as string) || null;
   const description = formData.get("description") as string;
   const status = (formData.get("status") as string) || "active";
 
@@ -17,6 +18,7 @@ export async function createProject(formData: FormData) {
   await db.insert(projects).values({
     userId,
     name,
+    packName,
     description,
     status,
   });
