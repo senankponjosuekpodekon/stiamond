@@ -25,7 +25,7 @@ const config = {
   },
   // Externalize @vercel/og so Wrangler does not try to bundle its WASM/font binaries
   dangerous: {
-    external: ["@vercel/og", "*.wasm?module"],
+    external: ["@vercel/og", "**/*.wasm", "**/*.ttf.bin"],
   },
 } as unknown as OpenNextConfig;
 
