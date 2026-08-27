@@ -5,10 +5,10 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const cspHeader = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: https:",
-  "connect-src 'self' https://www.google-analytics.com https://*.posthog.com https://*.googletagmanager.com",
+  "connect-src 'self' https://*.google.com https://www.google-analytics.com https://*.doubleclick.net https://*.posthog.com https://*.googletagmanager.com https://*.cloudflareinsights.com",
   "font-src 'self' https: data:",
   "frame-src https://www.googletagmanager.com",
   "object-src 'none'",
