@@ -32,7 +32,7 @@ export default async function PricingPage() {
       period: t("plans.starter.period"),
       features: t.raw("plans.starter.features") as string[],
       cta: t("plans.starter.cta"),
-      popular: true,
+      popular: false,
     },
     {
       name: t("plans.growth.name"),
@@ -41,7 +41,7 @@ export default async function PricingPage() {
       period: t("plans.growth.period"),
       features: t.raw("plans.growth.features") as string[],
       cta: t("plans.growth.cta"),
-      popular: false,
+      popular: true,
     },
     {
       name: t("plans.enterprise.name"),

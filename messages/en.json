@@ -410,70 +410,65 @@
   },
   "pricing": {
     "overline": "Pricing",
-    "title": "Simple, transparent pricing",
-    "subtitle": "From a single landing page to ongoing engineering leadership. Pick the level that fits your stage.",
+    "title": "Packs built for fast delivery, one point of contact",
+    "subtitle": "From a simple website to a complete digital presence. Every pack includes development, design, and automation by the same person.",
     "popular": "Most chosen",
     "plans": {
       "entry": {
-        "name": "Entry",
-        "description": "Landing pages, simple sites, and one-off tasks.",
-        "price": "$800",
+        "name": "Site Vitrine",
+        "description": "A professional, fast-loading website or landing page — delivered in 1-2 weeks.",
+        "price": "$1,500",
         "period": "/project",
         "features": [
-          "Landing page or simple website",
-          "Up to 20 hours",
-          "WordPress or Shopify setup",
-          "Basic SEO setup",
-          "14-day warranty",
-          "Email support"
+          "Up to 5 pages",
+          "Mobile-first design",
+          "SEO + speed optimization",
+          "Contact forms",
+          "14-day warranty"
         ],
         "cta": "Start a Project"
       },
       "starter": {
-        "name": "Starter",
-        "description": "Full websites, e-commerce stores, and automation agents.",
-        "price": "$2,500",
+        "name": "Funnel Systeme.io",
+        "description": "A sales funnel that converts: landing pages, email automation, and payment integration.",
+        "price": "$1,500",
         "period": "/project",
         "features": [
-          "Custom website or e-commerce store",
-          "Up to 40 hours",
-          "AI automation agent setup",
-          "Ad campaign setup",
-          "30-day warranty",
-          "Email support"
+          "3-5 funnel steps",
+          "Systeme.io setup",
+          "Email automation",
+          "Payment integration",
+          "30-day warranty"
         ],
-        "cta": "Start a Project"
+        "cta": "Build my Funnel"
       },
       "growth": {
-        "name": "Growth",
-        "description": "Ongoing engineering, marketing, and automation for scaling businesses.",
-        "price": "$3,000",
-        "period": "/month",
+        "name": "Complete Digital Presence",
+        "description": "Website, brand identity, Systeme.io funnel, and your first month of ads — one handoff.",
+        "price": "$4,200",
+        "period": "/project",
         "features": [
-          "Up to 3 pillars: Dev, Marketing, Automation",
-          "Up to 120 hours/month",
-          "Direct contact with founder",
-          "Priority support",
-          "Monthly strategy call",
-          "90-day warranty"
+          "Website or store",
+          "Brand identity",
+          "Sales funnel setup",
+          "Ad campaign setup (1 month)",
+          "Monthly strategy call"
         ],
-        "cta": "Scale with Us"
+        "cta": "Get the Full Package"
       },
       "enterprise": {
-        "name": "Enterprise / DSI",
-        "description": "Technical leadership, project management, and full-stack coverage.",
-        "price": "Custom",
-        "period": "",
+        "name": "Campaign Management",
+        "description": "Setup + monthly management of Meta, Google, and TikTok campaigns for e-commerce and lead generation.",
+        "price": "$1,500",
+        "period": "/month",
         "features": [
-          "All 4 pillars + project management",
-          "DSI / Lead Tech role",
-          "Unlimited hours",
-          "Team coordination & vendor management",
-          "SLA guarantee",
-          "On-site or remote",
-          "Custom integrations"
+          "Campaign structure & setup",
+          "Google Merchant Center if e-commerce",
+          "Meta + Google + TikTok",
+          "Weekly optimization",
+          "Reporting dashboard"
         ],
-        "cta": "Contact Sales"
+        "cta": "Let's Talk"
       }
     },
     "faq": {

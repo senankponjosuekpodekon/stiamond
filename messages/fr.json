@@ -410,70 +410,65 @@
   },
   "pricing": {
     "overline": "Tarifs",
-    "title": "Des tarifs simples et transparents",
-    "subtitle": "D'une simple landing page à la direction technique continue. Choisissez le niveau adapté à votre étape.",
+    "title": "Des packs conçus pour être livrés vite, par un seul interlocuteur",
+    "subtitle": "D'un simple site vitrine à une présence digitale complète. Chaque pack inclut développement, design et automatisation par la même personne.",
     "popular": "Le plus choisi",
     "plans": {
       "entry": {
-        "name": "Entry",
-        "description": "Landing pages, sites simples et tâches ponctuelles.",
-        "price": "800 $",
+        "name": "Site Vitrine",
+        "description": "Un site professionnel et rapide, livré en 1-2 semaines.",
+        "price": "1 500 $",
         "period": "/projet",
         "features": [
-          "Landing page ou site simple",
-          "Jusqu'à 20 heures",
-          "Setup WordPress ou Shopify",
-          "SEO de base",
-          "Garantie 14 jours",
-          "Support email"
+          "Jusqu'à 5 pages",
+          "Design mobile-first",
+          "SEO + vitesse",
+          "Formulaires de contact",
+          "Garantie 14 jours"
         ],
         "cta": "Démarrer un projet"
       },
       "starter": {
-        "name": "Starter",
-        "description": "Sites complets, boutiques e-commerce et agents d'automatisation.",
-        "price": "2 500 $",
+        "name": "Funnel Systeme.io",
+        "description": "Un tunnel de vente qui convertit : landing pages, automation email et intégration paiement.",
+        "price": "1 500 $",
         "period": "/projet",
         "features": [
-          "Site sur mesure ou boutique e-commerce",
-          "Jusqu'à 40 heures",
-          "Setup agent d'automatisation IA",
-          "Setup campagne publicitaire",
-          "Garantie 30 jours",
-          "Support email"
+          "3-5 étapes de funnel",
+          "Setup Systeme.io",
+          "Automation email",
+          "Intégration paiement",
+          "Garantie 30 jours"
         ],
-        "cta": "Démarrer un projet"
+        "cta": "Créer mon funnel"
       },
       "growth": {
-        "name": "Growth",
-        "description": "Ingénierie, marketing et automatisation continus pour les entreprises en croissance.",
-        "price": "3 000 $",
-        "period": "/mois",
+        "name": "Présence Digitale Complète",
+        "description": "Site, identité visuelle, funnel Systeme.io et 1er mois de publicité — un seul interlocuteur.",
+        "price": "4 200 $",
+        "period": "/projet",
         "features": [
-          "Jusqu'à 3 piliers : Dev, Marketing, Automatisation",
-          "Jusqu'à 120 heures/mois",
-          "Contact direct avec le fondateur",
-          "Support prioritaire",
-          "Appel stratégie mensuel",
-          "Garantie 90 jours"
+          "Site ou boutique",
+          "Identité visuelle",
+          "Setup tunnel de vente",
+          "Setup campagne publicitaire (1 mois)",
+          "Appel stratégie mensuel"
         ],
-        "cta": "Passer à l'échelle"
+        "cta": "Prendre le pack complet"
       },
       "enterprise": {
-        "name": "Enterprise / DSI",
-        "description": "Direction technique, gestion de projet et couverture full-stack.",
-        "price": "Sur Mesure",
-        "period": "",
+        "name": "Gestion de Campagnes",
+        "description": "Setup + gestion mensuelle des campagnes Meta, Google et TikTok pour e-commerce et leads.",
+        "price": "1 500 $",
+        "period": "/mois",
         "features": [
-          "Les 4 piliers + gestion de projet",
-          "Rôle DSI / Lead Tech",
-          "Heures illimitées",
-          "Coordination d'équipe & gestion de prestataires",
-          "Garantie SLA",
-          "Sur site ou à distance",
-          "Intégrations sur mesure"
+          "Structure et setup campagnes",
+          "Google Merchant Center si e-com",
+          "Meta + Google + TikTok",
+          "Optimisation hebdomadaire",
+          "Tableau de bord reporting"
         ],
-        "cta": "Contacter les ventes"
+        "cta": "Me contacter"
       }
     },
     "faq": {
