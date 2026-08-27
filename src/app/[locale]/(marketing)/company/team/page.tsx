@@ -1,7 +1,7 @@
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, GraduationCap, Briefcase, Rocket, Mail, Globe, Brain, TrendingUp, ArrowRight } from "lucide-react";
+import { Code, GraduationCap, Briefcase, Rocket, Mail, Globe, Brain, TrendingUp, Users, ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { getLocale } from "next-intl/server";
 import type { Metadata } from "next";
@@ -43,6 +43,7 @@ export default async function TeamPage() {
         "Développement Full-Stack — Epitech Coding Academy",
         "Certification Google Marketing (en cours)",
         "Certification Data Analytics (planifiée)",
+        "Certification Meta Marketing (planifiée)",
         "Master en cours (IAE Lille ou Paris-Saclay)",
       ],
     },
@@ -53,6 +54,7 @@ export default async function TeamPage() {
         "Frontend : React, Vue.js, Next.js, TailwindCSS, Flutter",
         "Backend : Laravel, NestJS, Node.js, PostgreSQL",
         "CMS : WordPress, Shopify, WooCommerce (18+ boutiques)",
+        "Sites vitrines et refontes en volume",
         "DevOps : CI/CD, gestion VPS, déploiement Cloudflare",
         "IA & Automatisation : agents n8n, orchestration de workflows",
       ],
@@ -90,6 +92,16 @@ export default async function TeamPage() {
         "Méthodologie Agile — sprints, rétros et livraison continue",
       ],
     },
+    {
+      icon: Users,
+      title: "Mentorat & Apprentissage",
+      items: [
+        "Coaching 1-on-1 dev fullstack",
+        "Parcours électricien → automate industriel",
+        "Formation structurée avec modules et support direct",
+        "Diagnostic et parcours personnalisé",
+      ],
+    },
   ] : [
     {
       icon: GraduationCap,
@@ -100,6 +112,7 @@ export default async function TeamPage() {
         "Full-Stack Development — Epitech Coding Academy",
         "Google Marketing Certification (in progress)",
         "Data Analytics Certification (planned)",
+        "Meta Marketing Certification (planned)",
         "Master's degree in progress (IAE Lille or Paris-Saclay)",
       ],
     },
@@ -110,6 +123,7 @@ export default async function TeamPage() {
         "Frontend: React, Vue.js, Next.js, TailwindCSS, Flutter",
         "Backend: Laravel, NestJS, Node.js, PostgreSQL",
         "CMS: WordPress, Shopify, WooCommerce (18+ stores built)",
+        "Showcase sites and redesigns at scale",
         "DevOps: CI/CD, VPS management, Cloudflare deployment",
         "AI & Automation: n8n agents, workflow orchestration",
       ],
@@ -145,6 +159,16 @@ export default async function TeamPage() {
         "Lead Tech — team coordination, code review, architecture decisions",
         "Vendor management — selecting and coordinating external providers",
         "Agile methodology — sprints, retros, and continuous delivery",
+      ],
+    },
+    {
+      icon: Users,
+      title: "Mentorship & Learning",
+      items: [
+        "1-on-1 dev fullstack coaching",
+        "Electrician to industrial automation learning path",
+        "Structured training with modules and direct support",
+        "Diagnostic and personalized roadmap",
       ],
     },
   ];
