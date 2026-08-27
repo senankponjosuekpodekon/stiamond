@@ -2,10 +2,53 @@ import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
-import { users } from "@/lib/db/schema";
+import { siteSettings, users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { authConfig } from "@/lib/auth.config";
 import { logger } from "@/lib/logger";
+
+const RATE_LIMIT_MAX = 5;
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
+
+function getRateLimitKey(email: string) {
+  return `login_attempts:${email.toLowerCase()}`;
+}
+
+async function getAttempts(email: string) {
+  const [row] = await db
+    .select({ value: siteSettings.value })
+    .from(siteSettings)
+    .where(eq(siteSettings.key, getRateLimitKey(email)))
+    .limit(1);
+  if (!row) return null;
+  return JSON.parse(row.value) as { count: number; lastAttempt: number };
+}
+
+async function setAttempts(email: string, attempts: { count: number; lastAttempt: number }) {
+  const key = getRateLimitKey(email);
+  const value = JSON.stringify(attempts);
+  await db
+    .insert(siteSettings)
+    .values({ key, value })
+    .onConflictDoUpdate({
+      target: siteSettings.key,
+      set: { value },
+    });
+}
+
+async function clearAttempts(email: string) {
+  await db.delete(siteSettings).where(eq(siteSettings.key, getRateLimitKey(email)));
+}
+
+async function isRateLimited(email: string) {
+  const attempts = await getAttempts(email);
+  if (!attempts) return false;
+  if (attempts.count >= RATE_LIMIT_MAX) {
+    const elapsed = Date.now() - attempts.lastAttempt;
+    if (elapsed < RATE_LIMIT_WINDOW_MS) return true;
+  }
+  return false;
+}
 
 export const { handlers, auth, signIn, signOut } = NextAuth(
   Object.assign({}, authConfig, {
@@ -30,6 +73,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth(
           }
 
           try {
+            if (await isRateLimited(email)) {
+              logger.warn("Auth: login rate limited", { email });
+              return null;
+            }
+
             const [user] = await db
               .select()
               .from(users)
@@ -43,10 +91,19 @@ export const { handlers, auth, signIn, signOut } = NextAuth(
 
             const valid = await bcrypt.compare(password, user.passwordHash);
             if (!valid) {
-              logger.warn("Auth: invalid password", { email });
+              const previous = await getAttempts(email);
+              const attempts =
+                previous && Date.now() - previous.lastAttempt < RATE_LIMIT_WINDOW_MS
+                  ? previous
+                  : { count: 0, lastAttempt: Date.now() };
+              attempts.count += 1;
+              attempts.lastAttempt = Date.now();
+              await setAttempts(email, attempts);
+              logger.warn("Auth: invalid password", { email, attempts: attempts.count });
               return null;
             }
 
+            await clearAttempts(email);
             logger.info("Auth: login successful", { email, userId: user.id });
 
             return {
