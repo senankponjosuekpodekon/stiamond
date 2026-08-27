@@ -519,18 +519,18 @@
           "cta": "Redesign"
         },
         {
-          "name": "Content & Ads Ready",
-          "description": "Ad creatives, short videos, and campaign setup for Meta, Google, TikTok.",
-          "price": "$1,200",
-          "period": "from $1,200",
+          "name": "Digital Marketing Strategy",
+          "description": "A clear digital marketing strategy: positioning, channels, content calendar, KPIs and first campaign setup.",
+          "price": "$1,500",
+          "period": "from $1,500",
           "features": [
-            "Ad visuals or short videos",
-            "Campaign structure",
-            "Meta + Google + TikTok setup",
-            "Audience targeting",
-            "Launch report"
+            "Market & competitor analysis",
+            "Positioning & messaging",
+            "Channel strategy (SEO, ads, email, social)",
+            "90-day content/campaign calendar",
+            "KPIs and reporting setup"
           ],
-          "cta": "Create & run"
+          "cta": "Get a strategy"
         },
         {
           "name": "Cloud & SaaS Launch",

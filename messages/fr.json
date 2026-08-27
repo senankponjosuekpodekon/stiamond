@@ -519,18 +519,18 @@
           "cta": "Refondre"
         },
         {
-          "name": "Contenu & Pub Ready",
-          "description": "Créatifs publicitaires, vidéos courtes et setup campagne Meta, Google, TikTok.",
-          "price": "1 200 $",
-          "period": "à partir de 1 200 $",
+          "name": "Stratégie Marketing Digital",
+          "description": "Une stratégie marketing digitale claire : positionnement, canaux, calendrier, KPIs et setup des premières campagnes.",
+          "price": "1 500 $",
+          "period": "à partir de 1 500 $",
           "features": [
-            "Visuels pub ou vidéos courtes",
-            "Structure de campagne",
-            "Setup Meta + Google + TikTok",
-            "Ciblage d'audience",
-            "Rapport de lancement"
+            "Analyse marché et concurrents",
+            "Positionnement et message clé",
+            "Stratégie canaux (SEO, ads, email, social)",
+            "Calendrier 90 jours contenu/campagne",
+            "KPIs et setup reporting"
           ],
-          "cta": "Créer & lancer"
+          "cta": "Obtenir une stratégie"
         },
         {
           "name": "Cloud & SaaS",
