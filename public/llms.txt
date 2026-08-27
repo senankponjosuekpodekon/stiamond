@@ -47,8 +47,11 @@ Stiamond Digital is a solo studio led by Senankpon Josué Kpodekon, also known a
 
 ## Pricing & Packs
 
-- 4 core packs: Website Showcase ($900), Systeme.io Funnel ($1,200), Complete Digital Presence ($2,500), Campaign Management ($1,500/mo)
-- 8 specialized packs: Express Audit, Business Automation, Redesign & Modernization, Digital Marketing Strategy, Cloud & SaaS Launch, Idea to MVP, Growth Retainer, Lead Tech Advisory
+- 4 main packs: Website Showcase ($1,500), Systeme.io Funnel ($1,500), Complete Digital Presence ($4,200), Campaign Management ($1,500/mo)
+- 9 specialized packs, grouped into 3 sections:
+  - Diagnose & Optimize: Express Audit, Redesign & Modernization, Digital Marketing Strategy
+  - Build & Launch: E-commerce Store, Idea to MVP, Cloud & SaaS Launch
+  - Run & Scale: Business Automation, Growth Retainer, Lead Tech Advisory
 - All prices, scopes and durations: https://stiamond.net/pricing
 
 ## Partnerships
