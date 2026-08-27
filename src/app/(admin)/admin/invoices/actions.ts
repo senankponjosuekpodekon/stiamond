@@ -1,7 +1,10 @@
 "use server";
 
 import { db } from "@/lib/db";
-import { invoices } from "@/lib/db/schema";
+import { invoices, projects, users } from "@/lib/db/schema";
+import { sendInvoiceNotification } from "@/lib/email";
+import { logger } from "@/lib/logger";
+import { eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
 
 export async function createInvoice(formData: FormData) {
@@ -15,13 +18,54 @@ export async function createInvoice(formData: FormData) {
     throw new Error("Client and amount are required");
   }
 
-  await db.insert(invoices).values({
-    userId,
-    projectId,
-    amount,
-    status,
-    dueDate: dueDate ? new Date(dueDate) : null,
-  });
+  const [client] = await db
+    .select({ email: users.email, firstName: users.firstName, lastName: users.lastName })
+    .from(users)
+    .where(eq(users.id, userId))
+    .limit(1);
+
+  if (!client) {
+    throw new Error("Client not found");
+  }
+
+  let projectName: string | null = null;
+
+  if (projectId) {
+    const [project] = await db
+      .select({ name: projects.name })
+      .from(projects)
+      .where(eq(projects.id, projectId))
+      .limit(1);
+    projectName = project?.name ?? null;
+  }
+
+  const [inserted] = await db
+    .insert(invoices)
+    .values({
+      userId,
+      projectId,
+      amount,
+      status,
+      dueDate: dueDate ? new Date(dueDate) : null,
+    })
+    .returning({ id: invoices.id });
+
+  const baseUrl = process.env.AUTH_URL || "http://localhost:3000";
+  const invoiceUrl = `${baseUrl}/app/invoices/${inserted.id}`;
+
+  try {
+    await sendInvoiceNotification({
+      to: client.email,
+      clientName: `${client.firstName} ${client.lastName}`,
+      amount,
+      dueDate,
+      status,
+      projectName,
+      invoiceUrl,
+    });
+  } catch (error) {
+    logger.error("Invoice email failed", error, { userId, invoiceId: inserted.id });
+  }
 
   redirect("/admin/invoices");
 }

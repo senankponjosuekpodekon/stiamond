@@ -120,3 +120,83 @@ export async function sendReplyEmail({
   logger.info("Email: reply notification sent", { id: result?.id, to });
   return { skipped: false as const, id: result?.id };
 }
+
+type InvoiceEmailParams = {
+  to: string;
+  clientName: string;
+  amount: string;
+  dueDate?: string;
+  status: string;
+  projectName?: string | null;
+  invoiceUrl: string;
+};
+
+export async function sendInvoiceNotification({
+  to,
+  clientName,
+  amount,
+  dueDate,
+  status,
+  projectName,
+  invoiceUrl,
+}: InvoiceEmailParams) {
+  const resend = getResend();
+  if (!resend) {
+    return { skipped: true as const };
+  }
+
+  const formattedDate = dueDate
+    ? new Date(dueDate).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+    : "No due date";
+
+  const html = `
+    <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+      <h2>New invoice from Stiamond</h2>
+      <p>Hi ${clientName},</p>
+      <p>A new invoice has been issued to your account.</p>
+      <table style="width: 100%; border-collapse: collapse; margin: 24px 0;">
+        <tr>
+          <td style="padding: 8px 0; border-bottom: 1px solid #e5e5e5;"><strong>Amount</strong></td>
+          <td style="padding: 8px 0; border-bottom: 1px solid #e5e5e5; text-align: right;">${amount}</td>
+        </tr>
+        ${projectName ? `
+        <tr>
+          <td style="padding: 8px 0; border-bottom: 1px solid #e5e5e5;"><strong>Project</strong></td>
+          <td style="padding: 8px 0; border-bottom: 1px solid #e5e5e5; text-align: right;">${projectName}</td>
+        </tr>
+        ` : ""}
+        <tr>
+          <td style="padding: 8px 0; border-bottom: 1px solid #e5e5e5;"><strong>Due date</strong></td>
+          <td style="padding: 8px 0; border-bottom: 1px solid #e5e5e5; text-align: right;">${formattedDate}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0;"><strong>Status</strong></td>
+          <td style="padding: 8px 0; text-align: right;">${status}</td>
+        </tr>
+      </table>
+      <p>
+        <a href="${invoiceUrl}" style="display: inline-block; background: #1a4d8f; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 500;">
+          View invoice
+        </a>
+      </p>
+      <p style="color: #888; font-size: 13px; margin-top: 24px;">
+        Stiamond — Intelligent software for ambitious teams
+      </p>
+    </div>
+  `;
+
+  const { data: result, error } = await resend.emails.send({
+    from: FROM_EMAIL,
+    to: [to],
+    subject: `New Stiamond invoice — ${amount}`,
+    html,
+  });
+
+  if (error) {
+    logger.error("Email: invoice notification failed", new Error(error.message), { to, amount });
+    throw new Error(error.message);
+  }
+
+  logger.info("Email: invoice notification sent", { id: result?.id, to });
+  return { skipped: false as const, id: result?.id };
+}
