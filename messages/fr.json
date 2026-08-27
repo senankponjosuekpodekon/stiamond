@@ -27,7 +27,7 @@
     "pillars": {
       "overline": "Notre expertise",
       "title": "Quatre piliers, une personne",
-      "subtitle": "Développement, marketing, automatisation IA et créa — ce que la plupart des agences répartissent sur 3-4 personnes, vous l'avez en un seul interlocuteur.",
+      "subtitle": "Développement, marketing, automatisation IA et infrastructure cloud — ce que la plupart des agences répartissent sur 3-4 personnes, vous l'avez en un seul interlocuteur.",
       "software": {
         "title": "Ingénierie Logicielle",
         "description": "Apps web sur mesure, sites et SaaS avec React, Vue, Laravel, NestJS. WordPress et Shopify pour une livraison plus rapide."
@@ -44,10 +44,6 @@
         "title": "Croissance & Marketing",
         "description": "Meta, Google, TikTok Ads, SEO, funnels Systeme.io et optimisation de conversion. 69+ campagnes gérées."
       },
-      "automation": {
-        "title": "Automatisation IA",
-        "description": "Agents propulsés par n8n qui gèrent le service client, les réseaux sociaux et les flux métier 24h/24."
-      }
     },
     "lab": {
       "overline": "Stiamond Lab",
@@ -66,7 +62,6 @@
       "viewAll": "Voir tous les produits",
       "medim": "Plateforme d'intelligence médicale par IA",
       "aiPlatform": "Passerelle IA multi-modèles avec routage intelligent",
-      "automation": "Automatisation de workflows et orchestration de processus",
       "apis": "APIs developer-first pour l'IA, les données et l'infrastructure"
     },
     "values": {
@@ -139,13 +134,15 @@
     "terms": "Conditions",
     "security": "Sécurité",
     "automation": "Automatisation IA",
+    "ai": "Agents IA",
     "creative": "Créatif & Contenu",
+    "cloud": "Cloud & DevOps",
     "faq": "FAQ",
     "mentorship": "Mentorat"
   },
   "solutions": {
     "overline": "Solutions",
-    "title": "Quatre piliers d'excellence en ingénierie",
+    "title": "Six piliers d'excellence en ingénierie",
     "subtitle": "Nous combinons une expertise technique approfondie avec une réflexion stratégique pour livrer des systèmes qui passent à l'échelle — du prototype à la production à la plateforme.",
     "learnMore": "En savoir plus",
     "capabilities": {

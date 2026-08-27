@@ -22,7 +22,9 @@ export function Footer() {
       links: [
         { label: t("softwareEngineering"), href: "/solutions/software" },
         { label: t("automation"), href: "/solutions/automation" },
+        { label: t("ai"), href: "/solutions/ai" },
         { label: t("creative"), href: "/solutions/creative" },
+        { label: t("cloud"), href: "/solutions/cloud" },
         { label: t("growthSystems"), href: "/solutions/growth" },
       ],
     },

@@ -27,7 +27,7 @@
     "pillars": {
       "overline": "Our Expertise",
       "title": "Four pillars, one person",
-      "subtitle": "Development, marketing, AI automation, and creative — what most agencies split across 3-4 people, you get in one direct contact.",
+      "subtitle": "Development, marketing, AI automation, and cloud infrastructure — what most agencies split across 3-4 people, you get in one direct contact.",
       "software": {
         "title": "Software Engineering",
         "description": "Custom web apps, sites, and SaaS with React, Vue, Laravel, NestJS. WordPress and Shopify for faster delivery."
@@ -44,10 +44,6 @@
         "title": "Growth & Marketing",
         "description": "Meta, Google, TikTok Ads, SEO, Systeme.io funnels, and conversion optimization. 69+ campaigns managed."
       },
-      "automation": {
-        "title": "AI Automation",
-        "description": "n8n-powered agents that handle customer service, social media, and business workflows 24/7."
-      }
     },
     "lab": {
       "overline": "Stiamond Lab",
@@ -66,7 +62,6 @@
       "viewAll": "View All Products",
       "medim": "AI-powered medical intelligence platform",
       "aiPlatform": "Multi-model AI gateway with intelligent routing",
-      "automation": "Workflow automation and process orchestration",
       "apis": "Developer-first APIs for AI, data, and infrastructure"
     },
     "values": {
@@ -139,13 +134,15 @@
     "terms": "Terms",
     "security": "Security",
     "automation": "AI Automation",
+    "ai": "AI Agents",
     "creative": "Creative & Content",
+    "cloud": "Cloud & DevOps",
     "faq": "FAQ",
     "mentorship": "Mentorship"
   },
   "solutions": {
     "overline": "Solutions",
-    "title": "Four pillars of engineering excellence",
+    "title": "Six pillars of engineering excellence",
     "subtitle": "We combine deep technical expertise with strategic thinking to deliver systems that scale — from prototype to production to platform.",
     "learnMore": "Learn more",
     "capabilities": {

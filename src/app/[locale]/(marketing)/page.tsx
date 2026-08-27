@@ -76,10 +76,10 @@ export default async function HomePage() {
       href: "/solutions/software",
     },
     {
-      icon: Zap,
-      title: t("pillars.automation.title"),
-      description: t("pillars.automation.description"),
-      href: "/solutions/automation",
+      icon: Cloud,
+      title: t("pillars.cloud.title"),
+      description: t("pillars.cloud.description"),
+      href: "/solutions/cloud",
     },
     {
       icon: Brain,
@@ -105,7 +105,6 @@ export default async function HomePage() {
   const products = [
     { icon: Cpu, name: "MEDIM", description: t("products.medim") },
     { icon: Brain, name: "AI Platform", description: t("products.aiPlatform") },
-    { icon: Zap, name: "Automation", description: t("products.automation") },
     { icon: Server, name: "APIs", description: t("products.apis") },
   ];
 
