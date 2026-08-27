@@ -476,9 +476,9 @@
       "overline": "Packs spécialisés",
       "title": "Pour des besoins spécifiques",
       "subtitle": "Des projets ciblés avec des livrables et délais clairs.",
-      "retainerOverline": "Scale et accompagnement",
-      "retainerTitle": "Construire, lancer et grandir",
-      "retainerSubtitle": "Cloud, SaaS, MVP, retainers et conseil pour équipes en croissance.",
+      "section1Title": "Diagnostiquer & Optimiser",
+      "section2Title": "Construire & Lancer",
+      "section3Title": "Piloter & Scaler",
       "items": [
         {
           "name": "Audit Express",
@@ -493,20 +493,6 @@
             "Appel de restitution 30 min"
           ],
           "cta": "Obtenir un audit"
-        },
-        {
-          "name": "Automatisation Métier",
-          "description": "Agents IA n8n pour service client, réseaux sociaux ou workflows internes.",
-          "price": "2 000 $",
-          "period": "à partir de 2 000 $",
-          "features": [
-            "Un agent n8n construit",
-            "Connecté à vos outils",
-            "Tests et réglages",
-            "Garantie 30 jours",
-            "Appel de transfert 1h"
-          ],
-          "cta": "Automatiser"
         },
         {
           "name": "Refonte & Modernisation",
@@ -537,18 +523,18 @@
           "cta": "Obtenir une stratégie"
         },
         {
-          "name": "Cloud & SaaS",
-          "description": "VPS, CI/CD, Cloudflare, SSL et déploiement pour applications web et produits SaaS.",
-          "price": "1 500 $",
-          "period": "à partir de 1 500 $",
+          "name": "Boutique E-commerce",
+          "description": "Boutique Shopify, WooCommerce ou WordPress clé en main — produits, paiement, livraison, SEO et analytics.",
+          "price": "2 500 $",
+          "period": "à partir de 2 500 $",
           "features": [
-            "Setup VPS ou Cloud",
-            "Pipeline CI/CD",
-            "Cloudflare DNS + cache",
-            "SSL et bases de sécurité",
-            "Sauvegardes + monitoring"
+            "Setup Shopify / WooCommerce / WordPress",
+            "Design de boutique responsive",
+            "Paiements, frais de port et taxes",
+            "SEO produits + Google Merchant Center",
+            "Analytics et reporting ventes"
           ],
-          "cta": "Lancer"
+          "cta": "Lancer ma boutique"
         },
         {
           "name": "Idée à MVP",
@@ -563,6 +549,34 @@
             "Coaching 1 mois"
           ],
           "cta": "Lancer mon MVP"
+        },
+        {
+          "name": "Cloud & SaaS",
+          "description": "VPS, CI/CD, Cloudflare, SSL et déploiement pour applications web et produits SaaS.",
+          "price": "1 500 $",
+          "period": "à partir de 1 500 $",
+          "features": [
+            "Setup VPS ou Cloud",
+            "Pipeline CI/CD",
+            "Cloudflare DNS + cache",
+            "SSL et bases de sécurité",
+            "Sauvegardes + monitoring"
+          ],
+          "cta": "Lancer"
+        },
+        {
+          "name": "Automatisation Métier",
+          "description": "Agents IA n8n pour service client, réseaux sociaux ou workflows internes.",
+          "price": "2 000 $",
+          "period": "à partir de 2 000 $",
+          "features": [
+            "Un agent n8n construit",
+            "Connecté à vos outils",
+            "Tests et réglages",
+            "Garantie 30 jours",
+            "Appel de transfert 1h"
+          ],
+          "cta": "Automatiser"
         },
         {
           "name": "Retainer Growth",
@@ -591,20 +605,6 @@
             "Slack à la demande"
           ],
           "cta": "Me contacter"
-        },
-        {
-          "name": "Boutique E-commerce",
-          "description": "Boutique Shopify, WooCommerce ou WordPress clé en main — produits, paiement, livraison, SEO et analytics.",
-          "price": "2 500 $",
-          "period": "à partir de 2 500 $",
-          "features": [
-            "Setup Shopify / WooCommerce / WordPress",
-            "Design de boutique responsive",
-            "Paiements, frais de port et taxes",
-            "SEO produits + Google Merchant Center",
-            "Analytics et reporting ventes"
-          ],
-          "cta": "Lancer ma boutique"
         }
       ]
     },

@@ -476,9 +476,9 @@
       "overline": "Specialized packs",
       "title": "For specific needs",
       "subtitle": "Focused projects with clear deliverables and timelines.",
-      "retainerOverline": "Scale & support",
-      "retainerTitle": "Build, launch and grow",
-      "retainerSubtitle": "Cloud, SaaS, MVP, retainers and advisory for growing teams.",
+      "section1Title": "Diagnose & Optimize",
+      "section2Title": "Build & Launch",
+      "section3Title": "Run & Scale",
       "items": [
         {
           "name": "Audit Express",
@@ -493,20 +493,6 @@
             "30-min review call"
           ],
           "cta": "Get an audit"
-        },
-        {
-          "name": "Business Automation",
-          "description": "n8n AI agents for customer service, social media, or internal workflows.",
-          "price": "$2,000",
-          "period": "from $2,000",
-          "features": [
-            "One n8n agent built",
-            "Connected to your tools",
-            "Testing & tuning",
-            "30-day warranty",
-            "1-hour handoff call"
-          ],
-          "cta": "Automate"
         },
         {
           "name": "Redesign & Modernization",
@@ -537,18 +523,18 @@
           "cta": "Get a strategy"
         },
         {
-          "name": "Cloud & SaaS Launch",
-          "description": "VPS, CI/CD, Cloudflare, SSL, and deployment for web apps and SaaS products.",
-          "price": "$1,500",
-          "period": "from $1,500",
+          "name": "E-commerce Store",
+          "description": "Turnkey Shopify, WooCommerce or WordPress store — products, payment, shipping, SEO and analytics.",
+          "price": "$2,500",
+          "period": "from $2,500",
           "features": [
-            "VPS or Cloud setup",
-            "CI/CD pipeline",
-            "Cloudflare DNS + caching",
-            "SSL and security basics",
-            "Backups + monitoring"
+            "Shopify / WooCommerce / WordPress setup",
+            "Responsive store design",
+            "Payments, shipping and tax setup",
+            "Product SEO + Google Merchant Center",
+            "Sales analytics and reporting"
           ],
-          "cta": "Launch"
+          "cta": "Launch my store"
         },
         {
           "name": "Idea to MVP",
@@ -563,6 +549,34 @@
             "1-month coaching"
           ],
           "cta": "Build my MVP"
+        },
+        {
+          "name": "Cloud & SaaS Launch",
+          "description": "VPS, CI/CD, Cloudflare, SSL, and deployment for web apps and SaaS products.",
+          "price": "$1,500",
+          "period": "from $1,500",
+          "features": [
+            "VPS or Cloud setup",
+            "CI/CD pipeline",
+            "Cloudflare DNS + caching",
+            "SSL and security basics",
+            "Backups + monitoring"
+          ],
+          "cta": "Launch"
+        },
+        {
+          "name": "Business Automation",
+          "description": "n8n AI agents for customer service, social media, or internal workflows.",
+          "price": "$2,000",
+          "period": "from $2,000",
+          "features": [
+            "One n8n agent built",
+            "Connected to your tools",
+            "Testing & tuning",
+            "30-day warranty",
+            "1-hour handoff call"
+          ],
+          "cta": "Automate"
         },
         {
           "name": "Growth Retainer",
@@ -591,20 +605,6 @@
             "On-demand Slack"
           ],
           "cta": "Get advice"
-        },
-        {
-          "name": "E-commerce Store",
-          "description": "Turnkey Shopify, WooCommerce or WordPress store — products, payment, shipping, SEO and analytics.",
-          "price": "$2,500",
-          "period": "from $2,500",
-          "features": [
-            "Shopify / WooCommerce / WordPress setup",
-            "Responsive store design",
-            "Payments, shipping and tax setup",
-            "Product SEO + Google Merchant Center",
-            "Sales analytics and reporting"
-          ],
-          "cta": "Launch my store"
         }
       ]
     },
