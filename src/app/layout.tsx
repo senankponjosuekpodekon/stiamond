@@ -109,6 +109,66 @@ const organizationSchema = {
     areaServed: ["BJ", "Worldwide"],
     availableLanguage: ["English", "French"],
   },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Software Engineering",
+          description: "Custom software, web platforms, and SaaS products.",
+          url: "https://stiamond.net/solutions/software",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "AI Engineering",
+          description: "LLM integration, RAG, and AI agents.",
+          url: "https://stiamond.net/solutions/ai",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Cloud Infrastructure",
+          description: "Scalable cloud architecture, DevOps, and CI/CD.",
+          url: "https://stiamond.net/solutions/cloud",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Growth Systems",
+          description: "SEO, content, marketing automation, and ads.",
+          url: "https://stiamond.net/solutions/growth",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Automation",
+          description: "Workflow automation and n8n AI agents.",
+          url: "https://stiamond.net/solutions/automation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Creative & Content",
+          description: "Ad creatives, short videos, and content strategy.",
+          url: "https://stiamond.net/solutions/creative",
+        },
+      },
+    ],
+  },
 };
 
 const websiteSchema = {
@@ -117,14 +177,6 @@ const websiteSchema = {
   name: "Stiamond Digital",
   alternateName: "Stiamond",
   url: "https://stiamond.net",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://stiamond.net/blog?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 const themeScript = `
