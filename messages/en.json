@@ -471,6 +471,69 @@
         "cta": "Let's Talk"
       }
     },
+    "specialized": {
+      "overline": "Specialized packs",
+      "title": "For specific needs",
+      "subtitle": "Focused projects with clear deliverables and timelines.",
+      "items": [
+        {
+          "name": "Audit Express",
+          "description": "Website, SEO and conversion audit with a concrete action plan.",
+          "price": "$500",
+          "period": "5-7 days",
+          "features": [
+            "Full site audit",
+            "SEO + speed analysis",
+            "Conversion bottlenecks",
+            "Prioritized action plan",
+            "30-min review call"
+          ],
+          "cta": "Get an audit"
+        },
+        {
+          "name": "Business Automation",
+          "description": "n8n AI agents for customer service, social media, or internal workflows.",
+          "price": "$2,000",
+          "period": "from $2,000",
+          "features": [
+            "One n8n agent built",
+            "Connected to your tools",
+            "Testing & tuning",
+            "30-day warranty",
+            "1-hour handoff call"
+          ],
+          "cta": "Automate"
+        },
+        {
+          "name": "Redesign & Modernization",
+          "description": "Rescue a broken site or upgrade a working one — design + tech + SEO.",
+          "price": "$1,500",
+          "period": "from $1,500",
+          "features": [
+            "Audit of existing site",
+            "New design + structure",
+            "Content migration",
+            "SEO + speed cleanup",
+            "30-day warranty"
+          ],
+          "cta": "Redesign"
+        },
+        {
+          "name": "Content & Ads Ready",
+          "description": "Ad creatives, short videos, and campaign setup for Meta, Google, TikTok.",
+          "price": "$1,200",
+          "period": "from $1,200",
+          "features": [
+            "Ad visuals or short videos",
+            "Campaign structure",
+            "Meta + Google + TikTok setup",
+            "Audience targeting",
+            "Launch report"
+          ],
+          "cta": "Create & run"
+        }
+      ]
+    },
     "faq": {
       "title": "Frequently asked questions",
       "q1": "What's included in the hours?",

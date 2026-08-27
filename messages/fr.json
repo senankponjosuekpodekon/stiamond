@@ -471,6 +471,69 @@
         "cta": "Me contacter"
       }
     },
+    "specialized": {
+      "overline": "Packs spécialisés",
+      "title": "Pour des besoins spécifiques",
+      "subtitle": "Des projets ciblés avec des livrables et délais clairs.",
+      "items": [
+        {
+          "name": "Audit Express",
+          "description": "Audit site, SEO et conversion avec un plan d'action concret.",
+          "price": "500 $",
+          "period": "5-7 jours",
+          "features": [
+            "Audit complet du site",
+            "Analyse SEO + vitesse",
+            "Goulots de conversion",
+            "Plan d'action priorisé",
+            "Appel de restitution 30 min"
+          ],
+          "cta": "Obtenir un audit"
+        },
+        {
+          "name": "Automatisation Métier",
+          "description": "Agents IA n8n pour service client, réseaux sociaux ou workflows internes.",
+          "price": "2 000 $",
+          "period": "à partir de 2 000 $",
+          "features": [
+            "Un agent n8n construit",
+            "Connecté à vos outils",
+            "Tests et réglages",
+            "Garantie 30 jours",
+            "Appel de transfert 1h"
+          ],
+          "cta": "Automatiser"
+        },
+        {
+          "name": "Refonte & Modernisation",
+          "description": "Sauver un site cassé ou moderniser un site fonctionnel — design + tech + SEO.",
+          "price": "1 500 $",
+          "period": "à partir de 1 500 $",
+          "features": [
+            "Audit du site existant",
+            "Nouveau design + structure",
+            "Migration de contenu",
+            "SEO + vitesse nettoyés",
+            "Garantie 30 jours"
+          ],
+          "cta": "Refondre"
+        },
+        {
+          "name": "Contenu & Pub Ready",
+          "description": "Créatifs publicitaires, vidéos courtes et setup campagne Meta, Google, TikTok.",
+          "price": "1 200 $",
+          "period": "à partir de 1 200 $",
+          "features": [
+            "Visuels pub ou vidéos courtes",
+            "Structure de campagne",
+            "Setup Meta + Google + TikTok",
+            "Ciblage d'audience",
+            "Rapport de lancement"
+          ],
+          "cta": "Créer & lancer"
+        }
+      ]
+    },
     "faq": {
       "title": "Questions fréquentes",
       "q1": "Qu'est-ce qui est inclus dans les heures ?",
