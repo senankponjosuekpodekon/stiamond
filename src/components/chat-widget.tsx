@@ -68,14 +68,14 @@ export function ChatWidget() {
   }, [replyToken]);
 
   useEffect(() => {
-    if (open && replyToken) {
+    if (replyToken) {
       pollMessages();
       pollRef.current = setInterval(pollMessages, 5000);
     }
     return () => {
       if (pollRef.current) clearInterval(pollRef.current);
     };
-  }, [open, replyToken, pollMessages]);
+  }, [replyToken, pollMessages]);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -188,6 +188,24 @@ export function ChatWidget() {
           </>
         )}
       </button>
+
+      {/* New reply toast */}
+      {hasNewReply && !open && (
+        <button
+          onClick={() => setOpen(true)}
+          className={`fixed ${cookieConsent ? "bottom-24" : "bottom-40"} right-6 z-50 w-64 rounded-xl border border-border bg-background p-4 shadow-2xl transition-transform hover:scale-105`}
+        >
+          <div className="flex items-start gap-3">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-white">
+              <MessageCircle className="h-4 w-4" />
+            </div>
+            <div className="text-left">
+              <p className="text-body-sm font-semibold">New message</p>
+              <p className="text-caption text-muted-foreground">Click to open chat</p>
+            </div>
+          </div>
+        </button>
+      )}
 
       {/* Chat panel */}
       {open && (
