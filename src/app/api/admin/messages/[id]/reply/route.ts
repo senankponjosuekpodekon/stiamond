@@ -60,17 +60,24 @@ export async function POST(
     const baseUrl = process.env.AUTH_URL || "http://localhost:3000";
     const conversationUrl = `${baseUrl}/messages/${replyToken}`;
 
-    try {
-      await sendReplyEmail({
-        to: contactMsg.email,
-        recipientName: `${contactMsg.firstName} ${contactMsg.lastName}`,
-        senderName: "Stiamond Team",
-        message: message.trim(),
-        conversationUrl,
-        isClientEmail: true,
-      });
-    } catch (emailError) {
-      logger.error("Admin reply: failed to send email to client", emailError, { contactMsgId: id });
+    const activeThreshold = new Date(Date.now() - 30 * 1000);
+    const clientIsActive = contactMsg.lastClientActivityAt && new Date(contactMsg.lastClientActivityAt) > activeThreshold;
+
+    if (!clientIsActive) {
+      try {
+        await sendReplyEmail({
+          to: contactMsg.email,
+          recipientName: `${contactMsg.firstName} ${contactMsg.lastName}`,
+          senderName: "Stiamond Team",
+          message: message.trim(),
+          conversationUrl,
+          isClientEmail: true,
+        });
+      } catch (emailError) {
+        logger.error("Admin reply: failed to send email to client", emailError, { contactMsgId: id });
+      }
+    } else {
+      logger.info("Admin reply: client is active on chat, skipping email", { contactMsgId: id });
     }
 
     logger.info("Admin reply sent", { contactMsgId: id, replyToken });

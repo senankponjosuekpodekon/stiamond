@@ -60,6 +60,7 @@ export const contactMessages = pgTable("contact_messages", {
   message: text("message").notNull(),
   replyToken: varchar("reply_token", { length: 64 }).unique(),
   isRead: boolean("is_read").default(false).notNull(),
+  lastClientActivityAt: timestamp("last_client_activity_at"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 

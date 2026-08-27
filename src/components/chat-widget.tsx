@@ -99,6 +99,27 @@ export function ChatWidget() {
     if (open) setHasNewReply(false);
   }, [open]);
 
+  const updateActivity = useCallback(async () => {
+    if (!replyToken) return;
+    try {
+      await fetch("/api/chat/activity", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token: replyToken }),
+      });
+    } catch {
+      // silent
+    }
+  }, [replyToken]);
+
+  useEffect(() => {
+    if (open && replyToken) {
+      updateActivity();
+      const id = setInterval(updateActivity, 5000);
+      return () => clearInterval(id);
+    }
+  }, [open, replyToken, updateActivity]);
+
   const handleStartChat = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
