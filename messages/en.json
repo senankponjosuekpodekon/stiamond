@@ -559,6 +559,34 @@
             "1-month coaching"
           ],
           "cta": "Build my MVP"
+        },
+        {
+          "name": "Growth Retainer",
+          "description": "Monthly retainer for growing brands: development, marketing and automation with a fixed monthly scope.",
+          "price": "$3,000",
+          "period": "/month",
+          "features": [
+            "Fixed monthly scope",
+            "Up to 60 hours",
+            "Direct founder contact",
+            "Weekly sync",
+            "Priority support"
+          ],
+          "cta": "Scale with me"
+        },
+        {
+          "name": "Lead Tech Advisory",
+          "description": "Part-time technical lead for architecture, code reviews and tech decisions.",
+          "price": "$1,500",
+          "period": "/month",
+          "features": [
+            "Architecture review",
+            "Code reviews",
+            "Vendor/tech choices",
+            "Weekly advisory call",
+            "On-demand Slack"
+          ],
+          "cta": "Get advice"
         }
       ]
     },

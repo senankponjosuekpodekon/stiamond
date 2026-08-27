@@ -559,6 +559,34 @@
             "Coaching 1 mois"
           ],
           "cta": "Lancer mon MVP"
+        },
+        {
+          "name": "Retainer Growth",
+          "description": "Retainer mensuel pour marques en croissance : développement, marketing et automation avec un scope mensuel fixe.",
+          "price": "3 000 $",
+          "period": "/mois",
+          "features": [
+            "Scope mensuel fixe",
+            "Jusqu'à 60 heures",
+            "Contact direct fondateur",
+            "Sync hebdo",
+            "Support prioritaire"
+          ],
+          "cta": "Passer à l'échelle"
+        },
+        {
+          "name": "Conseil Lead Tech",
+          "description": "Lead technique à temps partiel pour architecture, revue de code et choix technologiques.",
+          "price": "1 500 $",
+          "period": "/mois",
+          "features": [
+            "Revue d'architecture",
+            "Revue de code",
+            "Choix tech/fournisseurs",
+            "Appel conseil hebdo",
+            "Slack à la demande"
+          ],
+          "cta": "Me contacter"
         }
       ]
     },
