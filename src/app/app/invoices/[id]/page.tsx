@@ -1,12 +1,13 @@
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { invoices, projects, users } from "@/lib/db/schema";
+import { invoices, projects, siteSettings, users } from "@/lib/db/schema";
 import { eq, and } from "drizzle-orm";
 import { redirect, notFound } from "next/navigation";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FileText, Printer } from "lucide-react";
+import { PaymentSection } from "./payment-section";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -39,6 +40,8 @@ export default async function InvoiceDetailPage({ params }: InvoicePageProps) {
       id: invoices.id,
       amount: invoices.amount,
       status: invoices.status,
+      paymentMethod: invoices.paymentMethod,
+      paidAt: invoices.paidAt,
       dueDate: invoices.dueDate,
       createdAt: invoices.createdAt,
       projectId: invoices.projectId,
@@ -48,6 +51,27 @@ export default async function InvoiceDetailPage({ params }: InvoicePageProps) {
     .limit(1);
 
   if (!invoice) notFound();
+
+  let paymentSettings: {
+    bank: { enabled: boolean; details: string };
+    crypto: { enabled: boolean; details: string };
+    stripe: { enabled: boolean; details: string };
+  } = { bank: { enabled: false, details: "" }, crypto: { enabled: false, details: "" }, stripe: { enabled: false, details: "" } };
+
+  if (process.env.DATABASE_URL) {
+    try {
+      const [setting] = await db
+        .select({ value: siteSettings.value })
+        .from(siteSettings)
+        .where(eq(siteSettings.key, "payment_methods"))
+        .limit(1);
+      if (setting?.value) {
+        paymentSettings = JSON.parse(setting.value) as typeof paymentSettings;
+      }
+    } catch {
+      // ignore
+    }
+  }
 
   let projectName: string | null = null;
   if (invoice.projectId) {
@@ -134,6 +158,14 @@ export default async function InvoiceDetailPage({ params }: InvoicePageProps) {
                 Due date: <span className="font-medium text-foreground">{new Date(invoice.dueDate).toLocaleDateString()}</span>
               </p>
             )}
+
+            <PaymentSection
+              invoiceId={invoice.id}
+              status={invoice.status}
+              paymentMethod={invoice.paymentMethod}
+              methods={paymentSettings}
+              stripeConfigured={Boolean(process.env.STRIPE_SECRET_KEY)}
+            />
 
             <div className="mt-10 border-t border-border pt-6 text-center text-caption text-muted-foreground">
               Thank you for your business. Questions? Contact hello@stiamond.net

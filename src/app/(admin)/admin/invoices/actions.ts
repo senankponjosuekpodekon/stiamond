@@ -69,3 +69,31 @@ export async function createInvoice(formData: FormData) {
 
   redirect("/admin/invoices");
 }
+
+export async function markInvoiceAsPaid(formData: FormData) {
+  const id = formData.get("id") as string;
+  const method = (formData.get("method") as string) || "manual";
+
+  if (!id) {
+    throw new Error("Invoice ID is required");
+  }
+
+  const [invoice] = await db
+    .select({ id: invoices.id })
+    .from(invoices)
+    .where(eq(invoices.id, id))
+    .limit(1);
+
+  if (!invoice) {
+    throw new Error("Invoice not found");
+  }
+
+  await db
+    .update(invoices)
+    .set({
+      status: "paid",
+      paymentMethod: method,
+      paidAt: new Date(),
+    })
+    .where(eq(invoices.id, id));
+}

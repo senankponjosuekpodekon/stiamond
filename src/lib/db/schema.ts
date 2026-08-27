@@ -46,6 +46,8 @@ export const invoices = pgTable("invoices", {
   projectId: uuid("project_id").references(() => projects.id),
   amount: varchar("amount", { length: 50 }).notNull(),
   status: varchar("status", { length: 50 }).default("pending").notNull(),
+  paymentMethod: varchar("payment_method", { length: 50 }),
+  paidAt: timestamp("paid_at"),
   dueDate: timestamp("due_date"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });

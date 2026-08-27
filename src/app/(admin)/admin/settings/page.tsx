@@ -22,6 +22,13 @@ export default async function AdminSettingsPage() {
     contact_email: settingsMap.contact_email || "hello@stiamond.net",
     contact_phone: settingsMap.contact_phone || "+1 (555) 000-0000",
     contact_location: settingsMap.contact_location || "Remote · Global",
+    payment_methods:
+      settingsMap.payment_methods ||
+      JSON.stringify({
+        bank: { enabled: false, details: "" },
+        crypto: { enabled: false, details: "" },
+        stripe: { enabled: false, details: "" },
+      }),
   };
 
   return (
