@@ -20,16 +20,24 @@ export function ChatWidget() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [hasNewReply, setHasNewReply] = useState(false);
+  const [cookieConsent, setCookieConsent] = useState<string | null>(null);
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Restore session from localStorage
+  // Restore session from localStorage and track cookie banner
   useEffect(() => {
     const saved = localStorage.getItem("stiamond-chat-token");
     if (saved) {
       setReplyToken(saved);
       setStarted(true);
     }
+    const updateConsent = () => setCookieConsent(localStorage.getItem("stiamond-cookie-consent"));
+    updateConsent();
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === "stiamond-cookie-consent") updateConsent();
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
   }, []);
 
   const pollMessages = useCallback(async () => {
@@ -160,7 +168,7 @@ export function ChatWidget() {
       {/* Toggle button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+        className={`fixed ${cookieConsent ? "bottom-6" : "bottom-24"} right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl`}
         aria-label="Chat"
       >
         {open ? (
@@ -179,7 +187,7 @@ export function ChatWidget() {
 
       {/* Chat panel */}
       {open && (
-        <div className="fixed bottom-24 right-6 z-50 flex h-[28rem] w-[22rem] flex-col overflow-hidden rounded-2xl border border-border bg-background shadow-2xl">
+        <div className={`fixed ${cookieConsent ? "bottom-24" : "bottom-40"} right-6 z-50 flex h-[28rem] w-[22rem] flex-col overflow-hidden rounded-2xl border border-border bg-background shadow-2xl`}>
           {/* Header */}
           <div className="flex items-center gap-3 border-b border-border bg-primary px-4 py-3 text-white">
             <MessageCircle className="h-5 w-5" />
