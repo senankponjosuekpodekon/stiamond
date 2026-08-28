@@ -40,6 +40,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // Prevent @vercel/og resvg.wasm / yoga.wasm / fonts from being bundled
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "next/og": false,
+    };
+    return config;
+  },
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
   },

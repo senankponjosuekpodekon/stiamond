@@ -15,7 +15,7 @@
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "pages:build": "npx opennextjs-cloudflare build",
-    "pages:deploy": "npx wrangler deploy",
+    "pages:deploy": "npx wrangler deploy --minify",
     "preview": "npx wrangler dev"
   },
   "dependencies": {
