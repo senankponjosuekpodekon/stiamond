@@ -97,6 +97,25 @@ Solutions e-commerce dédiées : Shopify, WooCommerce, flux produits, optimisati
 - Local : Mobile money ou virement bancaire
 - Typiquement 50% à la commande, 50% à la livraison, ou par jalons
 
+## Produits & Packs
+
+### Packs principaux
+
+- **Site Vitrine** — 1 500 $ / projet. Jusqu'à 5 pages, design mobile-first, SEO + vitesse, formulaires, garantie 14 jours.
+- **Funnel Systeme.io** — 1 500 $ / projet. 3-5 étapes de funnel, automation email, intégration paiement, garantie 30 jours.
+- **Présence Digitale Complète** — 4 200 $ / projet. Site/identité/funnel + 1er mois de publicité + appel stratégie mensuel.
+- **Gestion de Campagnes** — 1 500 $ / mois. Campagnes Meta, Google, TikTok pour e-commerce et génération de leads.
+
+### Packs spécialisés
+
+- **Diagnostiquer & Optimiser** : Audit Express (500 $), Refonte & Modernisation (1 500 $+), Stratégie Marketing Digital (1 500 $+).
+- **Construire & Lancer** : Boutique E-commerce (2 500 $+), Idée à MVP (2 500 $+), Cloud & SaaS (1 500 $+).
+- **Piloter & Scaler** : Automatisation Métier (2 000 $+), Retainer Growth (3 000 $/mois), Conseil Lead Tech (1 500 $/mois).
+
+## Termes de recherche ciblés
+
+création site vitrine Cotonou, funnel Systeme.io, développement MVP, boutique Shopify Bénin, WooCommerce Cotonou, automatisation n8n, agent IA, déploiement SaaS Cloudflare, lead technique, gestion campagnes Meta Google TikTok, refonte site web, audit SEO, stratégie marketing digital, consultant e-commerce, mentorat fullstack.
+
 ## Langues
 
 - English : https://stiamond.net/llms.txt

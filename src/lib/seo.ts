@@ -11,7 +11,7 @@ export async function generatePageMetadata(
   namespace: string
 ): Promise<Metadata> {
   const locale = (await getLocale()) as Locale;
-  const meta = (messagesMap[locale] as Record<string, unknown>).metadata as Record<string, { title: string; description: string }>;
+  const meta = (messagesMap[locale] as Record<string, unknown>).metadata as Record<string, { title: string; description: string; keywords?: string[] }>;
   const page = meta[namespace];
 
   const routeMap: Record<string, string> = {
@@ -45,6 +45,7 @@ export async function generatePageMetadata(
   return {
     title: page.title,
     description: page.description,
+    keywords: page.keywords,
     alternates: {
       languages: {
         en: `https://stiamond.net${route}`,

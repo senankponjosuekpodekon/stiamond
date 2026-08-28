@@ -97,6 +97,25 @@ Dedicated e-commerce solutions: Shopify, WooCommerce, product feeds, conversion 
 - Local: Mobile money or bank transfer
 - Typically 50% upfront, 50% on delivery, or milestone-based
 
+## Products & Packs
+
+### Main Packs
+
+- **Site Vitrine** — $1,500 / project. Up to 5 pages, mobile-first, SEO + speed, forms, 14-day warranty.
+- **Funnel Systeme.io** — $1,500 / project. 3-5 funnel steps, email automation, payment integration, 30-day warranty.
+- **Complete Digital Presence** — $4,200 / project. Website/brand/funnel + first month of ads + monthly strategy call.
+- **Campaign Management** — $1,500 / month. Meta, Google, TikTok campaigns for e-commerce and lead generation.
+
+### Specialized Packs
+
+- **Diagnose & Optimize**: Audit Express ($500), Redesign & Modernization ($1,500+), Digital Marketing Strategy ($1,500+).
+- **Build & Launch**: E-commerce Store ($2,500+), Idea to MVP ($2,500+), Cloud & SaaS Launch ($1,500+).
+- **Run & Scale**: Business Automation ($2,000+), Growth Retainer ($3,000/mo), Lead Tech Advisory ($1,500/mo).
+
+## Target Search Terms
+
+website design Cotonou, Systeme.io funnel, MVP development, Shopify store setup, WooCommerce store, n8n automation, AI agent, Cloudflare SaaS deployment, fractional CTO, Meta Google TikTok ads management, website redesign, SEO audit, digital marketing strategy, e-commerce consultant, full-stack mentorship.
+
 ## Languages
 
 - English: https://stiamond.net/llms.txt
