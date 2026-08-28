@@ -1,5 +1,5 @@
+export const runtime = "nodejs";
 import type { Metadata } from "next";
-import { Poppins, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { getLocale, getTranslations } from "next-intl/server";
 import { AnalyticsProvider } from "@/components/analytics";
@@ -7,19 +7,6 @@ import { CookieBanner } from "@/components/cookie-banner";
 import { Providers } from "@/components/providers";
 import Script from "next/script";
 import "./globals.css";
-
-const poppins = Poppins({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
@@ -237,14 +224,14 @@ export default async function RootLayout({
         <link rel="alternate" hrefLang="en" href="https://stiamond.net" />
         <link rel="alternate" hrefLang="fr" href="https://stiamond.net/fr" />
         <link rel="alternate" hrefLang="x-default" href="https://stiamond.net" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body
-        className={cn(
-          poppins.variable,
-          jetbrainsMono.variable,
-          "font-sans antialiased"
-        )}
-      >
+      <body className={cn("font-sans antialiased")}>
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRRK45V4" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,

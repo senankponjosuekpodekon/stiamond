@@ -2,16 +2,3 @@ name = "stiamond"
 main = ".open-next/worker.js"
 compatibility_date = "2024-12-01"
 compatibility_flags = ["nodejs_compat"]
-
-[assets]
-directory = ".open-next/assets"
-binding = "ASSETS"
-
-[[services]]
-binding = "WORKER_SELF_REFERENCE"
-service = "stiamond"
-
-[vars]
-AUTH_URL = "https://stiamond.net"
-CONTACT_FROM_EMAIL = "Stiamond <onboarding@stiamond.net>"
-CONTACT_TO_EMAIL = "hello@stiamond.net"

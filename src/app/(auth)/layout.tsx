@@ -1,3 +1,4 @@
+export const runtime = "nodejs";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
