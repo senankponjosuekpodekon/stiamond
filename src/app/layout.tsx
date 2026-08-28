@@ -231,7 +231,7 @@ export default async function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={cn("font-sans antialiased")}>
+      <body className={cn("font-sans antialiased")} suppressHydrationWarning>
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRRK45V4" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
