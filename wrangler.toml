@@ -1,9 +1,9 @@
 name = "stiamond"
 main = ".open-next/worker.js"
-compatibility_date = "2024-12-01"
+compatibility_date = "2024-12-30"
 compatibility_flags = ["nodejs_compat"]
 
 [assets]
-directory = ".open-next"
-not_found_handling = "none"
-html_handling = "none"
+directory = ".open-next/assets"
+binding = "ASSETS"
+run_worker_first = false
