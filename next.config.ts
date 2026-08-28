@@ -40,6 +40,8 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // Exclude build-time MDX packages from the Cloudflare Worker bundle
+  serverExternalPackages: ["next-mdx-remote", "gray-matter", "reading-time"],
   // Prevent @vercel/og resvg.wasm / yoga.wasm / fonts from being bundled
   webpack: (config) => {
     config.resolve.alias = {
