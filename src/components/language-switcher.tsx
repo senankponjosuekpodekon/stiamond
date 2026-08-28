@@ -15,6 +15,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   const [isPending, startTransition] = useTransition();
 
   const switchLocale = (newLocale: Locale) => {
+    document.cookie = `NEXT_LOCALE=${newLocale};path=/;SameSite=Lax;max-age=31536000`;
     startTransition(() => {
       router.replace(pathname, { locale: newLocale });
     });
